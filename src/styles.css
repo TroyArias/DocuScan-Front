@@ -1,0 +1,539 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.formsList{
+  margin: 80px auto 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.Navbar{
+  display: flex;
+  height: 50px;
+  background: #34343f;
+  position: fixed;
+  width: 100vw;
+  z-index: 3;
+  top: 0px;
+  justify-content: space-between;
+}
+
+.Navbar div{
+  width: 25%;
+  display: flex;
+  align-self: center;
+  margin-left: 5%;
+}
+
+.Navbar div p a{
+  text-decoration: none;
+  color: gray;
+  font-size: 20px; 
+}
+
+.Navbar div p a:hover{
+  color: white;
+}
+
+.Exit_button {
+  margin: 0%;
+}
+
+.Exit_button:hover {
+  background-color: white;
+  color: #34343f;
+  transform: none;
+  border: none;
+}
+
+.btn {
+	display: flex;	
+	box-sizing: border-box;
+	padding: 0 24px;
+	margin: 40px auto;
+	outline: none;
+	border: none;    
+	border-radius: 3px;
+	height: 37px;
+	line-height: 37px;
+	font-size: 24px;
+	text-transform: uppercase;
+	font-weight: normal;
+	text-decoration: none;
+	color: #07bc4c;
+	background-color: #fff;
+	cursor: pointer;
+	user-select: none;
+	appearance: none;
+	touch-action: manipulation;  
+	transition: box-shadow .18s ease-out,background .18s ease-out,color .18s ease-out;
+}
+.btn:focus-visible {
+	box-shadow: 0 0 0 3px lightskyblue;
+}
+.btn:hover {
+	box-shadow: 0 1px 1px 0  #cfcfcf, 0 2px 5px 0  #cfcfcf;
+}
+.btn:active {
+	background-color: #efefef !important;
+}
+.btn:disabled {
+	background-color: #eee;
+	color: #444;
+	pointer-events: none;
+}
+
+.drag_drop{
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60%;
+  border: 3px dashed black;
+  background-color: #f8f9fa;
+  margin: 50px auto;
+}
+
+@page {
+  size: 210mm 275mm;
+}
+
+.form_1{
+  position: relative;
+  width: 850px;
+  height: 1100px;
+  margin: auto;
+  background-image: url('./formsBackground/dmv002en-1.png');
+  background-size: contain;
+}
+
+.form_2{
+  position: relative;
+  width: 850px;
+  height: 1100px;
+  margin: auto;
+  background-image: url('./formsBackground/dmv002en-2.png');
+  background-size: contain;
+}
+
+input {
+  border: none;
+  position: absolute;
+  height: 12px;
+  font-size: 12px;
+}
+
+input:focus {
+  outline: 0;
+}
+
+.lastName{
+  top: 158px;
+  left: 31px;
+  width: 220px;
+}
+
+.suffix{
+  top: 158px;
+  left: 560px;
+  width: 40px;
+}
+
+.nevadaIdNumber{
+  top: 158px;
+  left: 610px;
+  width: 200px;
+}
+
+.firstName{
+  top: 158px;
+  left: 262px;
+  width: 160px;
+}
+
+.middleName{
+  top: 158px;
+  left: 438px;
+  width: 113px;
+}
+
+.dateOfBirth{
+  top: 195px;
+  left: 262px;
+  width: 85px;
+}
+
+.socialSecurityNumber{
+  top: 195px;
+  left: 30px;
+  width: 220px;
+}
+
+.fullLegalName{
+  top: 195px;
+  left: 355px;
+  width: 240px;
+}
+
+.street{
+  top: 283px;
+  left: 32px;
+  width: 360px;
+}
+
+.mailing_address{
+  top: 283px;
+  left: 408px;
+  width: 400px;
+}
+
+.cityStateZip{
+  top: 314px;
+  left: 32px;
+  width: 360px;
+}
+
+.cityStateZip_2{
+  top: 314px;
+  left: 408px;
+  width: 400px;
+}
+
+.placeOfBirth{
+  top: 195px;
+  left: 607px;
+  width: 205px;
+}
+
+.height_ft{
+  top: 230px;
+  left: 125px;
+  width: 25px;
+}
+
+.height_in{
+  top: 230px;
+  left: 190px;
+  width: 30px;
+}
+
+.weight{
+  top: 230px;
+  left: 263px;
+  width: 40px;
+}
+
+.hair{
+  top: 230px;
+  left: 357px;
+  width: 95px;
+}
+
+.eye{
+  top: 230px;
+  left: 468px;
+  width: 120px;
+}
+
+.mothers_name{
+  top: 230px;
+  left: 608px;
+  width: 200px;
+}
+
+.email{
+  top: 343px;
+  left: 408px;
+  width: 400px;
+}
+
+.phone_code{
+  top: 343px;
+  left: 40px;
+  width: 50px;
+}
+
+.phone_number{
+  top: 343px;
+  left: 110px;
+  width: 280px;
+}
+
+input[type="checkbox"]{
+  position: absolute;
+  height: 11px;
+}
+
+.box_1{
+  top: 53px;
+  left: 137px;
+}
+
+.box_2{
+  top: 53px;
+  left: 212px;
+}
+
+.box_3{
+  top: 53px;
+  left: 293px;
+}
+
+.box_4{
+  top: 53px;
+  left: 381px;
+}
+
+.box_5{
+  top: 53px;
+  left: 515px;
+}
+
+.box_6{
+  top: 53px;
+  left: 667px;
+}
+
+.box_7{
+  top: 108px;
+  left: 32px;
+}
+
+.box_8{
+  top: 123px;
+  left: 32px;
+}
+
+.box_9{
+  top: 108px;
+  left: 117px;
+}
+
+.box_10{
+  top: 108px;
+  left: 250px;
+}
+
+.box_11{
+  top: 123px;
+  left: 250px;
+}
+
+.box_12{
+  top: 108px;
+  left: 350px;
+}
+
+.box_13{
+  top: 123px;
+  left: 350px;
+}
+
+.box_14{
+  top: 108px;
+  left: 463px;
+}
+
+.box_15{
+  top: 108px;
+  left: 506px;
+}
+
+.box_16{
+  top: 108px;
+  left: 618px;
+}
+
+.box_17{
+  top: 108px;
+  left: 703px;
+}
+
+.box_18{
+  top: 123px;
+  left: 618px;
+}
+
+.box_19{
+  top: 250px;
+  left: 25px;
+}
+
+.box_20{
+  top: 250px;
+  left: 399px;
+}
+
+.box_21{
+  top: 364px;
+  left: 706px;
+}
+
+.box_22{
+  top: 364px;
+  left: 761px;
+}
+
+.box_23{
+  top: 382px;
+  left: 706px;
+}
+
+.box_24{
+  top: 382px;
+  left: 760px;
+}
+
+.box_25{
+  top: 403px;
+  left: 706px;
+}
+
+.box_26{
+  top: 403px;
+  left: 760px;
+}
+
+.box_27{
+  top: 517px;
+  left: 123px;
+}
+
+.box_28{
+  top: 534px;
+  left: 123px;
+}
+
+.box_29{
+  top: 551px;
+  left: 123px;
+}
+
+.box_30{
+  top: 568px;
+  left: 706px;
+}
+
+.box_31{
+  top: 568px;
+  left: 761px;
+}
+
+.box_32{
+  top: 605px;
+  left: 706px;
+}
+
+.box_33{
+  top: 605px;
+  left: 761px;
+}
+
+.box_34{
+  top: 639px;
+  left: 706px;
+}
+
+.box_35{
+  top: 639px;
+  left: 761px;
+}
+
+.box_36{
+  top: 686px;
+  left: 761px;
+}
+
+.box_37{
+  top: 686px;
+  left: 706px;
+}
+
+.box_38{
+  top: 727px;
+  left: 706px;
+}
+
+.box_39{
+  top: 727px;
+  left: 761px;
+}
+
+.box_40{
+  top: 746px;
+  left: 761px;
+}
+
+.box_41{
+  top: 746px;
+  left: 706px;
+}
+
+.radio_group{
+  position: absolute;
+  top: 232px;
+  left: 58px;
+}
+
+.radio_group_container {
+  position: relative;
+  padding-left: 23px;
+  cursor: pointer;
+}
+
+.radio_group_container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+}
+
+.radio_group_container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.radio_group_container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.radio_group_container .checkmark:after {
+ 	top: 2px;
+	left: 2px;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: black;
+}
+
+.Menu_link a{
+  text-decoration: none;
+}
+
+.formStyle{
+  margin-top: 80px;
+}
