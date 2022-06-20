@@ -4,7 +4,7 @@ function FormsList() {
 
   return (
     <div className="formsList">
-        <div><Link to = "/example">Example form</Link></div>
+        {/* <div><Link to = "/example">Example form</Link></div> */}
         <div><Link to = "/vp247">Registration Service Transaction Request VP247</Link></div>
         <div><Link to = "/vp222">Application for Vehicle Registration VP222</Link></div>
         <div><Link to = "/vp019">Erasure Affidavit VP019</Link></div>
