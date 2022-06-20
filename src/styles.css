@@ -12,10 +12,55 @@ code {
     monospace;
 }
 
+input {
+  border: none;
+  background: none;
+  position: absolute;
+  height: 12px;
+  font-size: 12px;
+}
+
+input:focus {
+  background: wheat;
+  outline: none;
+}
+
 .formsList{
   margin: 80px auto 0;
   display: flex;
   flex-direction: column;
+}
+
+.formsList div{
+  margin: 8px auto;
+  width: 800px;
+  height: 45px;
+  border: #34343f solid 2px;
+  background-color: #34343f;
+}
+
+.formsList div:hover {
+  transform: scale(1.05);
+  transition: 0.3s;
+}
+
+.formsList div:not(:hover) {
+  transform: scale(1);
+  transition: 0.3s;
+}
+
+.formsList div a{
+  text-decoration: none;
+  display: flex;
+  color: white;
+  height: 100%;
+  font-weight: 700;
+  align-items: center;
+  padding-left: 10px;
+}
+
+.formStyle{
+  margin-top: 80px;         
 }
 
 .Navbar{
@@ -30,7 +75,6 @@ code {
 }
 
 .Navbar div{
-  width: 25%;
   display: flex;
   align-self: center;
   margin-left: 5%;
@@ -38,60 +82,51 @@ code {
 
 .Navbar div p a{
   text-decoration: none;
-  color: gray;
+  color: white;
   font-size: 20px; 
 }
 
 .Navbar div p a:hover{
-  color: white;
-}
-
-.Exit_button {
-  margin: 0%;
-}
-
-.Exit_button:hover {
-  background-color: white;
-  color: #34343f;
-  transform: none;
-  border: none;
+  color: wheat;
 }
 
 .btn {
-	display: flex;	
-	box-sizing: border-box;
-	padding: 0 24px;
-	margin: 40px auto;
+  position: fixed;
+  top: 10px;
+  right: 140px;
+  z-index: 3;	
+	padding: 0 16px;
 	outline: none;
 	border: none;    
 	border-radius: 3px;
-	height: 37px;
-	line-height: 37px;
-	font-size: 24px;
-	text-transform: uppercase;
-	font-weight: normal;
-	text-decoration: none;
-	color: #07bc4c;
+	height: 30px;
+	font-size: 28px;
+	color: #34343f;
 	background-color: #fff;
 	cursor: pointer;
-	user-select: none;
-	appearance: none;
-	touch-action: manipulation;  
-	transition: box-shadow .18s ease-out,background .18s ease-out,color .18s ease-out;
 }
-.btn:focus-visible {
-	box-shadow: 0 0 0 3px lightskyblue;
+
+.btn div:hover {
+  color: rgb(98, 151, 19);
 }
-.btn:hover {
-	box-shadow: 0 1px 1px 0  #cfcfcf, 0 2px 5px 0  #cfcfcf;
+
+.btn_2 {
+  position: fixed;
+  top: 10px;
+  right: 40px;	
+	padding: 0 16px;
+	outline: none;
+	border: none;    
+	border-radius: 3px;
+	height: 30px;
+	font-size: 28px;
+	color: #34343f;
+	background-color: #fff;
+	cursor: pointer;
 }
-.btn:active {
-	background-color: #efefef !important;
-}
-.btn:disabled {
-	background-color: #eee;
-	color: #444;
-	pointer-events: none;
+
+.btn_2 div:hover {
+  color: red;
 }
 
 .drag_drop{
@@ -114,7 +149,7 @@ code {
   width: 850px;
   height: 1100px;
   margin: auto;
-  background-image: url('./formsBackground/dmv002en-1.png');
+  background-image: url('./formBackgrounds/dmv002en-1.png');
   background-size: contain;
 }
 
@@ -123,382 +158,371 @@ code {
   width: 850px;
   height: 1100px;
   margin: auto;
-  background-image: url('./formsBackground/dmv002en-2.png');
+  background-image: url('./formBackgrounds/dmv002en-2.png');
   background-size: contain;
 }
 
-input {
-  border: none;
-  position: absolute;
-  height: 12px;
-  font-size: 12px;
-}
-
-input:focus {
-  outline: 0;
-}
-
-.lastName{
+.form_1 .lastName{
   top: 158px;
   left: 31px;
   width: 220px;
 }
 
-.suffix{
+.form_1 .suffix{
   top: 158px;
   left: 560px;
   width: 40px;
 }
 
-.nevadaIdNumber{
+.form_1 .nevadaIdNumber{
   top: 158px;
   left: 610px;
   width: 200px;
 }
 
-.firstName{
+.form_1 .firstName{
   top: 158px;
   left: 262px;
   width: 160px;
 }
 
-.middleName{
+.form_1 .middleName{
   top: 158px;
   left: 438px;
   width: 113px;
 }
 
-.dateOfBirth{
+.form_1 .dateOfBirth{
   top: 195px;
   left: 262px;
   width: 85px;
 }
 
-.socialSecurityNumber{
+.form_1 .socialSecurityNumber{
   top: 195px;
   left: 30px;
   width: 220px;
 }
 
-.fullLegalName{
+.form_1 .fullLegalName{
   top: 195px;
   left: 355px;
   width: 240px;
 }
 
-.street{
+.form_1 .street{
   top: 283px;
   left: 32px;
   width: 360px;
 }
 
-.mailing_address{
+.form_1 .mailing_address{
   top: 283px;
   left: 408px;
   width: 400px;
 }
 
-.cityStateZip{
+.form_1 .cityStateZip{
   top: 314px;
   left: 32px;
   width: 360px;
 }
 
-.cityStateZip_2{
+.form_1 .cityStateZip_2{
   top: 314px;
   left: 408px;
   width: 400px;
 }
 
-.placeOfBirth{
+.form_1 .placeOfBirth{
   top: 195px;
   left: 607px;
   width: 205px;
 }
 
-.height_ft{
+.form_1 .height_ft{
   top: 230px;
   left: 125px;
   width: 25px;
 }
 
-.height_in{
+.form_1 .height_in{
   top: 230px;
   left: 190px;
   width: 30px;
 }
 
-.weight{
+.form_1 .weight{
   top: 230px;
   left: 263px;
   width: 40px;
 }
 
-.hair{
+.form_1 .hair{
   top: 230px;
   left: 357px;
   width: 95px;
 }
 
-.eye{
+.form_1 .eye{
   top: 230px;
   left: 468px;
   width: 120px;
 }
 
-.mothers_name{
+.form_1 .mothers_name{
   top: 230px;
   left: 608px;
   width: 200px;
 }
 
-.email{
+.form_1 .email{
   top: 343px;
   left: 408px;
   width: 400px;
 }
 
-.phone_code{
+.form_1 .phone_code{
   top: 343px;
   left: 40px;
   width: 50px;
 }
 
-.phone_number{
+.form_1 .phone_number{
   top: 343px;
   left: 110px;
   width: 280px;
 }
 
-input[type="checkbox"]{
+.form_1 input[type="checkbox"]{
   position: absolute;
   height: 11px;
 }
 
-.box_1{
+.form_1 .box_1{
   top: 53px;
   left: 137px;
 }
 
-.box_2{
+.form_1 .box_2{
   top: 53px;
   left: 212px;
 }
 
-.box_3{
+.form_1 .box_3{
   top: 53px;
   left: 293px;
 }
 
-.box_4{
+.form_1 .box_4{
   top: 53px;
   left: 381px;
 }
 
-.box_5{
+.form_1 .box_5{
   top: 53px;
   left: 515px;
 }
 
-.box_6{
+.form_1 .box_6{
   top: 53px;
   left: 667px;
 }
 
-.box_7{
+.form_1 .box_7{
   top: 108px;
   left: 32px;
 }
 
-.box_8{
+.form_1 .box_8{
   top: 123px;
   left: 32px;
 }
 
-.box_9{
+.form_1 .box_9{
   top: 108px;
   left: 117px;
 }
 
-.box_10{
+.form_1 .box_10{
   top: 108px;
   left: 250px;
 }
 
-.box_11{
+.form_1 .box_11{
   top: 123px;
   left: 250px;
 }
 
-.box_12{
+.form_1 .box_12{
   top: 108px;
   left: 350px;
 }
 
-.box_13{
+.form_1 .box_13{
   top: 123px;
   left: 350px;
 }
 
-.box_14{
+.form_1 .box_14{
   top: 108px;
   left: 463px;
 }
 
-.box_15{
+.form_1 .box_15{
   top: 108px;
   left: 506px;
 }
 
-.box_16{
+.form_1 .box_16{
   top: 108px;
   left: 618px;
 }
 
-.box_17{
+.form_1 .box_17{
   top: 108px;
   left: 703px;
 }
 
-.box_18{
+.form_1 .box_18{
   top: 123px;
   left: 618px;
 }
 
-.box_19{
+.form_1 .box_19{
   top: 250px;
   left: 25px;
 }
 
-.box_20{
+.form_1 .box_20{
   top: 250px;
   left: 399px;
 }
 
-.box_21{
+.form_1 .box_21{
   top: 364px;
   left: 706px;
 }
 
-.box_22{
+.form_1 .box_22{
   top: 364px;
   left: 761px;
 }
 
-.box_23{
+.form_1 .box_23{
   top: 382px;
   left: 706px;
 }
 
-.box_24{
+.form_1 .box_24{
   top: 382px;
   left: 760px;
 }
 
-.box_25{
+.form_1 .box_25{
   top: 403px;
   left: 706px;
 }
 
-.box_26{
+.form_1 .box_26{
   top: 403px;
   left: 760px;
 }
 
-.box_27{
+.form_1 .box_27{
   top: 517px;
   left: 123px;
 }
 
-.box_28{
+.form_1 .box_28{
   top: 534px;
   left: 123px;
 }
 
-.box_29{
+.form_1 .box_29{
   top: 551px;
   left: 123px;
 }
 
-.box_30{
+.form_1 .box_30{
   top: 568px;
   left: 706px;
 }
 
-.box_31{
+.form_1 .box_31{
   top: 568px;
   left: 761px;
 }
 
-.box_32{
+.form_1 .box_32{
   top: 605px;
   left: 706px;
 }
 
-.box_33{
+.form_1 .box_33{
   top: 605px;
   left: 761px;
 }
 
-.box_34{
+.form_1 .box_34{
   top: 639px;
   left: 706px;
 }
 
-.box_35{
+.form_1 .box_35{
   top: 639px;
   left: 761px;
 }
 
-.box_36{
+.form_1 .box_36{
   top: 686px;
   left: 761px;
 }
 
-.box_37{
+.form_1 .box_37{
   top: 686px;
   left: 706px;
 }
 
-.box_38{
+.form_1 .box_38{
   top: 727px;
   left: 706px;
 }
 
-.box_39{
+.form_1 .box_39{
   top: 727px;
   left: 761px;
 }
 
-.box_40{
+.form_1 .box_40{
   top: 746px;
   left: 761px;
 }
 
-.box_41{
+.form_1 .box_41{
   top: 746px;
   left: 706px;
 }
 
-.radio_group{
+.form_1 .radio_group{
   position: absolute;
   top: 232px;
   left: 58px;
 }
 
-.radio_group_container {
+.form_1 .radio_group_container {
   position: relative;
   padding-left: 23px;
   cursor: pointer;
 }
 
-.radio_group_container input {
+.form_1 .radio_group_container input {
   position: absolute;
   opacity: 0;
   cursor: pointer;
 }
 
-.checkmark {
+.form_1 .checkmark {
   position: absolute;
   top: 0;
   left: 0;
@@ -507,21 +531,21 @@ input[type="checkbox"]{
   border-radius: 50%;
 }
 
-.radio_group_container:hover input ~ .checkmark {
+.form_1 .radio_group_container:hover input ~ .checkmark {
   background-color: #ccc;
 }
 
-.checkmark:after {
+.form_1 .checkmark:after {
   content: "";
   position: absolute;
   display: none;
 }
 
-.radio_group_container input:checked ~ .checkmark:after {
+.form_1 .radio_group_container input:checked ~ .checkmark:after {
   display: block;
 }
 
-.radio_group_container .checkmark:after {
+.form_1 .radio_group_container .checkmark:after {
  	top: 2px;
 	left: 2px;
 	width: 8px;
@@ -530,10 +554,1443 @@ input[type="checkbox"]{
 	background: black;
 }
 
-.Menu_link a{
-  text-decoration: none;
+.vp222{
+  position: relative;
+  width: 850px;
+  height: 1100px;
+  margin: auto;
+  background-image: url('./formBackgrounds/vp222-1.png');
+  background-size: contain;
 }
 
-.formStyle{
-  margin-top: 80px;
+.vp222 input{
+  height: 14px;
+  font-size: 12px;
+  text-align: center;
 }
+
+.vp222 .vehicleID input{
+  height: 34px;
+  width: 33px;
+  font-size: 30px;
+  text-align: center;
+  top: 298px;
+}
+
+.vp222 .vehicleID .vehicleID1{
+  left: 52px;
+}
+
+.vp222 .vehicleID .vehicleID2{
+  left: 94px;
+}
+
+.vp222 .vehicleID .vehicleID3{
+  left: 135px;
+}
+
+.vp222 .vehicleID .vehicleID4{
+  left: 176px;
+}
+
+.vp222 .vehicleID .vehicleID5{
+  left: 218px;
+}
+
+.vp222 .vehicleID .vehicleID6{
+  left: 260px;
+}
+
+.vp222 .vehicleID .vehicleID7{
+  left: 301px;
+}
+
+.vp222 .vehicleID .vehicleID8{
+  left: 343px;
+}
+
+.vp222 .vehicleID .vehicleID9{
+  left: 384px;
+}
+
+.vp222 .vehicleID .vehicleID10{
+  left: 425px;
+}
+
+.vp222 .vehicleID .vehicleID11{
+  left: 467px;
+}
+
+.vp222 .vehicleID .vehicleID12{
+  left: 509px;
+}
+
+.vp222 .vehicleID .vehicleID13{
+  left: 550px;
+}
+
+.vp222 .vehicleID .vehicleID14{
+  left: 592px;
+}
+
+.vp222 .vehicleID .vehicleID15{
+  left: 633px;
+}
+
+.vp222 .vehicleID .vehicleID16{
+  left: 675px;
+}
+
+.vp222 .vehicleID .vehicleID17{
+  left: 716px;
+}
+
+.vp222 .vehicleID .vehicleID18{
+  left: 758px;
+}
+
+.vp222 .year{
+  top: 340px;
+  left: 100px;
+  width: 112px;
+}
+
+.vp222 .make{
+  top: 340px;
+  left: 280px;
+  width: 222px;
+}
+
+.vp222 .model{
+  top: 340px;
+  left: 574px;
+  width: 222px;
+}
+
+.vp222 .weight{
+  top: 408px;
+  left: 512px;
+  width: 98px;
+}
+
+.vp222 .weight2{
+  top: 388px;
+  left: 98px;
+  width: 248px;
+}
+
+.vp222 .country{
+  top: 428px;
+  left: 312px;
+  width: 276px;
+}
+
+.vp222 .odometer{
+  top: 449px;
+  left: 400px;
+  width: 190px;
+}
+
+.vp222 .firstName{
+  top: 828px;
+  left: 200px;
+  width: 170px;
+}
+
+.vp222 .middleName{
+  top: 828px;
+  left: 380px;
+  width: 190px;
+}
+
+.vp222 .lastName{
+  top: 828px;
+  left: 580px;
+  width: 200px;
+}
+
+.vp222 .input1{
+  top: 876px;
+  left: 576px;
+  width: 224px;
+}
+
+.vp222 .address{
+  top: 915px;
+  left: 197px;
+  width: 250px;
+}
+
+.vp222 .city{
+  top: 915px;
+  left: 460px;
+  width: 150px;
+}
+
+.vp222 .state{
+  top: 915px;
+  left: 620px;
+  width: 90px;
+}
+
+.vp222 .zipCode{
+  top: 915px;
+  left: 716px;
+  width: 84px;
+}
+
+.vp222 .address2{
+  top: 951px;
+  left: 187px;
+  width: 250px;
+}
+
+.vp222 .city2{
+  top: 951px;
+  left: 450px;
+  width: 158px;
+}
+
+.vp222 .state2{
+  top: 951px;
+  left: 620px;
+  width: 80px;
+}
+
+.vp222 .zipCode2{
+  top: 951px;
+  left: 716px;
+  width: 84px;
+}
+
+.vp222 .telephone{
+  top: 980px;
+  left: 143px;
+  width: 274px;
+}
+
+.vp222 .email{
+  top: 980px;
+  left: 536px;
+  width: 264px;
+}
+
+.vp247{
+  position: relative;
+  width: 850px;
+  height: 1100px;
+  margin: auto;
+  background-image: url('./formBackgrounds/vp247-1.png');
+  background-size: contain;
+}
+
+.vp247 input{
+  height: 14px;
+  font-size: 12px;
+  text-align: center;
+}
+
+.vp247 .businessName{
+  top: 192px;
+  left: 144px;
+  width: 357px;
+}
+
+.vp247 .regNumber{
+  top: 192px;
+  left: 662px;
+  width: 153px;
+}
+
+.vp247 .representative{
+  top: 217px;
+  left: 215px;
+  width: 286px;
+}
+
+.vp247 .phone{
+  top: 217px;
+  left: 578px;
+  width: 236px;
+}
+
+.vp247 .input{
+  top: 260px;
+  left: 749px;
+  width: 66px;
+}
+
+.vp247 .firstName1{
+  top: 312px;
+  left: 198px;
+  width: 190px;
+}
+
+.vp247 .middleName1{
+  top: 312px;
+  left: 400px;
+  width: 140px;
+}
+
+.vp247 .lastName1{
+  top: 312px;
+  left: 550px;
+  width: 151px;
+}
+
+.vp247 .input1{
+  top: 342px;
+  left: 441px;
+  width: 374px;
+}
+
+.vp247 .insurance1{
+  top: 370px;
+  left: 210px;
+  width: 228px;
+}
+
+.vp247 .address1{
+  top: 395px;
+  left: 146px;
+  width: 300px;
+}
+
+.vp247 .city1{
+  top: 395px;
+  left: 460px;
+  width: 150px;
+}
+
+.vp247 .state1{
+  top: 395px;
+  left: 624px;
+  width: 70px;
+}
+
+.vp247 .zip1{
+  top: 395px;
+  left: 710px;
+  width: 105px;
+}
+
+.vp247 .address2{
+  top: 425px;
+  left: 146px;
+  width: 300px;
+}
+
+.vp247 .city2{
+  top: 425px;
+  left: 460px;
+  width: 150px;
+}
+
+.vp247 .state2{
+  top: 425px;
+  left: 624px;
+  width: 70px;
+}
+
+.vp247 .zip2{
+  top: 425px;
+  left: 710px;
+  width: 105px;
+}
+
+.vp247 .firstName2{
+  top: 464px;
+  left: 198px;
+  width: 190px;
+}
+
+.vp247 .middleName2{
+  top: 464px;
+  left: 400px;
+  width: 140px;
+}
+
+.vp247 .lastName2{
+  top: 464px;
+  left: 550px;
+  width: 152px;
+}
+
+.vp247 .input2{
+  top: 494px;
+  left: 441px;
+  width: 373px;
+}
+
+.vp247 .insurance2{
+  top: 522px;
+  left: 212px;
+  width: 226px;
+}
+
+.vp247 .address3{
+  top: 548px;
+  left: 146px;
+  width: 300px;
+}
+
+.vp247 .city3{
+  top: 548px;
+  left: 460px;
+  width: 150px;
+}
+
+.vp247 .state3{
+  top: 548px;
+  left: 624px;
+  width: 70px;
+}
+
+.vp247 .zip3{
+  top: 548px;
+  left: 710px;
+  width: 104px;
+}
+
+.vp247 .address4{
+  top: 577px;
+  left: 146px;
+  width: 300px;
+}
+
+.vp247 .city4{
+  top: 577px;
+  left: 460px;
+  width: 150px;
+}
+
+.vp247 .state4{
+  top: 577px;
+  left: 624px;
+  width: 70px;
+}
+
+.vp247 .zip4{
+  top: 577px;
+  left: 710px;
+  width: 104px;
+}
+
+.vp247 .email{
+  top: 616px;
+  left: 604px;
+  width: 210px;
+}
+
+.vp247 .telephone{
+  top: 616px;
+  left: 242px;
+  width: 152px;
+}
+
+.vp247 .vehicleID input{
+  height: 27px;
+  width: 39px;
+  font-size: 30px;
+  text-align: center;
+  top: 660px;
+  border: none;
+}
+
+.vp247 .vehicleID .vehicleID1{
+  left: 26px;
+}
+
+.vp247 .vehicleID .vehicleID2{
+  left: 73px;
+}
+
+.vp247 .vehicleID .vehicleID3{
+  left: 120px;
+}
+
+.vp247 .vehicleID .vehicleID4{
+  left: 167px;
+}
+
+.vp247 .vehicleID .vehicleID5{
+  left: 214px;
+}
+
+.vp247 .vehicleID .vehicleID6{
+  left: 261px;
+}
+
+.vp247 .vehicleID .vehicleID7{
+  left: 307px;
+}
+
+.vp247 .vehicleID .vehicleID8{
+  left: 354px;
+}
+
+.vp247 .vehicleID .vehicleID9{
+  left: 401px;
+}
+
+.vp247 .vehicleID .vehicleID10{
+  left: 448px;
+}
+
+.vp247 .vehicleID .vehicleID11{
+  left: 494px;
+}
+
+.vp247 .vehicleID .vehicleID12{
+  left: 541px;
+}
+
+.vp247 .vehicleID .vehicleID13{
+  left: 588px;
+}
+
+.vp247 .vehicleID .vehicleID14{
+  left: 635px;
+}
+
+.vp247 .vehicleID .vehicleID15{
+  left: 681px;
+}
+
+.vp247 .vehicleID .vehicleID16{
+  left: 728px;
+}
+
+.vp247 .vehicleID .vehicleID17{
+  left: 775px;
+}
+
+.vp247 .year{
+  top: 696px;
+  left: 67px;
+  width: 44px;
+}
+
+.vp247 .bodyType{
+  top: 696px;
+  left: 214px;
+  width: 193px;
+}
+
+.vp247 .model{
+  top: 696px;
+  left: 482px;
+  width: 135px;
+}
+
+.vp247 .make{
+  top: 696px;
+  left: 698px;
+  width: 117px;
+}
+
+.vp247 .fuel{
+  top: 713px;
+  left: 67px;
+  width: 44px;
+}
+
+.vp247 .weight{
+  top: 713px;
+  left: 284px;
+  width: 123px;
+}
+
+.vp247 .length{
+  top: 713px;
+  left: 482px;
+  width: 79px;
+}
+
+.vp247 .country{
+  top: 713px;
+  left: 698px;
+  width: 117px;
+}
+
+.vp247 .axles{
+  top: 730px;
+  left: 67px;
+  width: 44px;
+}
+
+.vp247 .weight2{
+  top: 730px;
+  left: 335px;
+  width: 72px;
+}
+
+.vp247 .odometer{
+  top: 730px;
+  left: 564px;
+  width: 130px;
+}
+
+.vp247 .input3{
+  top: 778px;
+  left: 757px;
+  width: 58px;
+}
+
+.vp247 .input4{
+  top: 795px;
+  left: 373px;
+  width: 136px;
+}
+
+.vp247 .input5{
+  top: 812px;
+  left: 389px;
+  width: 171px;
+}
+
+.vp247 .input6{
+  top: 828px;
+  left: 353px;
+  width: 96px;
+}
+
+.vp247 .input7{
+  top: 828px;
+  left: 588px;
+  width: 226px;
+}
+
+.vp247 .input8{
+  top: 893px;
+  left: 328px;
+  width: 97px;
+}
+
+.vp247 .input9{
+  top: 910px;
+  left: 280px;
+  width: 68px;
+}
+
+.vp247 .input10{
+  top: 948px;
+  left: 210px;
+  width: 143px;
+}
+
+.vp247 .input11{
+  top: 980px;
+  left: 723px;
+  width: 76px;
+}
+
+.vp247 .input12{
+  top: 997px;
+  left: 158px;
+  width: 562px;
+}
+
+.custom-checkbox>input {
+  z-index: -1;
+  opacity: 0;
+}
+
+.custom-checkbox>span::before {
+  position: absolute;
+  content: '';
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  /* border: #34343f 1px solid; */
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 80% 80%;
+}
+
+.custom-checkbox>input:checked+span::before {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='black' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e");
+}
+
+.custom-checkbox1>span::before {
+  top: 260px;
+  left: 263px;
+}
+.custom-checkbox1>input {
+  top: 260px;
+  left: 263px;
+}
+
+.custom-checkbox2>span::before {
+  top: 260px;
+  left: 325px;
+}
+.custom-checkbox2>input {
+  top: 260px;
+  left: 325px;
+}
+
+.custom-checkbox3>span::before {
+  top: 260px;
+  left: 438px;
+}
+.custom-checkbox3>input {
+  top: 260px;
+  left: 438px;
+}
+
+.custom-checkbox4>span::before {
+  top: 260px;
+  left: 623px;
+}
+.custom-checkbox4>input {
+  top: 260px;
+  left: 623px;
+}
+
+.custom-checkbox5>span::before {
+  top: 260px;
+  left: 689px;
+}
+.custom-checkbox5>input {
+  top: 260px;
+  left: 689px;
+}
+
+.custom-checkbox6>span::before {
+  top: 310px;
+  left: 712px;
+}
+.custom-checkbox6>input {
+  top: 310px;
+  left: 712px;
+}
+
+.custom-checkbox7>span::before {
+  top: 310px;
+  left: 774px;
+}
+.custom-checkbox7>input {
+  top: 310px;
+  left: 774px;
+}
+
+.custom-checkbox8>span::before {
+  top: 640px;
+  left: 518px;
+}
+.custom-checkbox8>input {
+  top: 640px;
+  left: 518px;
+}
+
+.custom-checkbox9>span::before {
+  top: 640px;
+  left: 578px;
+}
+.custom-checkbox9>input {
+  top: 640px;
+  left: 578px;
+}
+
+.custom-checkbox10>span::before {
+  top: 640px;
+  left: 646px;
+}
+.custom-checkbox10>input {
+  top: 640px;
+  left: 646px;
+}
+
+.custom-checkbox11>span::before {
+  top: 640px;
+  left: 756px;
+}
+.custom-checkbox11>input {
+  top: 640px;
+  left: 756px;
+}
+
+.custom-checkbox12>span::before {
+  top: 762px;
+  left: 25px;
+}
+.custom-checkbox12>input {
+  top: 762px;
+  left: 25px;
+}
+
+.custom-checkbox13>span::before {
+  top: 762px;
+  left: 180px;
+}
+.custom-checkbox13>input {
+  top: 762px;
+  left: 180px;
+}
+
+.custom-checkbox14>span::before {
+  top: 762px;
+  left: 344px;
+}
+.custom-checkbox14>input {
+  top: 762px;
+  left: 344px;
+}
+
+.custom-checkbox15>span::before {
+  top: 762px;
+  left: 497px;
+}
+.custom-checkbox15>input {
+  top: 762px;
+  left: 497px;
+}
+
+.custom-checkbox16>span::before {
+  top: 762px;
+  left: 648px;
+}
+.custom-checkbox16>input {
+  top: 762px;
+  left: 648px;
+}
+
+.custom-checkbox17>span::before {
+  top: 779px;
+  left: 25px;
+}
+.custom-checkbox17>input {
+  top: 779px;
+  left: 25px;
+}
+
+.custom-checkbox18>span::before {
+  top: 779px;
+  left: 180px;
+}
+.custom-checkbox18>input {
+  top: 779px;
+  left: 180px;
+}
+
+.custom-checkbox19>span::before {
+  top: 779px;
+  left: 344px;
+}
+.custom-checkbox19>input {
+  top: 779px;
+  left: 344px;
+}
+
+.custom-checkbox20>span::before {
+  top: 779px;
+  left: 497px;
+}
+.custom-checkbox20>input {
+  top: 779px;
+  left: 497px;
+}
+
+.custom-checkbox21>span::before {
+  top: 779px;
+  left: 649px;
+}
+.custom-checkbox21>input {
+  top: 779px;
+  left: 649px;
+}
+
+.custom-checkbox22>span::before {
+  top: 795px;
+  left: 25px;
+}
+.custom-checkbox22>input {
+  top: 795px;
+  left: 25px;
+}
+
+.custom-checkbox23>span::before {
+  top: 795px;
+  left: 180px;
+}
+.custom-checkbox23>input {
+  top: 795px;
+  left: 180px;
+}
+
+.custom-checkbox24>span::before {
+  top: 795px;
+  left: 305px;
+}
+.custom-checkbox24>input {
+  top: 795px;
+  left: 305px;
+}
+
+.custom-checkbox25>span::before {
+  top: 795px;
+  left: 525px;
+}
+.custom-checkbox25>input {
+  top: 795px;
+  left: 525px;
+}
+
+.custom-checkbox26>span::before {
+  top: 812px;
+  left: 25px;
+}
+.custom-checkbox26>input {
+  top: 812px;
+  left: 25px;
+}
+
+.custom-checkbox27>span::before {
+  top: 812px;
+  left: 574px;
+}
+.custom-checkbox27>input {
+  top: 812px;
+  left: 574px;
+}
+
+.custom-checkbox28>span::before {
+  top: 829px;
+  left: 25px;
+}
+.custom-checkbox28>input {
+  top: 829px;
+  left: 25px;
+}
+
+.custom-checkbox29>span::before {
+  top: 872px;
+  left: 708px;
+}
+.custom-checkbox29>input {
+  top: 872px;
+  left: 708px;
+}
+
+.custom-checkbox30>span::before {
+  top: 872px;
+  left: 767px;
+}
+.custom-checkbox30>input {
+  top: 872px;
+  left: 767px;
+}
+
+.custom-checkbox31>span::before {
+  top: 893px;
+  left: 25px;
+}
+.custom-checkbox31>input {
+  top: 893px;
+  left: 25px;
+}
+
+.custom-checkbox32>span::before {
+  top: 893px;
+  left: 175px;
+}
+.custom-checkbox32>input {
+  top: 893px;
+  left: 175px;
+}
+
+.custom-checkbox33>span::before {
+  top: 909px;
+  left: 25px;
+}
+.custom-checkbox33>input {
+  top: 909px;
+  left: 25px;
+}
+
+.custom-checkbox34>span::before {
+  top: 909px;
+  left: 128px;
+}
+.custom-checkbox34>input {
+  top: 909px;
+  left: 128px;
+}
+
+.custom-checkbox35>span::before {
+  top: 908px;
+  left: 439px;
+}
+.custom-checkbox35>input {
+  top: 908px;
+  left: 439px;
+}
+
+.custom-checkbox36>span::before {
+  top: 908px;
+  left: 504px;
+}
+.custom-checkbox36>input {
+  top: 908px;
+  left: 504px;
+}
+
+.custom-checkbox37>span::before {
+  top: 908px;
+  left: 704px;
+}
+.custom-checkbox37>input {
+  top: 908px;
+  left: 704px;
+}
+
+.custom-checkbox38>span::before {
+  top: 908px;
+  left: 762px;
+}
+.custom-checkbox38>input {
+  top: 908px;
+  left: 762px;
+}
+
+.vp019{
+  position: relative;
+  width: 850px;
+  height: 1100px;
+  margin: auto;
+  background-image: url('./formBackgrounds/vp019-1.png');
+  background-size: contain;
+}
+
+.vp019 input{
+  height: 14px;
+  font-size: 12px;
+  text-align: center;
+}
+
+.vp019 .year{
+  top: 354px;
+  left: 90px;
+  width: 154px;
+}
+
+.vp019 .make{
+  top: 354px;
+  left: 297px;
+  width: 229px;
+}
+
+.vp019 .model{
+  top: 354px;
+  left: 588px;
+  width: 201px;
+}
+
+.vp019 .vehicleID{
+  top: 405px;
+  left: 271px;
+  width: 525px;
+}
+
+.vp019 .input1{
+  top: 482px;
+  left: 50px;
+  width: 738px;
+}
+
+.vp019 .input2{
+  top: 520px;
+  left: 50px;
+  width: 738px;
+}
+
+.vp019 .input3{
+  top: 559px;
+  left: 50px;
+  width: 738px;
+}
+
+.vp019 .name{
+  top: 619px;
+  left: 297px;
+  width: 498px;
+}
+
+.vp019 .input4{
+  top: 670px;
+  left: 395px;
+  width: 396px;
+}
+
+.vp019 .address1{
+  top: 705px;
+  left: 178px;
+  width: 240px;
+}
+
+.vp019 .city1{
+  top: 705px;
+  left: 430px;
+  width: 170px;
+}
+
+.vp019 .state1{
+  top: 705px;
+  left: 610px;
+  width: 80px;
+}
+
+.vp019 .zip1{
+  top: 705px;
+  left: 700px;
+  width: 84px;
+}
+
+.vp019 .address2{
+  top: 756px;
+  left: 173px;
+  width: 240px;
+}
+
+.vp019 .city2{
+  top: 756px;
+  left: 430px;
+  width: 170px;
+}
+
+.vp019 .state2{
+  top: 756px;
+  left: 610px;
+  width: 80px;
+}
+
+.vp019 .zip2{
+  top: 756px;
+  left: 700px;
+  width: 95px;
+}
+
+.vp019 .input5{
+  top: 805px;
+  left: 254px;
+  width: 173px;
+}
+
+.vp019 .input6{
+  top: 843px;
+  left: 309px;
+  width: 118px;
+}
+
+.vp019 .input7{
+  top: 939px;
+  left: 349px;
+  width: 424px;
+}
+
+.vp185{
+  position: relative;
+  width: 850px;
+  height: 1100px;
+  margin: auto;
+  background-image: url('./formBackgrounds/vp185-1.png');
+  background-size: contain;
+}
+
+.vp185 input{
+  height: 14px;
+  font-size: 12px;
+  text-align: center;
+}
+
+.vp185 .name{
+  top: 306px;
+  left: 63px;
+  width: 452px;
+}
+
+.vp185 .address1{
+  top: 376px;
+  left: 178px;
+  width: 608px;
+}
+
+.vp185 .city1{
+  top: 415px;
+  left: 100px;
+  width: 220px;
+}
+
+.vp185 .state1{
+  top: 415px;
+  left: 370px;
+  width: 190px;
+}
+
+.vp185 .zip1{
+  top: 415px;
+  left: 650px;
+  width: 138px;
+}
+
+.vp185 .address2{
+  top: 459px;
+  left: 264px;
+  width: 526px;
+}
+
+.vp185 .city2{
+  top: 504px;
+  left: 100px;
+  width: 220px;
+}
+
+.vp185 .state2{
+  top: 504px;
+  left: 370px;
+  width: 190px;
+}
+
+.vp185 .zip2{
+  top: 504px;
+  left: 650px;
+  width: 144px;
+}
+
+.vp185 .input1{
+  top: 555px;
+  left: 114px;
+  width: 432px;
+}
+
+.vp185 .input2{
+  top: 593px;
+  left: 99px;
+  width: 693px;
+}
+
+.vp185 .input3{
+  top: 650px;
+  left: 439px;
+  width: 355px;
+}
+
+.vp185 .input4{
+  top: 747px;
+  left: 125px;
+  width: 155px;
+}
+
+.vp185 .input5{
+  top: 785px;
+  left: 281px;
+  width: 108px;
+}
+
+.vp185 .input6{
+  top: 910px;
+  left: 450px;
+  width: 309px;
+}
+
+.vp012_1{
+  position: relative;
+  width: 850px;
+  height: 1100px;
+  margin: auto;
+  background-image: url('./formBackgrounds/vp012-1.png');
+  background-size: contain;
+}
+
+.vp012_2{
+  position: relative;
+  width: 850px;
+  height: 1100px;
+  margin: auto;
+  background-image: url('./formBackgrounds/vp012-2.png');
+  background-size: contain;
+}
+
+.vp012_2 input{
+  height: 14px;
+  font-size: 12px;
+  text-align: center;
+}
+
+.vp012_2 .vehicleID input{
+  height: 24px;
+  width: 22px;
+  font-size: 18px;
+  text-align: center;
+  top: 84px;
+}
+
+.vp012_2 .vehicleID .vehicleID1{
+  left: 242px;
+}
+
+.vp012_2 .vehicleID .vehicleID2{
+  left: 272px;
+}
+
+.vp012_2 .vehicleID .vehicleID3{
+  left: 302px;
+}
+
+.vp012_2 .vehicleID .vehicleID4{
+  left: 333px;
+}
+
+.vp012_2 .vehicleID .vehicleID5{
+  left: 363px;
+}
+
+.vp012_2 .vehicleID .vehicleID6{
+  left: 394px;
+}
+
+.vp012_2 .vehicleID .vehicleID7{
+  left: 424px;
+}
+
+.vp012_2 .vehicleID .vehicleID8{
+  left: 454px;
+}
+
+.vp012_2 .vehicleID .vehicleID9{
+  left: 485px;
+}
+
+.vp012_2 .vehicleID .vehicleID10{
+  left: 515px;
+}
+
+.vp012_2 .vehicleID .vehicleID11{
+  left: 545px;
+}
+
+.vp012_2 .vehicleID .vehicleID12{
+  left: 576px;
+}
+
+.vp012_2 .vehicleID .vehicleID13{
+  left: 606px;
+}
+
+.vp012_2 .vehicleID .vehicleID14{
+  left: 636px;
+}
+
+.vp012_2 .vehicleID .vehicleID15{
+  left: 666px;
+}
+
+.vp012_2 .vehicleID .vehicleID16{
+  left: 697px;
+}
+
+.vp012_2 .vehicleID .vehicleID17{
+  left: 727px;
+}
+
+.vp012_2 .vehicleID .vehicleID18{
+  left: 757px;
+}
+
+.vp012_2 .year{
+  top: 125px;
+  left: 86px;
+  width: 176px;
+}
+
+.vp012_2 .make{
+  top: 125px;
+  left: 317px;
+  width: 176px;
+}
+
+.vp012_2 .model{
+  top: 125px;
+  left: 550px;
+  width: 250px;
+}
+
+.vp012_2 .nevadaLic{
+  top: 153px;
+  left: 240px;
+  width: 266px;
+}
+
+.vp012_2 .firstName1{
+  top: 222px;
+  left: 174px;
+  width: 190px;
+}
+
+.vp012_2 .middleName1{
+  top: 222px;
+  left: 380px;
+  width: 170px;
+}
+
+.vp012_2 .lastName1{
+  top: 222px;
+  left: 570px;
+  width: 222px;
+}
+
+.vp012_2 .driverLic1{
+  top: 258px;
+  left: 624px;
+  width: 168px;
+}
+
+.vp012_2 .address1{
+  top: 281px;
+  left: 174px;
+  width: 260px;
+}
+
+.vp012_2 .city1{
+  top: 281px;
+  left: 450px;
+  width: 170px;
+}
+
+.vp012_2 .state1{
+  top: 281px;
+  left: 636px;
+  width: 50px;
+}
+
+.vp012_2 .zip1{
+  top: 281px;
+  left: 700px;
+  width: 92px;
+}
+
+.vp012_2 .address2{
+  top: 317px;
+  left: 174px;
+  width: 260px;
+}
+
+.vp012_2 .city2{
+  top: 317px;
+  left: 450px;
+  width: 170px;
+}
+
+.vp012_2 .state2{
+  top: 317px;
+  left: 636px;
+  width: 50px;
+}
+
+.vp012_2 .zip2{
+  top: 317px;
+  left: 700px;
+  width: 92px;
+}
+

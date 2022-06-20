@@ -1,11 +1,11 @@
 import * as React from "react";
-import Form from './forms/1_form/Form_1';
-import Form_2 from './forms/1_form/Form_2';
+import ExampleFormPage1 from '../formPages/Example/Form1';
+import ExampleFormPage2 from '../formPages/Example/Form2';
 
 export const Content = React.forwardRef((props, ref) => (
   <div ref={ref}>
-    <Form inputsValue={props}/>
-    <Form_2 inputsValue={props}/>
+    <ExampleFormPage1/>
+    <ExampleFormPage2/>
   </div>
     
   ));

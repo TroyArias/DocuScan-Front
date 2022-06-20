@@ -1,10 +1,15 @@
+import React, { useContext } from "react";
+import { Context } from "../../context";
 
-function Form(props) {
+
+function ExampleFormPage1() {
+
+  const [lastName, setLastName, firstName, setFirstName, middleName, setMiddleName, 
+    dateOfBirth, setDateOfBirth, street, setStreet, cityStateZip, setCityStateZip, placeOfBirth, setPlaceOfBirth] = useContext(Context);
 
   return (
-    <div className="App">
-        
-        <div id="invoice" className="form_1">
+
+        <div className="form_1">
           <input type="checkbox" className="box_1"/>
           <input type="checkbox" className="box_2"/>
           <input type="checkbox" className="box_3"/>
@@ -62,8 +67,8 @@ function Form(props) {
             </label>
           </div>
 
-          <input className="lastName" type="text" value={props.inputsValue.lastName} onChange={(event)=>{props.inputsValue.setLastName(event.target.value)}}/>
-          <input className="firstName" type="text" value={props.inputsValue.firstName} onChange={(event)=>{props.inputsValue.setFirstName(event.target.value)}}/>
+          <input className="lastName" type="text" value={lastName} onChange={(event)=>{setLastName(event.target.value)}}/>
+          <input className="firstName" type="text" value={firstName} onChange={(event)=>{setFirstName(event.target.value)}}/>
           <input className="suffix" type="text"/>
           <input className="nevadaIdNumber" type="text"/>
           <input className="socialSecurityNumber" type="text"/>
@@ -79,15 +84,14 @@ function Form(props) {
           <input className="email" type="text"/>
           <input className="phone_code" type="text"/>
           <input className="phone_number" type="text"/>
-          <input className="middleName" type="text" value={props.inputsValue.middleName} onChange={(event)=>{props.inputsValue.setMiddleName(event.target.value)}}/>
-          <input className="dateOfBirth" type="text" value={props.inputsValue.dateOfBirth} onChange={(event)=>{props.inputsValue.setDateOfBirth(event.target.value)}}/>
-          <input className="street" type="text" value={props.inputsValue.street} onChange={(event)=>{props.inputsValue.setStreet(event.target.value)}}/>
-          <input className="cityStateZip" type="text" value={props.inputsValue.cityStateZip} onChange={(event)=>{props.inputsValue.setCityStateZip(event.target.value)}}/>
-          <input className="placeOfBirth" type="text" value={props.inputsValue.placeOfBirth} onChange={(event)=>{props.inputsValue.setPlaceOfBirth(event.target.value)}}/>  
+          <input className="middleName" type="text" value={middleName} onChange={(event)=>{setMiddleName(event.target.value)}}/>
+          <input className="dateOfBirth" type="text" value={dateOfBirth} onChange={(event)=>{setDateOfBirth(event.target.value)}}/>
+          <input className="street" type="text" value={street} onChange={(event)=>{setStreet(event.target.value)}}/>
+          <input className="cityStateZip" type="text" value={cityStateZip} onChange={(event)=>{setCityStateZip(event.target.value)}}/>
+          <input className="placeOfBirth" type="text" value={placeOfBirth} onChange={(event)=>{setPlaceOfBirth(event.target.value)}}/>  
         </div>
-      
-    </div>
+ 
   );
 }
 
-export default Form;
+export default ExampleFormPage1;

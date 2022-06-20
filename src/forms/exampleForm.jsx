@@ -1,14 +1,14 @@
-import { Content } from './content';
+import { Content } from '../forPrint/content';
 import { useReactToPrint } from 'react-to-print';
-import { useState, useCallback, useRef } from 'react';
+import React, { useState, useCallback, useRef } from 'react';
+import { AiOutlineDownload} from 'react-icons/ai';
 import {useDropzone} from 'react-dropzone';
-import Drag from "./drag&drop"
+import Drag from "../dragDrop"
+import { Context } from "../context.jsx";
+import {TEXT_DELIMITER, FIELDS_DELIMITER, WHITESPACE_DELIMITER} from "../constants.jsx"
 
-function Form1(props) {
+function ExampleForm(props) {
 
-  const TEXT_DELIMITER = '\n';
-  const FIELDS_DELIMITER = ',';
-  const WHITESPACE_DELIMITER = ' ';
   const user = {};
 
   const [lastName, setLastName] = useState('');
@@ -68,7 +68,6 @@ function Form1(props) {
         setCityStateZip(user.city + ' ' + user.state + ' ' + user.zipCode)
         setPlaceOfBirth(user.state + ' ' + user.placeOfBirth)
 
-
       }
       reader.readAsText(file)
     })
@@ -82,15 +81,22 @@ function Form1(props) {
     content: () => componentRef.current,
     documentTitle: "AwesomeFileName",
   });
+
+  const contextObj = [lastName, setLastName, firstName, setFirstName, middleName, setMiddleName, 
+    dateOfBirth, setDateOfBirth, street, setStreet, cityStateZip, setCityStateZip, placeOfBirth, setPlaceOfBirth]
+
  
   return (
-    <div className='formStyle'>
-      <Drag getRootProps={getRootProps} getInputProps={getInputProps}/>
-      <Content ref={componentRef} lastName={lastName} firstName={firstName} middleName={middleName} dateOfBirth={dateOfBirth} street={street} cityStateZip={cityStateZip} placeOfBirth={placeOfBirth}
-      setLastName={setLastName} setFirstName={setFirstName} setMiddleName={setMiddleName} setDateOfBirth={setDateOfBirth} setStreet={setStreet} setCityStateZip={setCityStateZip} setPlaceOfBirth={setPlaceOfBirth}/>
-      <button className='btn' onClick={handlePrint}>PRINT FORM</button>
-    </div>
+    <Context.Provider value={contextObj}>
+      <div className='formStyle'>
+        <Drag getRootProps={getRootProps} getInputProps={getInputProps}/>
+        <Content ref={componentRef}/>
+        <button className='btn' onClick={handlePrint}>
+            <div><AiOutlineDownload/></div>
+        </button>
+      </div>
+    </Context.Provider>
   );
 }
 
-export default Form1;
+export default ExampleForm;
