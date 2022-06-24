@@ -4,11 +4,11 @@ import { Context } from "../../context";
 
 function VP012Page() {
 
-  const [vehicleID, setVehicleID, year, setYear, make, setMake, model, setModel, driverLicense1, setDriverLicense1,
+  const {vehicleID, setVehicleID, year, setYear, make, setMake, model, setModel, driverLicense1, setDriverLicense1,
     zip1, setZip1, setAddress1, address1, setCity1, city1, setState1, state1, lastName1, setLastName1, firstName1, setFirstName1,
     middleName1, setMiddleName1, zip2, setZip2, setAddress2, address2, setCity2, city2, setState2, state2, lastName2, 
     zip3, setZip3, setAddress3, address3, setCity3, city3, setState3, state3, setLastName2, firstName2, setFirstName2, 
-    middleName2, setMiddleName2, zip4, setZip4, setAddress4, address4, setCity4, city4, setState4, state4, driverLicense2, setDriverLicense2] = useContext(Context);
+    middleName2, setMiddleName2, zip4, setZip4, setAddress4, address4, setCity4, city4, setState4, state4, driverLicense2, setDriverLicense2} = useContext(Context);
 
 
   function handleVal(value, index){
@@ -99,20 +99,21 @@ function VP012Page() {
       <input className="input26" type="text"/>
       <input className="input27" type="text"/>
       <input className="input28" type="text"/>
+      <input className="input29" type="text"/>
 
-      <label className="custom-checkbox custom-checkbox1">
+      <label className="custom-checkbox custom-checkbox0121">
         <input type="checkbox"/><span></span>
       </label>
 
-      <label className="custom-checkbox custom-checkbox2">
+      <label className="custom-checkbox custom-checkbox0122">
         <input type="checkbox"/><span></span>
       </label>
 
-      <label className="custom-checkbox custom-checkbox3">
+      <label className="custom-checkbox custom-checkbox0123">
         <input type="checkbox"/><span></span>
       </label>
 
-      <label className="custom-checkbox custom-checkbox4">
+      <label className="custom-checkbox custom-checkbox0124">
         <input type="checkbox"/><span></span>
       </label>
     </div>

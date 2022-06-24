@@ -1,4 +1,3 @@
-import { VP019print } from '../forPrint/VP019';
 import { useReactToPrint } from 'react-to-print';
 import React, { useState, useCallback, useRef } from 'react';
 import { AiOutlineDownload} from 'react-icons/ai';
@@ -6,6 +5,8 @@ import {useDropzone} from 'react-dropzone';
 import Drag from "../dragDrop"
 import { Context } from "../context.jsx";
 import {TEXT_DELIMITER, delimeter, mapFor1Customer} from "../constants.jsx"
+import VP019Page from '../formPages/VP019/Form1';
+import { Content } from '../forPrint/content';
 
 function VP019() {
 
@@ -60,20 +61,20 @@ function VP019() {
   const componentRef = useRef();
   const handlePrint = useReactToPrint({
     content: () => componentRef.current,
-    documentTitle: "VP222",
+    documentTitle: "VP019",
   });
 
-  const contextObj = [name, setName, vehicleID, setVehicleID, year, setYear, 
+  const contextObj = {name, setName, vehicleID, setVehicleID, year, setYear, 
     make, setMake, model, setModel, driverLicense,setDriverLicense, 
     setAddress1, address1, setCity1, city1, setState1, state1, setZip1, zip1,
-    setAddress2, address2, setCity2, city2, setState2, state2, setZip2, zip2]
+    setAddress2, address2, setCity2, city2, setState2, state2, setZip2, zip2}
 
  
   return (
     <Context.Provider value={contextObj}>
       <div className='formStyle'>
         <Drag getRootProps={getRootProps} getInputProps={getInputProps}/>
-        <VP019print ref={componentRef}/>
+        <Content ref={componentRef} pages={[VP019Page]}/>
         <button className='btn' onClick={handlePrint}>
             <div><AiOutlineDownload/></div>
         </button>

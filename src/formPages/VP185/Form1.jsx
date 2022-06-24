@@ -4,9 +4,9 @@ import { Context } from "../../context";
 
 function VP185Page() {
 
-  const [name, setName, driverLicense,setDriverLicense, 
+  const {name, setName, driverLicense,setDriverLicense, 
     setAddress1, address1, setCity1, city1, setState1, state1, setZip1, zip1,
-    setAddress2, address2, setCity2, city2, setState2, state2, setZip2, zip2] = useContext(Context);
+    setAddress2, address2, setCity2, city2, setState2, state2, setZip2, zip2} = useContext(Context);
 
 
   return (

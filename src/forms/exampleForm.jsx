@@ -5,11 +5,13 @@ import { AiOutlineDownload} from 'react-icons/ai';
 import {useDropzone} from 'react-dropzone';
 import Drag from "../dragDrop"
 import { Context } from "../context.jsx";
-import {TEXT_DELIMITER, FIELDS_DELIMITER, WHITESPACE_DELIMITER} from "../constants.jsx"
+import {TEXT_DELIMITER, delimeter, mapFor1Customer,} from "../constants.jsx"
+import ExampleFormPage1 from '../formPages/Example/Form1';
+import ExampleFormPage2 from '../formPages/Example/Form2';
 
 function ExampleForm(props) {
 
-  const user = {};
+  let user = {};
 
   const [lastName, setLastName] = useState('');
   const [firstName, setFirstName] = useState('');
@@ -22,43 +24,11 @@ function ExampleForm(props) {
   const onDrop = useCallback((acceptedFiles) => {
     acceptedFiles.forEach((file) => {
       const reader = new FileReader()
-
-      reader.onabort = () => console.log('file reading was aborted')
-      reader.onerror = () => console.log('file reading has failed')
       reader.onload = (file) => {
-
-        const requiredFields = new Map([
-          ['DCS', 'lastName'],
-          ['DCT', 'firstName,middleName'],
-          ['DBB', 'dateOfBirth'],
-          ['DAG', 'street'],
-          ['DAI', 'city'],
-          ['DAJ', 'state'],
-          ['DAK', 'zipCode'],
-          ['DCG', 'placeOfBirth']
-        ])
-        
+   
         const text = file.target.result.split(TEXT_DELIMITER);
-        
-        requiredFields.forEach((value, key) => {
-          text.forEach(e => {
-            if(e.startsWith(key)) {
-  
-              const textValue = e.replace(key, '').replace(' \r', '').trim();
-              if(value.includes(FIELDS_DELIMITER)){
-                const fields = value.split(FIELDS_DELIMITER);
-                const values = textValue.split(WHITESPACE_DELIMITER);
-  
-                fields.forEach((field, i) => {
-                  user[field] = values[i];
-                })
-  
-              } else {
-                user[value] = textValue;
-              }
-            }
-          })
-        });
+
+        user = delimeter(mapFor1Customer, text)
   
         setLastName(user.lastName)
         setFirstName(user.firstName)
@@ -82,15 +52,15 @@ function ExampleForm(props) {
     documentTitle: "AwesomeFileName",
   });
 
-  const contextObj = [lastName, setLastName, firstName, setFirstName, middleName, setMiddleName, 
-    dateOfBirth, setDateOfBirth, street, setStreet, cityStateZip, setCityStateZip, placeOfBirth, setPlaceOfBirth]
+  const contextObj = {lastName, setLastName, firstName, setFirstName, middleName, setMiddleName, 
+    dateOfBirth, setDateOfBirth, street, setStreet, cityStateZip, setCityStateZip, placeOfBirth, setPlaceOfBirth}
 
  
   return (
     <Context.Provider value={contextObj}>
       <div className='formStyle'>
         <Drag getRootProps={getRootProps} getInputProps={getInputProps}/>
-        <Content ref={componentRef}/>
+        <Content ref={componentRef} pages={[ExampleFormPage1, ExampleFormPage2]}/>
         <button className='btn' onClick={handlePrint}>
             <div><AiOutlineDownload/></div>
         </button>

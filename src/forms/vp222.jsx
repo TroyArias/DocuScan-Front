@@ -1,4 +1,3 @@
-import { VP222print } from '../forPrint/VP222';
 import { useReactToPrint } from 'react-to-print';
 import React, { useState, useCallback, useRef } from 'react';
 import { AiOutlineDownload} from 'react-icons/ai';
@@ -6,6 +5,8 @@ import {useDropzone} from 'react-dropzone';
 import Drag from "../dragDrop"
 import { Context } from "../context.jsx";
 import {TEXT_DELIMITER, delimeter, mapFor1Customer} from "../constants.jsx"
+import VP222Page from '../formPages/VP222/Form1';
+import { Content } from '../forPrint/content';
 
 function VP222() {
 
@@ -17,9 +18,9 @@ function VP222() {
   const [make, setMake] = useState('');
   const [model, setModel] = useState('');
   const [weight, setWeight] = useState('');
-  const [lastName, setLastName] = useState('');
-  const [firstName, setFirstName] = useState('');
-  const [middleName, setMiddleName] = useState('');
+  const [lastName1, setLastName1] = useState('');
+  const [firstName1, setFirstName1] = useState('');
+  const [middleName1, setMiddleName1] = useState('');
   const [address1, setAddress1] = useState('');
   const [city1, setCity1] = useState('');
   const [state1, setState1] = useState('');
@@ -43,9 +44,9 @@ function VP222() {
         setMake(user.make)
         setModel(user.model)
         if (user.weight !== undefined) {setWeight(user.weight.replace(/^0+/, ''))}
-        setLastName(user.lastName)
-        setMiddleName(user.middleName)
-        setFirstName(user.firstName)
+        setLastName1(user.lastName)
+        setMiddleName1(user.middleName)
+        setFirstName1(user.firstName)
         setAddress1(user.address)
         user.city2 === undefined ? setCity1(user.city) : setCity1(user.city + ' ' + user.city2)
         setState1(user.state)
@@ -70,18 +71,18 @@ function VP222() {
     documentTitle: "VP222",
   });
 
-  const contextObj = [firstName, setFirstName, middleName, setMiddleName, lastName, setLastName, 
+  const contextObj = {firstName1, setFirstName1, middleName1, setMiddleName1, lastName1, setLastName1, 
     vehicleID, setVehicleID, year, setYear, make, setMake, model, setModel, weight, setWeight, 
     setAddress1, address1, setCity1, city1, setState1, state1, zip1, setZip1,
     setAddress2, address2, setCity2, city2, setState2, state2, zip2, setZip2,
-    driverLicense, setDriverLicense]
+    driverLicense, setDriverLicense}
 
  
   return (
     <Context.Provider value={contextObj}>
       <div className='formStyle'>
         <Drag getRootProps={getRootProps} getInputProps={getInputProps}/>
-        <VP222print ref={componentRef}/>
+        <Content ref={componentRef} pages={[VP222Page]}/>
         <button className='btn' onClick={handlePrint}>
             <div><AiOutlineDownload/></div>
         </button>

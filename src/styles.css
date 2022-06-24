@@ -25,38 +25,114 @@ input:focus {
   outline: none;
 }
 
+.menu{
+  display: flex;
+  justify-content: space-around
+}
+
+.infoList{
+  width: 500px;
+}
+
+.infoList h4{
+  text-align: center;
+}
+
+.infoList input{
+  border-bottom: 1px black solid;
+  background: none;
+  position: relative;
+  margin-top: 7px;
+  margin-left: 10px;
+  width: 350px;
+}
+
+.vehicleInformation{
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between
+}
+
+.vehicleInformation p {
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+}
+
+.ownersInformation{
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between
+}
+
+.ownersInformation p {
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+}
+
+.margin{
+  height: 25px;
+}
+
 .formsList{
-  margin: 80px auto 0;
+  margin: 50px 20px 0;
   display: flex;
   flex-direction: column;
+  width: 550px;
 }
 
-.formsList div{
+.formsListContainer{
+  display: flex;
+  align-items: center;
+}
+
+.formsListContainer input{
+  position: relative;
+}
+
+.listLinks{
   margin: 8px auto;
-  width: 800px;
-  height: 45px;
-  border: #34343f solid 2px;
-  background-color: #34343f;
+  width: 500px;
+  height: 20px;
 }
 
-.formsList div:hover {
-  transform: scale(1.05);
+.listLinks a:hover {
+  transform: scale(1.02);
   transition: 0.3s;
 }
 
-.formsList div:not(:hover) {
+.listLinks a:not(:hover) {
   transform: scale(1);
   transition: 0.3s;
 }
 
-.formsList div a{
+.listLinks a{
   text-decoration: none;
   display: flex;
-  color: white;
+  color: #34343f;
   height: 100%;
-  font-weight: 700;
+  font-weight: 500;
   align-items: center;
   padding-left: 10px;
+}
+
+.customCheckbox>input {
+  z-index: -1;
+  opacity: 0;
+}
+
+.customCheckbox>span::before {
+  content: '';
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  border: #34343f 2px solid;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 80% 80%;
+}
+
+.customCheckbox>input:checked+span::before {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='black' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e");
 }
 
 .formStyle{
@@ -130,7 +206,7 @@ input:focus {
 }
 
 .drag_drop{
-  height: 300px;
+  height: 260px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1993,4 +2069,275 @@ input:focus {
   left: 700px;
   width: 92px;
 }
+
+.vp012_2 .firstName2{
+  top: 353px;
+  left: 175px;
+  width: 190px;
+}
+
+.vp012_2 .middleName2{
+  top: 353px;
+  left: 380px;
+  width: 170px;
+}
+
+.vp012_2 .lastName2{
+  top: 353px;
+  left: 570px;
+  width: 222px;
+}
+
+.vp012_2 .driverLic2{
+  top: 389px;
+  left: 624px;
+  width: 168px;
+}
+
+.vp012_2 .address3{
+  top: 412px;
+  left: 174px;
+  width: 260px;
+}
+
+.vp012_2 .city3{
+  top: 412px;
+  left: 450px;
+  width: 170px;
+}
+
+.vp012_2 .state3{
+  top: 412px;
+  left: 636px;
+  width: 50px;
+}
+
+.vp012_2 .zip3{
+  top: 412px;
+  left: 700px;
+  width: 92px;
+}
+
+.vp012_2 .address4{
+  top: 448px;
+  left: 174px;
+  width: 260px;
+}
+
+.vp012_2 .city4{
+  top: 448px;
+  left: 450px;
+  width: 170px;
+}
+
+.vp012_2 .state4{
+  top: 448px;
+  left: 636px;
+  width: 50px;
+}
+
+.vp012_2 .zip4{
+  top: 448px;
+  left: 700px;
+  width: 92px;
+}
+
+.vp012_2 .input3{
+  top: 514px;
+  left: 174px;
+  width: 619px;
+}
+
+.vp012_2 .input4{
+  top: 537px;
+  left: 586px;
+  width: 207px;
+}
+
+.vp012_2 .input5{
+  top: 560px;
+  left: 113px;
+  width: 320px;
+}
+
+.vp012_2 .input6{
+  top: 560px;
+  left: 450px;
+  width: 170px;
+}
+
+.vp012_2 .input7{
+  top: 560px;
+  left: 636px;
+  width: 50px;
+}
+
+.vp012_2 .input8{
+  top: 560px;
+  left: 700px;
+  width: 92px;
+}
+
+.vp012_2 .input9{
+  top: 597px;
+  left: 148px;
+  width: 645px;
+}
+
+.vp012_2 .input10{
+  top: 620px;
+  left: 586px;
+  width: 207px;
+}
+
+.vp012_2 .input11{
+  top: 642px;
+  left: 113px;
+  width: 320px;
+}
+
+.vp012_2 .input12{
+  top: 642px;
+  left: 450px;
+  width: 170px;
+}
+
+.vp012_2 .input13{
+  top: 642px;
+  left: 636px;
+  width: 50px;
+}
+
+.vp012_2 .input14{
+  top: 642px;
+  left: 700px;
+  width: 92px;
+}
+
+.vp012_2 .input15{
+  top: 714px;
+  left: 148px;
+  width: 645px;
+}
+
+.vp012_2 .input16{
+  top: 737px;
+  left: 112px;
+  width: 280px;
+}
+
+.vp012_2 .input17{
+  top: 737px;
+  left: 410px;
+  width: 170px;
+}
+
+.vp012_2 .input18{
+  top: 737px;
+  left: 594px;
+  width: 70px;
+}
+
+.vp012_2 .input19{
+  top: 737px;
+  left: 680px;
+  width: 112px;
+}
+
+.vp012_2 .input20{
+  top: 830px;
+  left: 408px;
+  width: 388px;
+}
+
+.vp012_2 .input21{
+  top: 859px;
+  left: 224px;
+  width: 198px;
+}
+
+.vp012_2 .input22{
+  top: 886px;
+  left: 81px;
+  width: 547px;
+}
+
+.vp012_2 .input23{
+  top: 886px;
+  left: 687px;
+  width: 117px;
+}
+
+.vp012_2 .input24{
+  top: 923px;
+  left: 112px;
+  width: 280px;
+}
+
+.vp012_2 .input25{
+  top: 923px;
+  left: 410px;
+  width: 170px;
+}
+
+.vp012_2 .input26{
+  top: 923px;
+  left: 594px;
+  width: 70px;
+}
+
+.vp012_2 .input27{
+  top: 923px;
+  left: 680px;
+  width: 120px;
+}
+
+.vp012_2 .input28{
+  top: 961px;
+  left: 325px;
+  width: 97px;
+}
+
+.vp012_2 .input29{
+  top: 990px;
+  left: 50px;
+  width: 320px;
+}
+
+.custom-checkbox0121>span::before {
+  top: 831px;
+  left: 76px;
+}
+.custom-checkbox0121>input {
+  top: 831px;
+  left: 76px;
+}
+
+.custom-checkbox0122>span::before {
+  top: 831px;
+  left: 151px;
+}
+.custom-checkbox0122>input {
+  top: 831px;
+  left: 151px;
+}
+
+.custom-checkbox0123>span::before {
+  top: 831px;
+  left: 239px;
+}
+.custom-checkbox0123>input {
+  top: 831px;
+  left: 239px;
+}
+
+.custom-checkbox0124>span::before {
+  top: 831px;
+  left: 351px;
+}
+.custom-checkbox0124>input {
+  top: 831px;
+  left: 351px;
+}
+
 

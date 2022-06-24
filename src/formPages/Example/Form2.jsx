@@ -1,4 +1,4 @@
-function ExampleFormPage2(props) {
+function ExampleFormPage2() {
 
   return (
     <div className="App">

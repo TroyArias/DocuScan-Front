@@ -17,23 +17,17 @@ export const mapFor1Customer = [
   ['RAG', 'dateRegistExpiration'],
   ['DBB', 'dateOfBirth'],
   ['DCG', 'placeOfBirth'],
-  ['NAA', 'lastName'],
   ['DCS', 'lastName'],
   ['RBD', 'lastName'],
-  ['NAE', 'firstName,middleName'],
   ['DCT', 'firstName,middleName'],
   ['RBENEF', 'firstName'],
-  ['NAR', 'address'],
   ['DAG', 'address'],
   ['RBI', 'address'],
-  ['NAT', 'city'],
   ['DAI', 'city'],
   ['RBK', 'city'],
   ['RBL', 'city2'],
-  ['NAU', 'state'],
   ['DAJ', 'state'],
   ['RBM', 'state'],
-  ['NAV', 'zipCode'],
   ['DAK', 'zipCode'],
 ]
 
@@ -51,23 +45,17 @@ export const mapFor2Customer = [
   ['RAG', 'dateRegistExpiration'],
   ['DBB', 'dateOfBirth'],
   ['DCG', 'placeOfBirth'],
-  ['NAA', 'lastName2'],
   ['DCS', 'lastName2'],
   ['RBD', 'lastName2'],
-  ['NAE', 'firstName2,middleName2'],
   ['DCT', 'firstName2,middleName2'],
   ['RBENEF', 'firstName2'],
-  ['NAR', 'address2'],
   ['DAG', 'address2'],
   ['RBI', 'address2'],
-  ['NAT', 'city3'],
   ['DAI', 'city3'],
   ['RBK', 'city3'],
   ['RBL', 'city4'],
-  ['NAU', 'state2'],
   ['DAJ', 'state2'],
   ['RBM', 'state2'],
-  ['NAV', 'zipCode2'],
   ['DAK', 'zipCode2'],
 ]
 
@@ -103,3 +91,4 @@ export function delimeter (map, text) {
 
     return user
 }
+

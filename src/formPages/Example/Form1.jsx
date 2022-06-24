@@ -4,8 +4,9 @@ import { Context } from "../../context";
 
 function ExampleFormPage1() {
 
-  const [lastName, setLastName, firstName, setFirstName, middleName, setMiddleName, 
-    dateOfBirth, setDateOfBirth, street, setStreet, cityStateZip, setCityStateZip, placeOfBirth, setPlaceOfBirth] = useContext(Context);
+  const {lastName, setLastName, firstName, setFirstName, middleName, setMiddleName, 
+    dateOfBirth, setDateOfBirth, street, setStreet, cityStateZip, setCityStateZip,
+    placeOfBirth, setPlaceOfBirth} = useContext(Context);
 
   return (
 

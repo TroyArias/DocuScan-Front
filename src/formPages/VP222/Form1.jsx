@@ -4,11 +4,11 @@ import { Context } from "../../context";
 
 function VP222Page() {
 
-  const [firstName, setFirstName, middleName, setMiddleName, lastName, setLastName, 
+  const {firstName1, setFirstName1, middleName1, setMiddleName1, lastName1, setLastName1, 
     vehicleID, setVehicleID, year, setYear, make, setMake, model, setModel, weight, setWeight, 
     setAddress1, address1, setCity1, city1, setState1, state1, zip1, setZip1, 
     setAddress2, address2, setCity2, city2, setState2, state2, zip2, setZip2,
-    driverLicense, setDriverLicense] = useContext(Context);
+    driverLicense, setDriverLicense} = useContext(Context);
 
 
   function handleVal(value, index){
@@ -49,9 +49,9 @@ function VP222Page() {
       <input className="weight2" type="text" value={weight} onChange={(event)=>{setWeight(event.target.value)}}/>
       <input className="country" type="text"/>
       <input className="odometer" type="text"/>
-      <input className="firstName" type="text" value={firstName} onChange={(event)=>{setFirstName(event.target.value)}}/>
-      <input className="middleName" type="text" value={middleName} onChange={(event)=>{setMiddleName(event.target.value)}}/>
-      <input className="lastName" type="text" value={lastName} onChange={(event)=>{setLastName(event.target.value)}}/>
+      <input className="firstName" type="text" value={firstName1} onChange={(event)=>{setFirstName1(event.target.value)}}/>
+      <input className="middleName" type="text" value={middleName1} onChange={(event)=>{setMiddleName1(event.target.value)}}/>
+      <input className="lastName" type="text" value={lastName1} onChange={(event)=>{setLastName1(event.target.value)}}/>
       <input className="input1" type="text" value={driverLicense} onChange={(event)=>{setDriverLicense(event.target.value)}}/>
       <input className="address" type="text" value={address1} onChange={(event)=>{setAddress1(event.target.value)}}/>
       <input className="city" type="text" value={city1} onChange={(event)=>{setCity1(event.target.value)}}/>
