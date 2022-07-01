@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import React, { useState, useCallback, useRef } from 'react';
 import { useReactToPrint } from 'react-to-print';
 import {useDropzone} from 'react-dropzone';
@@ -6,14 +5,10 @@ import { AiOutlineDownload} from 'react-icons/ai';
 import Drag from "./dragDrop"
 import {TEXT_DELIMITER, delimeter, mapFor1Customer, mapFor2Customer} from "./constants.jsx"
 import { Content } from './forPrint/content';
-import ExampleFormPage1 from './formPages/Example/Form1';
-import ExampleFormPage2 from './formPages/Example/Form2';
-import VP012Page1 from './formPages/VP012/Form1';
-import VP012Page2 from './formPages/VP012/Form2';
-import VP019Page from './formPages/VP019/Form1';
-import VP185Page from './formPages/VP185/Form1';
-import VP247Page from './formPages/VP247/Form1';
-import VP222Page from './formPages/VP222/Form1';
+import ListOfForms from './listOfForms';
+import FirstOwner from './1owner';
+import SecondOwner from './2owner';
+import VehicleInfo from './vehicleInfo';
 import { Context } from "./context.jsx";
 
 function FormsList() {
@@ -24,7 +19,7 @@ function FormsList() {
   const [regNumber, setRegNumber] = useState('RS90')
   const [representative, setRepresentative] = useState('T.ARIAS, F.ARIAS, J.GLENN, B.OCHOA')
   const [phone, setPhone] = useState('702-315-4402')
-  const [vehicleID, setVehicleID] = useState([]);
+  const [vehicleID, setVehicleID] = useState('');
   const [year, setYear] = useState('');
   const [make, setMake] = useState('');
   const [model, setModel] = useState('');
@@ -57,7 +52,9 @@ function FormsList() {
   const [zip4, setZip4] = useState('');
   const [arrValues, setArrValues] = useState([]);
   const [arrForms, setArrForms] = useState([]);
-  const [name, setName] = useState('');
+  const [name, setName] = useState({firstName: '', middleName: '', lastName: ''});
+  const [variant, setVariant] = useState('');
+  const [checked, setChecked] = useState(true);
 
   const onDrop = useCallback((acceptedFiles) => {
 
@@ -114,7 +111,7 @@ function FormsList() {
       setModel(user.model)
       setBody(user.vechBody)
       setFuel(user.fuelType)
-      user.middleName === undefined ? setName(user.firstName + ' ' + user.lastName) : setName(user.firstName + ' ' + user.middleName + ' ' + user.lastName)
+      if(user.firstName !== undefined && user.lastName !== undefined){setName({...name, firstName: user.firstName, lastName: user.lastName, middleName: user.middleName})}
       if (user.weight !== undefined) {setWeight(user.weight.replace(/^0+/, ''))}
 
       numCallbackRuns++
@@ -126,76 +123,14 @@ function FormsList() {
     
   }, [])
 
-  
+  function changeOwners(e) {
 
-  function checkValue(e) {
-
-    let value = e.target.value;
-
-    if (value === 'ExampleFormPage'){
-
-      if (!arrValues.includes(value)) {
-        setArrForms([...arrForms, ExampleFormPage1, ExampleFormPage2]);
-        setArrValues([...arrValues, value]);
-      } else {
-        setArrForms(arrForms.filter(function(f) { return (f !== ExampleFormPage1 && f !== ExampleFormPage2)}))
-        setArrValues(arrValues.filter(function(f) { return f !== value }));
-      }
-    }
-    
-    if (value === 'VP247Page'){
-
-      if (!arrValues.includes(value)) {
-        setArrForms([...arrForms, VP247Page]);
-        setArrValues([...arrValues, value]);
-      } else {
-        setArrForms(arrForms.filter(function(f) { return f !== VP247Page}))
-        setArrValues(arrValues.filter(function(f) { return f !== value }));
-      }
-    }
-
-    if (value === 'VP222Page'){
-
-      if (!arrValues.includes(value)) {
-        setArrForms([...arrForms, VP222Page]);
-        setArrValues([...arrValues, value]);
-      } else {
-        setArrForms(arrForms.filter(function(f) { return f !== VP222Page}))
-        setArrValues(arrValues.filter(function(f) { return f !== value }));
-      }
-    }
-
-    if (value === 'VP019Page'){
-
-      if (!arrValues.includes(value)) {
-        setArrForms([...arrForms, VP019Page]);
-        setArrValues([...arrValues, value]);
-      } else {
-        setArrForms(arrForms.filter(function(f) { return f !== VP019Page}))
-        setArrValues(arrValues.filter(function(f) { return f !== value }));
-      }
-    }
-
-    if (value === 'VP185Page'){
-
-      if (!arrValues.includes(value)) {
-        setArrForms([...arrForms, VP185Page]);
-        setArrValues([...arrValues, value]);
-      } else {
-        setArrForms(arrForms.filter(function(f) { return f !== VP185Page}))
-        setArrValues(arrValues.filter(function(f) { return f !== value }));
-      }
-    }
-
-    if (value === 'VP012Page'){
-
-      if (!arrValues.includes(value)) {
-        setArrForms([...arrForms, VP012Page1, VP012Page2]);
-        setArrValues([...arrValues, value]);
-      } else {
-        setArrForms(arrForms.filter(function(f) { return (f !== VP012Page1 && f!== VP012Page2)}))
-        setArrValues(arrValues.filter(function(f) { return f !== value }));
-      }
+    if (e.target.value === '1'){
+      setVariant("1")
+      setChecked(!checked);
+    } else { 
+     setVariant("2")
+     setChecked(!checked);
     }
   
   }
@@ -205,7 +140,7 @@ function FormsList() {
   const componentRef = useRef();
   const handlePrint = useReactToPrint({
     content: () => componentRef.current,
-    documentTitle: "VP247",
+    documentTitle: "forms",
   });
 
   const contextObj = {vehicleID, setVehicleID, year, setYear, make, setMake, model, setModel, weight, setWeight, regNumber, setRegNumber, 
@@ -213,7 +148,8 @@ function FormsList() {
     zip1, setZip1, setAddress1, address1, setCity1, city1, setState1, state1, lastName1, setLastName1, firstName1, setFirstName1,
     middleName1, setMiddleName1, zip2, setZip2, setAddress2, address2, setCity2, city2, setState2, state2, lastName2, 
     zip3, setZip3, setAddress3, address3, setCity3, city3, setState3, state3, setLastName2, firstName2, setFirstName2, 
-    middleName2, setMiddleName2, zip4, setZip4, setAddress4, address4, setCity4, city4, setState4, state4, driverLicense2, setDriverLicense2, name, setName,}
+    middleName2, setMiddleName2, zip4, setZip4, setAddress4, address4, setCity4, city4, setState4, state4, driverLicense2, setDriverLicense2, 
+    name, setName, arrValues, setArrValues, arrForms, setArrForms}
 
 
   return (
@@ -227,156 +163,29 @@ function FormsList() {
 
       <div className="menu">
 
-        <div className="formsList">
-      
-          <h3>List of forms</h3>
-
-          <div className="formsListContainer">
-            <label className="customCheckbox customCheckbox2">
-              <input onChange={checkValue} type="checkbox" value="VP247Page" /><span></span>
-            </label>
-            <div className="listLinks"><Link to = "/vp247">Registration Service Transaction Request VP247</Link></div>
-          </div>
-
-          <div className="formsListContainer">
-            <label className="customCheckbox customCheckbox3">
-              <input onChange={checkValue} type="checkbox" value="VP222Page" /><span></span>
-            </label>
-            <div className="listLinks"><Link to = "/vp222">Application for Vehicle Registration VP222</Link></div>
-          </div>
-
-          <h3>Ownership Forms</h3>
-
-          <div className="formsListContainer">
-            <label className="customCheckbox customCheckbox4">
-              <input onChange={checkValue} type="checkbox" value="VP019Page" /><span></span>
-            </label>
-            <div className="listLinks"><Link to = "/vp019">Erasure Affidavit VP019</Link></div>
-          </div>
-
-          <div className="formsListContainer">
-            <label className="customCheckbox customCheckbox5">
-              <input onChange={checkValue} type="checkbox" value="VP185Page" /><span></span>
-            </label>
-            <div className="listLinks"><Link to = "/vp185">One and the Same Affidavit VP185</Link></div>
-          </div>
-
-
-          <div className="formsListContainer">
-            <label className="customCheckbox customCheckbox6">
-              <input onChange={checkValue} type="checkbox" value="VP012Page" /><span></span>
-            </label>
-            <div className="listLinks"><Link to = "/vp012">Application for Duplicate Nevada Certificate of Title VP012</Link></div>
-          </div>
-
-        </div>
-
+        <ListOfForms/>
 
         <div className="infoList">
           <h4>Vehicle information</h4>
-
-          <div className="vehicleInformation">
-            <p>VIN</p><input className="vehicleID" type="text" value={vehicleID} onChange={(event)=>{setVehicleID(event.target.value)}}/>
-          </div>
-
-          <div className="vehicleInformation">
-            <p>Year</p><input className="year" type="text" value={year} onChange={(event)=>{setYear(event.target.value)}}/>
-          </div>
-
-          <div className="vehicleInformation">
-            <p>Body type</p><input className="bodyType" type="text" value={body} onChange={(event)=>{setBody(event.target.value)}}/>
-          </div>
-
-          <div className="vehicleInformation">
-            <p>Model</p><input className="model" type="text" value={model} onChange={(event)=>{setModel(event.target.value)}}/>
-          </div>
-
-          <div className="vehicleInformation">
-            <p>Make</p><input className="make" type="text" value={make} onChange={(event)=>{setMake(event.target.value)}}/>
-          </div>
-
-          <div className="vehicleInformation">
-            <p>Fuel</p><input className="fuel" type="text" value={fuel} onChange={(event)=>{setFuel(event.target.value)}}/>
-          </div>
-
-          <div className="vehicleInformation">
-            <p>Gross Wt</p><input className="weight" type="text" value={weight} onChange={(event)=>{setWeight(event.target.value)}}/>
-          </div>
-
+          
+          <VehicleInfo/>
 
           <h4>Owner information</h4>
 
-          <div className="ownersInformation">
-            <p>First name</p><input className="firstName1" type="text" value={firstName1} onChange={(event)=>{setFirstName1(event.target.value)}}/>
+          <div className ="ownerRadio">
+            <div className ="ownerList">
+              <input type="radio" id="html" value="1" name="owners" onChange={changeOwners} defaultChecked={checked}/>
+              <label htmlFor="html">1 owner</label>
+            </div>
+              
+            <div className ="ownerList">
+              <input type="radio" id="2owner" value="2" name="owners" onChange={changeOwners}/>
+              <label htmlFor="2owner">2 owners</label>
+            </div>
           </div>
-
-          <div className="ownersInformation">
-            <p>Middle name</p><input className="middleName1" type="text" value={middleName1} onChange={(event)=>{setMiddleName1(event.target.value)}}/>
-          </div>
-
-          <div className="ownersInformation">
-            <p>Last name</p><input className="lastName1" type="text" value={lastName1} onChange={(event)=>{setLastName1(event.target.value)}}/>
-          </div>
-
-          <div className="ownersInformation">
-            <p>DL/ID No.</p><input className="vehicleID" type="text" value={driverLicense1} onChange={(event)=>{setDriverLicense1(event.target.value)}}/>
-          </div>
-
-          <div className="ownersInformation">
-            <p>Address</p><input className="address1" type="text" value={address1} onChange={(event)=>{setAddress1(event.target.value)}}/>
-          </div>
-
-          <div className="ownersInformation">
-            <p>City</p><input className="city1" type="text" value={city1} onChange={(event)=>{setCity1(event.target.value)}}/>
-          </div>
-
-          <div className="ownersInformation">
-            <p>State</p><input className="state1" type="text" value={state1} onChange={(event)=>{setState1(event.target.value)}}/>
-          </div>
-
-          <div className="ownersInformation">
-            <p>Zip Code</p><input className="zip1" type="text" value={zip1} onChange={(event)=>{setZip1(event.target.value)}}/>
-          </div>
-
-
-          <div className="margin"></div>
-
-
-          <div className="ownersInformation">
-            <p>First name</p><input className="firstName1" type="text" value={firstName2} onChange={(event)=>{setFirstName2(event.target.value)}}/>
-          </div>
-
-          <div className="ownersInformation">
-            <p>Middle name</p><input className="middleName1" type="text" value={middleName2} onChange={(event)=>{setMiddleName2(event.target.value)}}/>
-          </div>
-
-          <div className="ownersInformation">
-            <p>Last name</p><input className="lastName1" type="text" value={lastName2} onChange={(event)=>{setLastName2(event.target.value)}}/>
-          </div>
-
-          <div className="ownersInformation">
-            <p>DL/ID No.</p><input className="vehicleID" type="text" value={driverLicense2} onChange={(event)=>{setDriverLicense2(event.target.value)}}/>
-          </div>
-
-          <div className="ownersInformation">
-            <p>Address</p><input className="address1" type="text" value={address3} onChange={(event)=>{setAddress3(event.target.value)}}/>
-          </div>
-
-          <div className="ownersInformation">
-            <p>City</p><input className="city1" type="text" value={city3} onChange={(event)=>{setCity3(event.target.value)}}/>
-          </div>
-
-          <div className="ownersInformation">
-            <p>State</p><input className="state1" type="text" value={state3} onChange={(event)=>{setState3(event.target.value)}}/>
-          </div>
-
-          <div className="ownersInformation">
-            <p>Zip Code</p><input className="zip1" type="text" value={zip3} onChange={(event)=>{setZip3(event.target.value)}}/>
-          </div>
-
+          {variant == 2? <><FirstOwner/><div className="margin"></div><SecondOwner/></> : <FirstOwner/>}
+         
         </div>
-
-
       </div>
 
       <div className='formStyle'>

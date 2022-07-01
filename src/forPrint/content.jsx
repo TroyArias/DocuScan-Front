@@ -4,7 +4,6 @@ export const Content = React.forwardRef((props, ref) => (
   <div ref={ref}>
     {props.pages.map(page => (page()))}
   </div>
-    
   ));
   
   const ref = React.createRef();

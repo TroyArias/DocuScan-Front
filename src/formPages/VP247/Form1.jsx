@@ -16,6 +16,7 @@ function VP247Page() {
     let vehicleID2 = [...vehicleID]
     vehicleID2[index] = value
     setVehicleID(vehicleID2)
+    
   }
 
   return (

@@ -4,7 +4,7 @@ import { Context } from "../../context";
 
 function VP185Page() {
 
-  const {name, setName, driverLicense,setDriverLicense, 
+  const {name, setName, driverLicense1, setDriverLicense1, 
     setAddress1, address1, setCity1, city1, setState1, state1, setZip1, zip1,
     setAddress2, address2, setCity2, city2, setState2, state2, setZip2, zip2} = useContext(Context);
 
@@ -12,7 +12,7 @@ function VP185Page() {
   return (
     <div className="vp185">
 
-      <input className="name" type="text" value={name} onChange={(event)=>{setName(event.target.value)}}/>
+<input className="name" type="text" value={name.middleName === undefined ? name.firstName + " " + name.lastName : name.firstName + " " + name.middleName + " " + name.lastName}/>
 
       <input className="address1" type="text" value={address1} onChange={(event)=>{setAddress1(event.target.value)}}/>
       <input className="city1" type="text" value={city1} onChange={(event)=>{setCity1(event.target.value)}}/>
@@ -26,7 +26,7 @@ function VP185Page() {
 
       <input className="input1" type="text" />
       <input className="input2" type="text" />
-      <input className="input3" type="text" value={driverLicense} onChange={(event)=>{setDriverLicense(event.target.value)}}/>
+      <input className="input3" type="text" value={driverLicense1} onChange={(event)=>{setDriverLicense1(event.target.value)}}/>
       <input className="input4" type="text" />
       <input className="input5" type="text" />
       <input className="input6" type="text" />

@@ -4,16 +4,20 @@ import { Context } from "../../context";
 
 function VP019Page() {
 
-  const {name, setName, vehicleID, setVehicleID, year, setYear, 
-    make, setMake, model, setModel, driverLicense,setDriverLicense, 
-    setAddress1, address1, setCity1, city1, setState1, state1, setZip1, zip1,
-    setAddress2, address2, setCity2, city2, setState2, state2, setZip2, zip2} = useContext(Context);
+  const {vehicleID, setVehicleID, year, setYear, make, setMake, model, setModel, zip1, setZip1, setAddress1, address1, setCity1, 
+    city1, setState1, state1, zip2, setZip2,  setAddress2, address2, setCity2, city2, setState2, state2, driverLicense1, 
+    setDriverLicense1, name, setName} = useContext(Context);
 
 
   return (
+
+    
     <div className="vp019">
 
-      <input className="vehicleID" type="text" value={vehicleID} onChange={(event)=>{setVehicleID(event.target.value)}}/>
+      {typeof vehicleID === "object" ? 
+      <input className="vehicleID" type="text" value={vehicleID.join('')} onChange={(event)=>{setVehicleID(event.target.value)}}/>: 
+      <input className="vehicleID" type="text" value={vehicleID} onChange={(event)=>{setVehicleID(event.target.value)}}/>}
+      
       <input className="year" type="text" value={year} onChange={(event)=>{setYear(event.target.value)}}/>
       <input className="make" type="text" value={make} onChange={(event)=>{setMake(event.target.value)}}/>
       <input className="model" type="text" value={model} onChange={(event)=>{setModel(event.target.value)}}/>
@@ -22,9 +26,9 @@ function VP019Page() {
       <input className="input2" type="text" />
       <input className="input3" type="text" />
 
-      <input className="name" type="text" value={name} onChange={(event)=>{setName(event.target.value)}}/>
+      <input className="name" type="text" value={name.middleName === undefined ? name.firstName + " " + name.lastName : name.firstName + " " + name.middleName + " " + name.lastName} />
 
-      <input className="input4" type="text" value={driverLicense} onChange={(event)=>{setDriverLicense(event.target.value)}}/>
+      <input className="input4" type="text" value={driverLicense1} onChange={(event)=>{setDriverLicense1(event.target.value)}}/>
 
       <input className="address1" type="text" value={address1} onChange={(event)=>{setAddress1(event.target.value)}}/>
       <input className="city1" type="text" value={city1} onChange={(event)=>{setCity1(event.target.value)}}/>

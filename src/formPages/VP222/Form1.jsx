@@ -4,17 +4,14 @@ import { Context } from "../../context";
 
 function VP222Page() {
 
-  const {firstName1, setFirstName1, middleName1, setMiddleName1, lastName1, setLastName1, 
-    vehicleID, setVehicleID, year, setYear, make, setMake, model, setModel, weight, setWeight, 
-    setAddress1, address1, setCity1, city1, setState1, state1, zip1, setZip1, 
-    setAddress2, address2, setCity2, city2, setState2, state2, zip2, setZip2,
-    driverLicense, setDriverLicense} = useContext(Context);
+  const {vehicleID, setVehicleID, year, setYear, make, setMake, model, setModel, weight, setWeight, driverLicense1, setDriverLicense1,
+    zip1, setZip1, setAddress1, address1, setCity1, city1, setState1, state1, lastName1, setLastName1, firstName1, setFirstName1,
+    middleName1, setMiddleName1, zip2, setZip2, setAddress2, address2, setCity2, city2, setState2, state2} = useContext(Context);
 
 
   function handleVal(value, index){
     let vehicleID2 = [...vehicleID]
     vehicleID2[index] = value
-    console.log(vehicleID2)
     setVehicleID(vehicleID2)
   }
 
@@ -52,7 +49,7 @@ function VP222Page() {
       <input className="firstName" type="text" value={firstName1} onChange={(event)=>{setFirstName1(event.target.value)}}/>
       <input className="middleName" type="text" value={middleName1} onChange={(event)=>{setMiddleName1(event.target.value)}}/>
       <input className="lastName" type="text" value={lastName1} onChange={(event)=>{setLastName1(event.target.value)}}/>
-      <input className="input1" type="text" value={driverLicense} onChange={(event)=>{setDriverLicense(event.target.value)}}/>
+      <input className="input1" type="text" value={driverLicense1} onChange={(event)=>{setDriverLicense1(event.target.value)}}/>
       <input className="address" type="text" value={address1} onChange={(event)=>{setAddress1(event.target.value)}}/>
       <input className="city" type="text" value={city1} onChange={(event)=>{setCity1(event.target.value)}}/>
       <input className="state" type="text" value={state1} onChange={(event)=>{setState1(event.target.value)}}/>
