@@ -9,6 +9,12 @@ import VP185Page from './formPages/VP185/Form1';
 import VP247Page from './formPages/VP247/Form1';
 import VP222Page from './formPages/VP222/Form1';
 import ContractPage from './formPages/ContractPage/Form1';
+import VP104Page from './formPages/VP104/Form1';
+import VP265Page1 from './formPages/VP265/Form1';
+import VP265Page2 from './formPages/VP265/Form2';
+import VP136Page from './formPages/VP136/Form1';
+import VP202Page from './formPages/VP202/Form1';
+
 
 function ListOfForms() {
 
@@ -94,6 +100,51 @@ function ListOfForms() {
             setArrValues(arrValues.filter(function(f) { return f !== value }));
           }
         }
+
+        if (value === 'VP104Page'){
+    
+          if (!arrValues.includes(value)) {
+            setArrForms([...arrForms, VP104Page]);
+            setArrValues([...arrValues, value]);
+          } else {
+            setArrForms(arrForms.filter(function(f) { return f !== VP104Page}))
+            setArrValues(arrValues.filter(function(f) { return f !== value }));
+          }
+        }
+
+        if (value === 'VP265Page'){
+    
+          if (!arrValues.includes(value)) {
+            setArrForms([...arrForms, VP265Page1, VP265Page2]);
+            setArrValues([...arrValues, value]);
+          } else {
+            setArrForms(arrForms.filter(function(f) { return (f !== VP265Page1 && f!== VP265Page2)}))
+            setArrValues(arrValues.filter(function(f) { return f !== value }));
+          }
+        }
+
+        if (value === 'VP136Page'){
+    
+          if (!arrValues.includes(value)) {
+            setArrForms([...arrForms, VP136Page]);
+            setArrValues([...arrValues, value]);
+          } else {
+            setArrForms(arrForms.filter(function(f) { return f !== VP136Page}))
+            setArrValues(arrValues.filter(function(f) { return f !== value }));
+          }
+        }
+
+        if (value === 'VP202Page'){
+    
+          if (!arrValues.includes(value)) {
+            setArrForms([...arrForms, VP202Page]);
+            setArrValues([...arrValues, value]);
+          } else {
+            setArrForms(arrForms.filter(function(f) { return f !== VP202Page}))
+            setArrValues(arrValues.filter(function(f) { return f !== value }));
+          }
+        }
+        
       
       }
 
@@ -145,6 +196,37 @@ return (
             <label className="customCheckbox customCheckbox6">
               <input onChange={checkValue} type="checkbox" value="VP012Page" /><span></span>
               <div className="listLinks"><p>Application for Duplicate Nevada Certificate of Title VP012</p></div>
+            </label>
+          </div>
+
+          <div className="formsListContainer">
+            <label className="customCheckbox customCheckbox7">
+              <input onChange={checkValue} type="checkbox" value="VP104Page" /><span></span>
+              <div className="listLinks"><p>Bill of Sale VP104</p></div>
+            </label>
+          </div>
+
+          <div className="formsListContainer">
+            <label className="customCheckbox customCheckbox8">
+              <input onChange={checkValue} type="checkbox" value="VP265Page" /><span></span>
+              <div className="listLinks"><p>Application for Expedited Processing/Shipping of Nevada Title VP265</p></div>
+            </label>
+          </div>
+
+          <div className="formsListContainer">
+            <label className="customCheckbox customCheckbox8">
+              <input onChange={checkValue} type="checkbox" value="VP136Page" /><span></span>
+              <div className="listLinks"><p>Power of Attorney VP136</p></div>
+            </label>
+          </div>
+
+
+          <h3>Registration Forms</h3>
+
+          <div className="formsListContainer">
+            <label className="customCheckbox customCheckbox9">
+              <input onChange={checkValue} type="checkbox" value="VP202Page" /><span></span>
+              <div className="listLinks"><p>Lost, Stolen or Mutilated License Plate Affidavit VP202</p></div>
             </label>
           </div>
 

@@ -2,36 +2,33 @@ import React, { useContext } from "react";
 import { Context } from "../../context";
 
 
-function VP247Page() {
+function VP104Page() {
 
-  const {vehicleID, setVehicleID, year, setYear, make, setMake, model, setModel, weight, setWeight, regNumber, setRegNumber, 
-    representative, setRepresentative, phone, setPhone, fuel, setFuel, body, setBody, businessName, setBusinessName, driverLicense1, setDriverLicense1,
+  const {vehicleID, setVehicleID, year, setYear, make, setMake, model, setModel, weight, setWeight, fuel, setFuel, body, setBody, driverLicense1, setDriverLicense1,
     zip1, setZip1, setAddress1, address1, setCity1, city1, setState1, state1, lastName1, setLastName1, firstName1, setFirstName1,
     middleName1, setMiddleName1, zip2, setZip2, setAddress2, address2, setCity2, city2, setState2, state2, lastName2, 
     zip3, setZip3, setAddress3, address3, setCity3, city3, setState3, state3, setLastName2, firstName2, setFirstName2, 
     middleName2, setMiddleName2, zip4, setZip4, setAddress4, address4, setCity4, city4, setState4, state4, driverLicense2, setDriverLicense2} = useContext(Context);
 
+    function handleVal(value, index){
+      let vehicleID2 = [...vehicleID]
+      vehicleID2[index] = value
+      setVehicleID(vehicleID2)
+    }
 
-  function handleVal(value, index){
-    let vehicleID2 = [...vehicleID]
-    vehicleID2[index] = value
-    setVehicleID(vehicleID2)
-  }
 
   return (
-    <div className="vp247">
 
-      <input className="businessName" type="text" value={businessName} onChange={(event)=>{setBusinessName(event.target.value)}}/>
-      <input className="regNumber" type="text" value={regNumber} onChange={(event)=>{setRegNumber(event.target.value)}}/>
-      <input className="representative" type="text" value={representative} onChange={(event)=>{setRepresentative(event.target.value)}}/>
-      <input className="phone" type="text" value={phone} onChange={(event)=>{setPhone(event.target.value)}}/>
-      <input className="input" type="text"/>
+    
+    <div className="vp104">
+
+      <input className="input1" type="text"/>
+      <input className="input2" type="text"/>
 
       <input className="firstName1" type="text" value={firstName1} onChange={(event)=>{setFirstName1(event.target.value)}}/>
       <input className="middleName1" type="text" value={middleName1} onChange={(event)=>{setMiddleName1(event.target.value)}}/>
       <input className="lastName1" type="text" value={lastName1} onChange={(event)=>{setLastName1(event.target.value)}}/>
-      <input className="input1" type="text" value={driverLicense1} onChange={(event)=>{setDriverLicense1(event.target.value)}}/>
-      <input className="insurance1" type="text"/>
+      <input className="driverLicense1" type="text" value={driverLicense1} onChange={(event)=>{setDriverLicense1(event.target.value)}}/>
       <input className="address1" type="text" value={address1} onChange={(event)=>{setAddress1(event.target.value)}}/>
       <input className="city1" type="text" value={city1} onChange={(event)=>{setCity1(event.target.value)}}/>
       <input className="state1" type="text" value={state1} onChange={(event)=>{setState1(event.target.value)}}/>
@@ -44,8 +41,7 @@ function VP247Page() {
       <input className="firstName2" type="text" value={firstName2} onChange={(event)=>{setFirstName2(event.target.value)}}/>
       <input className="middleName2" type="text" value={middleName2} onChange={(event)=>{setMiddleName2(event.target.value)}}/>
       <input className="lastName2" type="text" value={lastName2} onChange={(event)=>{setLastName2(event.target.value)}}/>
-      <input className="input2" type="text" value={driverLicense2} onChange={(event)=>{setDriverLicense2(event.target.value)}}/>
-      <input className="insurance2" type="text"/>
+      <input className="driverLicense2" type="text" value={driverLicense2} onChange={(event)=>{setDriverLicense2(event.target.value)}}/>
       <input className="address3" type="text" value={address3} onChange={(event)=>{setAddress3(event.target.value)}}/>
       <input className="city3" type="text" value={city3} onChange={(event)=>{setCity3(event.target.value)}}/>
       <input className="state3" type="text" value={state3} onChange={(event)=>{setState3(event.target.value)}}/>
@@ -55,6 +51,7 @@ function VP247Page() {
       <input className="state4" type="text" value={state4} onChange={(event)=>{setState4(event.target.value)}}/>
       <input className="zip4" type="text" value={zip4} onChange={(event)=>{setZip4(event.target.value)}}/>
 
+      <input className="date" type="tex"/>
       <input className="telephone" type="text"/>
       <input className="email" type="text"/>
 
@@ -76,22 +73,13 @@ function VP247Page() {
         <input className="vehicleID15" type="text" maxLength='1' value={vehicleID[14]} onChange={(event)=>{handleVal(event.target.value, 14)}}/>
         <input className="vehicleID16" type="text" maxLength='1' value={vehicleID[15]} onChange={(event)=>{handleVal(event.target.value, 15)}}/>
         <input className="vehicleID17" type="text" maxLength='1' value={vehicleID[16]} onChange={(event)=>{handleVal(event.target.value, 16)}}/>
+        <input className="vehicleID18" type="text" maxLength='1' value={vehicleID[17]} onChange={(event)=>{handleVal(event.target.value, 17)}}/>
       </div>
 
       <input className="year" type="text" value={year} onChange={(event)=>{setYear(event.target.value)}}/>
-      <input className="bodyType" type="text" value={body} onChange={(event)=>{setBody(event.target.value)}}/>
       <input className="model" type="text" value={model} onChange={(event)=>{setModel(event.target.value)}}/>
       <input className="make" type="text" value={make} onChange={(event)=>{setMake(event.target.value)}}/>
       
-      <input className="fuel" type="text" value={fuel} onChange={(event)=>{setFuel(event.target.value)}}/>
-      <input className="weight" type="text" />
-      <input className="length" type="text"/>
-      <input className="country" type="text"/>
-
-      <input className="axles" type="text"/>
-      <input className="weight2" type="text" value={weight} onChange={(event)=>{setWeight(event.target.value)}}/>
-      <input className="odometer" type="text"/>
-
       <input className="input3" type="text"/>
       <input className="input4" type="text"/>
       <input className="input5" type="text"/>
@@ -102,161 +90,25 @@ function VP247Page() {
       <input className="input10" type="text"/>
       <input className="input11" type="text"/>
       <input className="input12" type="text"/>
+      <input className="input13" type="text"/>
+      <input className="input14" type="text"/>
+      <input className="input15" type="text"/>
+      <input className="input16" type="text"/>
+      <input className="input17" type="text"/>
 
-      <label className="custom-checkbox custom-checkbox1">
+      <label className="custom-checkbox custom-checkbox104_1">
         <input type="checkbox"/><span></span>
       </label>
 
-      <label className="custom-checkbox custom-checkbox2">
+      <label className="custom-checkbox custom-checkbox104_2">
         <input type="checkbox"/><span></span>
       </label>
 
-      <label className="custom-checkbox custom-checkbox3">
+      <label className="custom-checkbox custom-checkbox104_3">
         <input type="checkbox"/><span></span>
       </label>
-
-      <label className="custom-checkbox custom-checkbox4">
-        <input type="checkbox"/><span></span>
-      </label>
-
-      <label className="custom-checkbox custom-checkbox5">
-        <input type="checkbox"/><span></span>
-      </label>
-
-      <label className="custom-checkbox custom-checkbox6">
-        <input type="checkbox"/><span></span>
-      </label>
-
-      <label className="custom-checkbox custom-checkbox7">
-        <input type="checkbox"/><span></span>
-      </label>
-
-      <label className="custom-checkbox custom-checkbox8">
-        <input type="checkbox"/><span></span>
-      </label>
-
-      <label className="custom-checkbox custom-checkbox9">
-        <input type="checkbox"/><span></span>
-      </label>
-
-      <label className="custom-checkbox custom-checkbox10">
-        <input type="checkbox"/><span></span>
-      </label>
-
-      <label className="custom-checkbox custom-checkbox11">
-        <input type="checkbox"/><span></span>
-      </label>
-
-      <label className="custom-checkbox custom-checkbox12">
-        <input type="checkbox"/><span></span>
-      </label>
-
-      <label className="custom-checkbox custom-checkbox13">
-        <input type="checkbox"/><span></span>
-      </label>
-
-      <label className="custom-checkbox custom-checkbox14">
-        <input type="checkbox"/><span></span>
-      </label>
-
-      <label className="custom-checkbox custom-checkbox15">
-        <input type="checkbox"/><span></span>
-      </label>
-
-      <label className="custom-checkbox custom-checkbox16">
-        <input type="checkbox"/><span></span>
-      </label>
-
-      <label className="custom-checkbox custom-checkbox17">
-        <input type="checkbox"/><span></span>
-      </label>
-
-      <label className="custom-checkbox custom-checkbox18">
-        <input type="checkbox"/><span></span>
-      </label>
-
-      <label className="custom-checkbox custom-checkbox19">
-        <input type="checkbox"/><span></span>
-      </label>
-
-      <label className="custom-checkbox custom-checkbox20">
-        <input type="checkbox"/><span></span>
-      </label>
-
-      <label className="custom-checkbox custom-checkbox21">
-        <input type="checkbox"/><span></span>
-      </label>
-
-      <label className="custom-checkbox custom-checkbox22">
-        <input type="checkbox"/><span></span>
-      </label>
-
-      <label className="custom-checkbox custom-checkbox23">
-        <input type="checkbox"/><span></span>
-      </label>
-
-      <label className="custom-checkbox custom-checkbox24">
-        <input type="checkbox"/><span></span>
-      </label>
-
-      <label className="custom-checkbox custom-checkbox25">
-        <input type="checkbox"/><span></span>
-      </label>
-
-      <label className="custom-checkbox custom-checkbox26">
-        <input type="checkbox"/><span></span>
-      </label>
-
-      <label className="custom-checkbox custom-checkbox27">
-        <input type="checkbox"/><span></span>
-      </label>
-
-      <label className="custom-checkbox custom-checkbox28">
-        <input type="checkbox"/><span></span>
-      </label>
-
-      <label className="custom-checkbox custom-checkbox29">
-        <input type="checkbox"/><span></span>
-      </label>
-
-      <label className="custom-checkbox custom-checkbox30">
-        <input type="checkbox"/><span></span>
-      </label>
-
-      <label className="custom-checkbox custom-checkbox31">
-        <input type="checkbox"/><span></span>
-      </label>
-
-      <label className="custom-checkbox custom-checkbox32">
-        <input type="checkbox"/><span></span>
-      </label>
-
-      <label className="custom-checkbox custom-checkbox33">
-        <input type="checkbox"/><span></span>
-      </label>
-
-      <label className="custom-checkbox custom-checkbox34">
-        <input type="checkbox"/><span></span>
-      </label>
-
-      <label className="custom-checkbox custom-checkbox35">
-        <input type="checkbox"/><span></span>
-      </label>
-
-      <label className="custom-checkbox custom-checkbox36">
-        <input type="checkbox"/><span></span>
-      </label>
-
-      <label className="custom-checkbox custom-checkbox37">
-        <input type="checkbox"/><span></span>
-      </label>
-
-      <label className="custom-checkbox custom-checkbox38">
-        <input type="checkbox"/><span></span>
-      </label>
-      
     </div>
   );
 }
 
-export default VP247Page;
+export default VP104Page;

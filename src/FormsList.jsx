@@ -53,7 +53,6 @@ function FormsList() {
   const [arrValues, setArrValues] = useState([]);
   const [arrForms, setArrForms] = useState([]);
   const [name, setName] = useState({firstName: '', middleName: '', lastName: ''});
-  const [variant, setVariant] = useState('');
   const [checked, setChecked] = useState(true);
 
   const onDrop = useCallback((acceptedFiles) => {
@@ -126,13 +125,10 @@ function FormsList() {
   function changeOwners(e) {
 
     if (e.target.value === '1'){
-      setVariant("1")
       setChecked(!checked);
-    } else { 
-     setVariant("2")
+    } else {
      setChecked(!checked);
     }
-  
   }
 
   const {getRootProps, getInputProps} = useDropzone({onDrop})
@@ -183,7 +179,7 @@ function FormsList() {
               <label htmlFor="2owner">2 owners</label>
             </div>
           </div>
-          {variant == 2? <><FirstOwner/><div className="margin"></div><SecondOwner/></> : <FirstOwner/>}
+          {checked == false ? <><FirstOwner/><div className="margin"></div><SecondOwner/></> : <FirstOwner/>}
          
         </div>
       </div>
@@ -193,10 +189,7 @@ function FormsList() {
       </div>
 
           
-          {/* <div><Link to = "/example">Bill of Sale VP104</Link></div>
-          <div><Link to = "/example">Application for Expedited Processing/Shipping of Nevada Title VP265</Link></div>
-          <div><Link to = "/example">Power of Attorney VP136</Link></div>
-          <div><Link to = "/example">Lost, Stolen or Mutilated License Plate Affidavit VP202</Link></div>
+          {/* <div><Link to = "/example">Lost, Stolen or Mutilated License Plate Affidavit VP202</Link></div>
           <div><Link to = "/example">Affidavit of Non-Operation VP018</Link></div>
           <div><Link to = "/example">Application for Duplicate Registration Certificate VP013</Link></div>
           <div><Link to = "/example">Emission Control Exemption Application EC008</Link></div>
