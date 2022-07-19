@@ -14,6 +14,9 @@ import VP265Page1 from './formPages/VP265/Form1';
 import VP265Page2 from './formPages/VP265/Form2';
 import VP136Page from './formPages/VP136/Form1';
 import VP202Page from './formPages/VP202/Form1';
+import VP018Page from './formPages/VP018/Form1';
+import VP013Page1 from './formPages/VP013/Form1';
+import VP013Page2 from './formPages/VP013/Form2';
 
 
 function ListOfForms() {
@@ -24,128 +27,139 @@ function ListOfForms() {
 
         let value = e.target.value;
 
-        if (value === 'Contract'){
-    
-          if (!arrValues.includes(value)) {
-            setArrForms([...arrForms, ContractPage]);
-            setArrValues([...arrValues, value]);
-          } else {
-            setArrForms(arrForms.filter(function(f) { return f !== ContractPage}))
-            setArrValues(arrValues.filter(function(f) { return f !== value }));
-          }
-        }
-    
-        if (value === 'ExampleFormPage'){
-    
-          if (!arrValues.includes(value)) {
-            setArrForms([...arrForms, ExampleFormPage1, ExampleFormPage2]);
-            setArrValues([...arrValues, value]);
-          } else {
-            setArrForms(arrForms.filter(function(f) { return (f !== ExampleFormPage1 && f !== ExampleFormPage2)}))
-            setArrValues(arrValues.filter(function(f) { return f !== value }));
-          }
-        }
-        
-        if (value === 'VP247Page'){
-    
-          if (!arrValues.includes(value)) {
-            setArrForms([...arrForms, VP247Page]);
-            setArrValues([...arrValues, value]);
-          } else {
-            setArrForms(arrForms.filter(function(f) { return f !== VP247Page}))
-            setArrValues(arrValues.filter(function(f) { return f !== value }));
-          }
-        }
-    
-        if (value === 'VP222Page'){
-    
-          if (!arrValues.includes(value)) {
-            setArrForms([...arrForms, VP222Page]);
-            setArrValues([...arrValues, value]);
-          } else {
-            setArrForms(arrForms.filter(function(f) { return f !== VP222Page}))
-            setArrValues(arrValues.filter(function(f) { return f !== value }));
-          }
-        }
-    
-        if (value === 'VP019Page'){
-    
-          if (!arrValues.includes(value)) {
-            setArrForms([...arrForms, VP019Page]);
-            setArrValues([...arrValues, value]);
-          } else {
-            setArrForms(arrForms.filter(function(f) { return f !== VP019Page}))
-            setArrValues(arrValues.filter(function(f) { return f !== value }));
-          }
-        }
-    
-        if (value === 'VP185Page'){
-    
-          if (!arrValues.includes(value)) {
-            setArrForms([...arrForms, VP185Page]);
-            setArrValues([...arrValues, value]);
-          } else {
-            setArrForms(arrForms.filter(function(f) { return f !== VP185Page}))
-            setArrValues(arrValues.filter(function(f) { return f !== value }));
-          }
-        }
-    
-        if (value === 'VP012Page'){
-    
-          if (!arrValues.includes(value)) {
-            setArrForms([...arrForms, VP012Page1, VP012Page2]);
-            setArrValues([...arrValues, value]);
-          } else {
-            setArrForms(arrForms.filter(function(f) { return (f !== VP012Page1 && f!== VP012Page2)}))
-            setArrValues(arrValues.filter(function(f) { return f !== value }));
-          }
-        }
+        switch(value) {
 
-        if (value === 'VP104Page'){
-    
-          if (!arrValues.includes(value)) {
-            setArrForms([...arrForms, VP104Page]);
-            setArrValues([...arrValues, value]);
-          } else {
-            setArrForms(arrForms.filter(function(f) { return f !== VP104Page}))
-            setArrValues(arrValues.filter(function(f) { return f !== value }));
-          }
-        }
-
-        if (value === 'VP265Page'){
-    
-          if (!arrValues.includes(value)) {
-            setArrForms([...arrForms, VP265Page1, VP265Page2]);
-            setArrValues([...arrValues, value]);
-          } else {
-            setArrForms(arrForms.filter(function(f) { return (f !== VP265Page1 && f!== VP265Page2)}))
-            setArrValues(arrValues.filter(function(f) { return f !== value }));
-          }
-        }
-
-        if (value === 'VP136Page'){
-    
-          if (!arrValues.includes(value)) {
-            setArrForms([...arrForms, VP136Page]);
-            setArrValues([...arrValues, value]);
-          } else {
-            setArrForms(arrForms.filter(function(f) { return f !== VP136Page}))
-            setArrValues(arrValues.filter(function(f) { return f !== value }));
-          }
-        }
-
-        if (value === 'VP202Page'){
-    
-          if (!arrValues.includes(value)) {
-            setArrForms([...arrForms, VP202Page]);
-            setArrValues([...arrValues, value]);
-          } else {
-            setArrForms(arrForms.filter(function(f) { return f !== VP202Page}))
-            setArrValues(arrValues.filter(function(f) { return f !== value }));
-          }
-        }
-        
+          case 'Contract':
+            if (!arrValues.includes(value)) {
+              setArrForms([...arrForms, ContractPage]);
+              setArrValues([...arrValues, value]);
+            } else {
+              setArrForms(arrForms.filter(function(f) { return f !== ContractPage}))
+              setArrValues(arrValues.filter(function(f) { return f !== value }));
+            }
+          break;
       
+          case 'ExampleFormPage':
+            if (!arrValues.includes(value)) {
+              setArrForms([...arrForms, ExampleFormPage1, ExampleFormPage2]);
+              setArrValues([...arrValues, value]);
+            } else {
+              setArrForms(arrForms.filter(function(f) { return (f !== ExampleFormPage1 && f !== ExampleFormPage2)}))
+              setArrValues(arrValues.filter(function(f) { return f !== value }));
+            }
+          break;
+          
+          case 'VP247Page':
+            if (!arrValues.includes(value)) {
+              setArrForms([...arrForms, VP247Page]);
+              setArrValues([...arrValues, value]);
+            } else {
+              setArrForms(arrForms.filter(function(f) { return f !== VP247Page}))
+              setArrValues(arrValues.filter(function(f) { return f !== value }));
+            }
+          break;
+      
+          case 'VP222Page':
+            if (!arrValues.includes(value)) {
+              setArrForms([...arrForms, VP222Page]);
+              setArrValues([...arrValues, value]);
+            } else {
+              setArrForms(arrForms.filter(function(f) { return f !== VP222Page}))
+              setArrValues(arrValues.filter(function(f) { return f !== value }));
+            }
+          break;
+      
+          case 'VP019Page':
+            if (!arrValues.includes(value)) {
+              setArrForms([...arrForms, VP019Page]);
+              setArrValues([...arrValues, value]);
+            } else {
+              setArrForms(arrForms.filter(function(f) { return f !== VP019Page}))
+              setArrValues(arrValues.filter(function(f) { return f !== value }));
+            }
+          break;
+      
+          case 'VP185Page':
+            if (!arrValues.includes(value)) {
+              setArrForms([...arrForms, VP185Page]);
+              setArrValues([...arrValues, value]);
+            } else {
+              setArrForms(arrForms.filter(function(f) { return f !== VP185Page}))
+              setArrValues(arrValues.filter(function(f) { return f !== value }));
+            }
+          break;
+      
+          case 'VP012Page':
+            if (!arrValues.includes(value)) {
+              setArrForms([...arrForms, VP012Page1, VP012Page2]);
+              setArrValues([...arrValues, value]);
+            } else {
+              setArrForms(arrForms.filter(function(f) { return (f !== VP012Page1 && f!== VP012Page2)}))
+              setArrValues(arrValues.filter(function(f) { return f !== value }));
+            }
+          break;
+
+          case 'VP104Page':
+            if (!arrValues.includes(value)) {
+              setArrForms([...arrForms, VP104Page]);
+              setArrValues([...arrValues, value]);
+            } else {
+              setArrForms(arrForms.filter(function(f) { return f !== VP104Page}))
+              setArrValues(arrValues.filter(function(f) { return f !== value }));
+            }
+          break;
+
+          case 'VP265Page':
+            if (!arrValues.includes(value)) {
+              setArrForms([...arrForms, VP265Page1, VP265Page2]);
+              setArrValues([...arrValues, value]);
+            } else {
+              setArrForms(arrForms.filter(function(f) { return (f !== VP265Page1 && f!== VP265Page2)}))
+              setArrValues(arrValues.filter(function(f) { return f !== value }));
+            }
+          break;
+
+          case 'VP136Page':
+            if (!arrValues.includes(value)) {
+              setArrForms([...arrForms, VP136Page]);
+              setArrValues([...arrValues, value]);
+            } else {
+              setArrForms(arrForms.filter(function(f) { return f !== VP136Page}))
+              setArrValues(arrValues.filter(function(f) { return f !== value }));
+            }
+          break
+
+          case 'VP202Page':
+            if (!arrValues.includes(value)) {
+              setArrForms([...arrForms, VP202Page]);
+              setArrValues([...arrValues, value]);
+            } else {
+              setArrForms(arrForms.filter(function(f) { return f !== VP202Page}))
+              setArrValues(arrValues.filter(function(f) { return f !== value }));
+            }
+          break
+
+          case 'VP018Page':
+            if (!arrValues.includes(value)) {
+              setArrForms([...arrForms, VP018Page]);
+              setArrValues([...arrValues, value]);
+            } else {
+              setArrForms(arrForms.filter(function(f) { return f !== VP018Page}))
+              setArrValues(arrValues.filter(function(f) { return f !== value }));
+            }
+          break
+
+          case 'VP013Page':
+            if (!arrValues.includes(value)) {
+              setArrForms([...arrForms, VP013Page1, VP013Page2]);
+              setArrValues([...arrValues, value]);
+            } else {
+              setArrForms(arrForms.filter(function(f) { return (f !== VP013Page1 && f!== VP013Page2)}))
+              setArrValues(arrValues.filter(function(f) { return f !== value }));
+            }
+          break;
+
+        }  
       }
 
 return (
@@ -227,6 +241,20 @@ return (
             <label className="customCheckbox customCheckbox9">
               <input onChange={checkValue} type="checkbox" value="VP202Page" /><span></span>
               <div className="listLinks"><p>Lost, Stolen or Mutilated License Plate Affidavit VP202</p></div>
+            </label>
+          </div>
+
+          <div className="formsListContainer">
+            <label className="customCheckbox customCheckbox9">
+              <input onChange={checkValue} type="checkbox" value="VP018Page" /><span></span>
+              <div className="listLinks"><p>Affidavit of Non-Operation VP018</p></div>
+            </label>
+          </div>
+
+          <div className="formsListContainer">
+            <label className="customCheckbox customCheckbox9">
+              <input onChange={checkValue} type="checkbox" value="VP013Page" /><span></span>
+              <div className="listLinks"><p>Application for Duplicate Registration Certificate VP013</p></div>
             </label>
           </div>
 

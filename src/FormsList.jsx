@@ -54,6 +54,10 @@ function FormsList() {
   const [arrForms, setArrForms] = useState([]);
   const [name, setName] = useState({firstName: '', middleName: '', lastName: ''});
   const [checked, setChecked] = useState(true);
+  const [cost1, setCost1] = useState('');
+  const [cost2, setCost2] = useState("0.00");
+  const [cost3, setCost3] = useState("0.00");
+  const [cost4, setCost4] = useState("0.00");
 
   const onDrop = useCallback((acceptedFiles) => {
 
@@ -145,7 +149,7 @@ function FormsList() {
     middleName1, setMiddleName1, zip2, setZip2, setAddress2, address2, setCity2, city2, setState2, state2, lastName2, 
     zip3, setZip3, setAddress3, address3, setCity3, city3, setState3, state3, setLastName2, firstName2, setFirstName2, 
     middleName2, setMiddleName2, zip4, setZip4, setAddress4, address4, setCity4, city4, setState4, state4, driverLicense2, setDriverLicense2, 
-    name, setName, arrValues, setArrValues, arrForms, setArrForms}
+    name, setName, arrValues, setArrValues, arrForms, setArrForms, cost1, setCost1, cost2, setCost2, cost3, setCost3, cost4, setCost4}
 
 
   return (
@@ -179,7 +183,7 @@ function FormsList() {
               <label htmlFor="2owner">2 owners</label>
             </div>
           </div>
-          {checked == false ? <><FirstOwner/><div className="margin"></div><SecondOwner/></> : <FirstOwner/>}
+          {checked === false ? <><FirstOwner/><div className="margin"></div><SecondOwner/></> : <FirstOwner/>}
          
         </div>
       </div>
@@ -189,10 +193,7 @@ function FormsList() {
       </div>
 
           
-          {/* <div><Link to = "/example">Lost, Stolen or Mutilated License Plate Affidavit VP202</Link></div>
-          <div><Link to = "/example">Affidavit of Non-Operation VP018</Link></div>
-          <div><Link to = "/example">Application for Duplicate Registration Certificate VP013</Link></div>
-          <div><Link to = "/example">Emission Control Exemption Application EC008</Link></div>
+          {/* <div><Link to = "/example">Emission Control Exemption Application EC008</Link></div>
           <div><Link to = "/example">Change of Address Notification by Mail DMV22</Link></div>
           <div><Link to = "/example">Declaration of Responsibility NLV019</Link></div>
           <div><Link to = "/example">Application sp66 – Personalized Plate</Link></div>
