@@ -4224,4 +4224,251 @@ input:focus {
   left: 395px;
 }
 
+.ec008_1{
+  position: relative;
+  width: 850px;
+  height: 1100px;
+  margin: auto;
+  background-image: url('./formBackgrounds/ec008-1.png');
+  background-size: contain;
+}
+
+.ec008_2{
+  position: relative;
+  width: 850px;
+  height: 1100px;
+  margin: auto;
+  background-image: url('./formBackgrounds/ec008-2.png');
+  background-size: contain;
+}
+
+.ec008_2 input{
+  height: 14px;
+  font-size: 12px;
+  text-align: center;
+}
+
+.ec008_2 .name{
+  top: 117px;
+  left: 57px;
+  width: 400px;
+}
+
+.ec008_2 .driverLic1{
+  top: 117px;
+  left: 471px;
+  width: 318px;
+}
+
+.ec008_2 .address1{
+  top: 154px;
+  left: 57px;
+  width: 400px;
+}
+
+.ec008_2 .input1{
+  top: 154px;
+  left: 471px;
+  width: 318px;
+}
+
+.ec008_2 .city1{
+  top: 192px;
+  left: 57px;
+  width: 280px;
+}
+
+.ec008_2 .state1{
+  top: 192px;
+  left: 350px;
+  width: 60px;
+}
+
+.ec008_2 .zip1{
+  top: 192px;
+  left: 440px;
+  width: 104px;
+}
+
+.ec008_2 .input2{
+  top: 192px;
+  left: 561px;
+  width: 228px;
+}
+
+.ec008_2 .address2{
+  top: 229px;
+  left: 57px;
+  width: 400px;
+}
+
+.ec008_2 .input3{
+  top: 229px;
+  left: 471px;
+  width: 318px;
+}
+
+.ec008_2 .city2{
+  top: 266px;
+  left: 57px;
+  width: 280px;
+}
+
+.ec008_2 .state2{
+  top: 266px;
+  left: 350px;
+  width: 60px;
+}
+
+.ec008_2 .zip2{
+  top: 266px;
+  left: 440px;
+  width: 104px;
+}
+
+.ec008_2 .input4{
+  top: 304px;
+  left: 57px;
+  width: 250px;
+}
+
+.ec008_2 .vehicleID{
+  top: 304px;
+  left: 330px;
+  width: 270px;
+}
+
+.ec008_2 .year{
+  top: 341px;
+  left: 57px;
+  width: 190px;
+}
+
+.ec008_2 .make{
+  top: 341px;
+  left: 260px;
+  width: 170px;
+}
+
+.ec008_2 .model{
+  top: 341px;
+  left: 446px;
+  width: 170px;
+}
+
+.ec008_2 .input5{
+  top: 341px;
+  left: 631px;
+  width: 158px;
+}
+
+.ec008_2 .input6{
+  top: 574px;
+  left: 243px;
+  width: 546px;
+}
+
+.ec008_2 .input7{
+  top: 598px;
+  left: 57px;
+  width: 732px;
+}
+
+.ec008_2 .input8{
+  top: 622px;
+  left: 57px;
+  width: 732px;
+}
+
+.ec008_2 .input9{
+  top: 647px;
+  left: 57px;
+  width: 732px;
+}
+
+.ec008_2 .input10{
+  top: 689px;
+  left: 57px;
+  width: 400px;
+}
+
+.ec008_2 .input11{
+  top: 689px;
+  left: 471px;
+  width: 318px;
+}
+
+.ec008_2 .input12{
+  top: 726px;
+  left: 57px;
+  width: 280px;
+}
+
+.ec008_2 .input13{
+  top: 726px;
+  left: 350px;
+  width: 60px;
+}
+
+.ec008_2 .input14{
+  top: 726px;
+  left: 441px;
+  width: 104px;
+}
+
+.ec008_2 .input15{
+  top: 835px;
+  left: 531px;
+  width: 258px;
+}
+
+.custom-checkbox0081>span::before {
+  top: 400px;
+  left: 87px;
+}
+.custom-checkbox0081>input {
+  top: 400px;
+  left: 87px;
+}
+
+.custom-checkbox0082>span::before {
+  top: 440px;
+  left: 87px;
+}
+.custom-checkbox0082>input {
+  top: 440px;
+  left: 87px;
+}
+
+.dmv22_1{
+  position: relative;
+  width: 850px;
+  height: 1100px;
+  margin: auto;
+  background-image: url('./formBackgrounds/dmv22en-1.png');
+  background-size: contain;
+}
+
+.dmv22_2{
+  position: relative;
+  width: 850px;
+  height: 1100px;
+  margin: auto;
+  background-image: url('./formBackgrounds/dmv22en-2.png');
+  background-size: contain;
+}
+
+.dmv22_3{
+  position: relative;
+  width: 850px;
+  height: 1100px;
+  margin: auto;
+  background-image: url('./formBackgrounds/dmv22en-3.png');
+  background-size: contain;
+}
+
+
+
+
+
 

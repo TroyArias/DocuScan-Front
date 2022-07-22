@@ -17,6 +17,11 @@ import VP202Page from './formPages/VP202/Form1';
 import VP018Page from './formPages/VP018/Form1';
 import VP013Page1 from './formPages/VP013/Form1';
 import VP013Page2 from './formPages/VP013/Form2';
+import EC008Page1 from './formPages/EC008/Form1';
+import EC008Page2 from './formPages/EC008/Form2';
+import DMV22Page1 from './formPages/DMV22/Form1';
+import DMV22Page2 from './formPages/DMV22/Form2';
+import DMV22Page3 from './formPages/DMV22/Form3.jsx';
 
 
 function ListOfForms() {
@@ -159,6 +164,28 @@ function ListOfForms() {
             }
           break;
 
+          case 'EC008Page':
+            if (!arrValues.includes(value)) {
+              setArrForms([...arrForms, EC008Page1, EC008Page2]);
+              setArrValues([...arrValues, value]);
+            } else {
+              setArrForms(arrForms.filter(function(f) { return (f!== EC008Page1 && f!== EC008Page2)}))
+              setArrValues(arrValues.filter(function(f) { return f !== value }));
+            }
+          break;
+
+          case 'DMV22Page':
+            if (!arrValues.includes(value)) {
+              setArrForms([...arrForms, DMV22Page1, DMV22Page2, DMV22Page3]);
+              setArrValues([...arrValues, value]);
+            } else {
+              setArrForms(arrForms.filter(function(f) { return (f!== DMV22Page1 && f!== DMV22Page2 && f!== DMV22Page3)}))
+              setArrValues(arrValues.filter(function(f) { return f !== value }));
+            }
+          break;
+
+          default:
+
         }  
       }
 
@@ -257,6 +284,24 @@ return (
               <div className="listLinks"><p>Application for Duplicate Registration Certificate VP013</p></div>
             </label>
           </div>
+
+          <div className="formsListContainer">
+            <label className="customCheckbox customCheckbox9">
+              <input onChange={checkValue} type="checkbox" value="EC008Page" /><span></span>
+              <div className="listLinks"><p>Emission Control Exemption Application EC008</p></div>
+            </label>
+          </div>
+
+          {/* <div className="formsListContainer">
+            <label className="customCheckbox customCheckbox9">
+              <input onChange={checkValue} type="checkbox" value="DMV22Page" /><span></span>
+              <div className="listLinks"><p>Change of Address Notification by Mail DMV22</p></div>
+            </label>
+          </div> */}
+
+
+
+          
 
         </div>
 
