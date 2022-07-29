@@ -1,6 +1,6 @@
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
-import FormsList from "./FormsList";
-import Navbar from "./Navbar";
+import MainList from "./MainList";
+import Navbar from "./components/navbar";
 
 export default function App () {
 
@@ -8,7 +8,7 @@ export default function App () {
         <BrowserRouter>  
         <Navbar/>  
             <Routes>
-                <Route exact path='/' element={<FormsList/>}/>
+                <Route exact path='/' element={<MainList/>}/>
             </Routes>                
         </BrowserRouter>
     );

@@ -4467,6 +4467,982 @@ input:focus {
   background-size: contain;
 }
 
+.dmv22_1 input{
+  height: 14px;
+  font-size: 12px;
+  text-align: center;
+}
+
+.dmv22_1 .lastName1{
+  top: 299px;
+  left: 32px;
+  width: 213px;
+}
+
+.dmv22_1 .firstName1{
+  top: 299px;
+  left: 250px;
+  width: 171px;
+}
+
+.dmv22_1 .middleName1{
+  top: 299px;
+  left: 426px;
+  width: 117px;
+}
+
+.dmv22_1 .suffix{
+  top: 299px;
+  left: 549px;
+  width: 44px;
+}
+
+.dmv22_1 .nevadaIdNumber{
+  top: 299px;
+  left: 599px;
+  width: 221px;
+}
+
+.dmv22_1 .state1{
+  top: 336px;
+  left: 32px;
+  width: 100px;
+}
+
+.dmv22_1 .country{
+  top: 336px;
+  left: 140px;
+  width: 100px;
+}
+
+.dmv22_1 .dateOfBirth{
+  top: 336px;
+  left: 401px;
+  width: 100px;
+}
+
+.dmv22_1 .address1{
+  top: 399px;
+  left: 32px;
+  width: 363px;
+}
+
+.dmv22_1 .address2{
+  top: 399px;
+  left: 401px;
+  width: 419px;
+}
+
+.dmv22_1 .cityStateZip1{
+  top: 436px;
+  left: 32px;
+  width: 363px;
+}
+
+.dmv22_1 .cityStateZip2{
+  top: 436px;
+  left: 401px;
+  width: 419px;
+}
+
+.dmv22_1 .phone_code{
+  top: 470px;
+  left: 44px;
+  width: 50px;
+}
+
+.dmv22_1 .phone_number{
+  top: 470px;
+  left: 110px;
+  width: 280px;
+}
+
+.dmv22_1 .email{
+  top: 473px;
+  left: 401px;
+  width: 419px;
+}
+
+.dmv22_1 .input1{
+  top: 501px;
+  left: 300px;
+  width: 380px;
+}
+
+.dmv22_1 .input2{
+  top: 617px;
+  left: 146px;
+  width: 184px;
+  height: 12px;
+}
+
+.dmv22_1 .input3{
+  top: 615px;
+  left: 553px;
+  width: 177px;
+}
+
+.dmv22_1 .input4{
+  top: 703px;
+  left: 24px;
+  width: 160px;
+}
+
+.dmv22_1 .input5{
+  top: 703px;
+  left: 218px;
+  width: 130px;
+}
+
+.dmv22_1 .input6{
+  top: 703px;
+  left: 370px;
+  width: 90px;
+}
+
+.dmv22_1 .input7{
+  top: 703px;
+  left: 480px;
+  width: 120px;
+}
+
+.dmv22_1 .input8{
+  top: 735px;
+  left: 24px;
+  width: 160px;
+}
+
+.dmv22_1 .input9{
+  top: 735px;
+  left: 218px;
+  width: 130px;
+}
+
+.dmv22_1 .input10{
+  top: 735px;
+  left: 370px;
+  width: 90px;
+}
+
+.dmv22_1 .input11{
+  top: 735px;
+  left: 480px;
+  width: 120px;
+}
+
+.dmv22_1 .input12{
+  top: 766px;
+  left: 24px;
+  width: 160px;
+}
+
+.dmv22_1 .input13{
+  top: 766px;
+  left: 218px;
+  width: 130px;
+}
+
+.dmv22_1 .input14{
+  top: 766px;
+  left: 370px;
+  width: 90px;
+}
+
+.dmv22_1 .input15{
+  top: 766px;
+  left: 480px;
+  width: 120px;
+}
+
+.custom-checkbox22_1_0>span::before {
+  top: 244px;
+  left: 26px;
+}
+.custom-checkbox22_1_0>input {
+  top: 244px;
+  left: 26px;
+}
+
+.custom-checkbox22_1_1>span::before {
+  top: 494px;
+  left: 698px;
+}
+.custom-checkbox22_1_1>input {
+  top: 494px;
+  left: 698px;
+}
+
+.custom-checkbox22_1_2>span::before {
+  top: 494px;
+  left: 740px;
+}
+.custom-checkbox22_1_2>input {
+  top: 494px;
+  left: 740px;
+}
+
+.custom-checkbox22_1_3>span::before {
+  top: 531px;
+  left: 25px;
+}
+.custom-checkbox22_1_3>input {
+  top: 531px;
+  left: 25px;
+}
+
+.custom-checkbox22_1_4>span::before {
+  top: 531px;
+  left: 294px;
+}
+.custom-checkbox22_1_4>input {
+  top: 531px;
+  left: 294px;
+}
+
+.custom-checkbox22_1_5>span::before {
+  top: 589px;
+  left: 25px;
+}
+.custom-checkbox22_1_5>input {
+  top: 589px;
+  left: 25px;
+}
+
+.custom-checkbox22_1_6>span::before {
+  top: 648px;
+  left: 25px;
+}
+.custom-checkbox22_1_6>input {
+  top: 648px;
+  left: 25px;
+}
+
+.custom-checkbox22_1_7>span::before {
+  top: 705px;
+  left: 625px;
+}
+.custom-checkbox22_1_7>input {
+  top: 705px;
+  left: 625px;
+}
+
+.custom-checkbox22_1_8>span::before {
+  top: 736px;
+  left: 625px;
+}
+.custom-checkbox22_1_8>input {
+  top: 736px;
+  left: 625px;
+}
+
+.custom-checkbox22_1_9>span::before {
+  top: 768px;
+  left: 625px;
+}
+.custom-checkbox22_1_9>input {
+  top: 768px;
+  left: 625px;
+}
+
+.custom-checkbox22_1_10>span::before {
+  top: 355px;
+  left: 31px;
+}
+.custom-checkbox22_1_10>input {
+  top: 355px;
+  left: 31px;
+}
+
+.dmv22_2 .input{
+  font-size: 12px;
+  text-align: center;
+  height: 11px;
+}
+
+.dmv22_2 .input1{
+  top: 460px;
+  left: 329px;
+  width: 343px;
+}
+
+.dmv22_2 .input2{
+  top: 541px;
+  left: 494px;
+  width: 151px;
+}
+
+.dmv22_2 .input3{
+  top: 825px;
+  left: 618px;
+  width: 83px;
+}
+
+.dmv22_2 .input4{
+  top: 989px;
+  left: 140px;
+  width: 314px;
+}
+
+.dmv22_2 .input5{
+  top: 989px;
+  left: 580px;
+  width: 182px;
+}
+
+.dmv22_2 .input6{
+  top: 1018px;
+  left: 520px;
+  width: 275px;
+}
+
+.custom-checkbox22_2_0>span::before {
+  top: 160px;
+  left: 715px;
+}
+.custom-checkbox22_2_0>input {
+  top: 160px;
+  left: 715px;
+}
+
+.custom-checkbox22_2_1>span::before {
+  top: 230px;
+  left: 715px;
+}
+.custom-checkbox22_2_1>input {
+  top: 160px;
+  left: 715px;
+}
+
+.custom-checkbox22_2_2>span::before {
+  top: 230px;
+  left: 757px;
+}
+.custom-checkbox22_2_2>input {
+  top: 230px;
+  left: 757px;
+}
+
+.custom-checkbox22_2_3>span::before {
+  top: 249px;
+  left: 715px;
+}
+.custom-checkbox22_2_3>input {
+  top: 249px;
+  left: 715px;
+}
+
+.custom-checkbox22_2_4>span::before {
+  top: 249px;
+  left: 757px;
+}
+.custom-checkbox22_2_4>input {
+  top: 249px;
+  left: 757px;
+}
+
+.custom-checkbox22_2_5>span::before {
+  top: 351px;
+  left: 124px;
+}
+.custom-checkbox22_2_5>input {
+  top: 351px;
+  left: 124px;
+}
+
+.custom-checkbox22_2_6>span::before {
+  top: 365px;
+  left: 124px;
+}
+.custom-checkbox22_2_6>input {
+  top: 365px;
+  left: 124px;
+}
+
+.custom-checkbox22_2_7>span::before {
+  top: 379px;
+  left: 124px;
+}
+.custom-checkbox22_2_7>input {
+  top: 379px;
+  left: 124px;
+}
+
+.custom-checkbox22_2_8>span::before {
+  top: 417px;
+  left: 168px;
+}
+.custom-checkbox22_2_8>input {
+  top: 379px;
+  left: 168px;
+}
+
+.custom-checkbox22_2_9>span::before {
+  top: 417px;
+  left: 368px;
+}
+.custom-checkbox22_2_9>input {
+  top: 417px;
+  left: 368px;
+}
+
+.custom-checkbox22_2_10>span::before {
+  top: 417px;
+  left: 618px;
+}
+.custom-checkbox22_2_10>input {
+  top: 417px;
+  left: 618px;
+}
+
+.custom-checkbox22_2_11>span::before {
+  top: 438px;
+  left: 368px;
+}
+.custom-checkbox22_2_11>input {
+  top: 438px;
+  left: 368px;
+}
+
+.custom-checkbox22_2_12>span::before {
+  top: 438px;
+  left: 168px;
+}
+.custom-checkbox22_2_12>input {
+  top: 438px;
+  left: 168px;
+}
+
+.custom-checkbox22_2_13>span::before {
+  top: 459px;
+  left: 168px;
+}
+.custom-checkbox22_2_13>input {
+  top: 459px;
+  left: 168px;
+}
+
+.custom-checkbox22_2_14>span::before {
+  top: 602px;
+  left: 728px;
+}
+.custom-checkbox22_2_14>input {
+  top: 602px;
+  left: 728px;
+}
+
+.custom-checkbox22_2_15>span::before {
+  top: 650px;
+  left: 726px;
+}
+.custom-checkbox22_2_15>input {
+  top: 602px;
+  left: 726px;
+}
+
+.custom-checkbox22_2_16>span::before {
+  top: 650px;
+  left: 771px;
+}
+.custom-checkbox22_2_16>input {
+  top: 650px;
+  left: 771px;
+}
+
+.custom-checkbox22_2_17>span::before {
+  top: 680px;
+  left: 771px;
+}
+.custom-checkbox22_2_17>input {
+  top: 680px;
+  left: 771px;
+}
+
+.custom-checkbox22_2_18>span::before {
+  top: 680px;
+  left: 726px;
+}
+.custom-checkbox22_2_18>input {
+  top: 680px;
+  left: 726px;
+}
+
+.custom-checkbox22_2_19>span::before {
+  top: 716px;
+  left: 726px;
+}
+.custom-checkbox22_2_19>input {
+  top: 716px;
+  left: 726px;
+}
+
+.custom-checkbox22_2_20>span::before {
+  top: 716px;
+  left: 771px;
+}
+.custom-checkbox22_2_20>input {
+  top: 716px;
+  left: 771px;
+}
+
+.custom-checkbox22_2_21>span::before {
+  top: 767px;
+  left: 771px;
+}
+.custom-checkbox22_2_21>input {
+  top: 767px;
+  left: 771px;
+}
+
+.custom-checkbox22_2_22>span::before {
+  top: 767px;
+  left: 726px;
+}
+.custom-checkbox22_2_22>input {
+  top: 767px;
+  left: 726px;
+}
+
+.custom-checkbox22_2_23>span::before {
+  top: 805px;
+  left: 726px;
+}
+.custom-checkbox22_2_23>input {
+  top: 805px;
+  left: 726px;
+}
+
+.custom-checkbox22_2_24>span::before {
+  top: 805px;
+  left: 771px;
+}
+.custom-checkbox22_2_24>input {
+  top: 805px;
+  left: 771px;
+}
+
+.dmv22_3 input{
+  height: 14px;
+  font-size: 12px;
+  text-align: center;
+}
+
+.dmv22_3 .cardNumber input{
+  height: 30px;
+  width: 38px;
+  font-size: 30px;
+  text-align: center;
+  top: 222px;
+}
+
+.dmv22_3 .cardNumber .cardNumber1{
+  left: 53px;
+}
+
+.dmv22_3 .cardNumber .cardNumber2{
+  left: 96px;
+}
+
+.dmv22_3 .cardNumber .cardNumber3{
+  left: 139px;
+}
+
+.dmv22_3 .cardNumber .cardNumber4{
+  left: 182px;
+}
+
+.dmv22_3 .cardNumber .cardNumber5{
+  left: 244px;
+}
+
+.dmv22_3 .cardNumber .cardNumber6{
+  left: 287px;
+}
+
+.dmv22_3 .cardNumber .cardNumber7{
+  left: 330px;
+}
+
+.dmv22_3 .cardNumber .cardNumber8{
+  left: 373px;
+}
+
+.dmv22_3 .cardNumber .cardNumber9{
+  left: 435px;
+}
+
+.dmv22_3 .cardNumber .cardNumber10{
+  left: 478px;
+}
+
+.dmv22_3 .cardNumber .cardNumber11{
+  left: 521px;
+}
+
+.dmv22_3 .cardNumber .cardNumber12{
+  left: 564px;
+}
+
+.dmv22_3 .cardNumber .cardNumber13{
+  left: 626px;
+}
+
+.dmv22_3 .cardNumber .cardNumber14{
+  left: 669px;
+}
+
+.dmv22_3 .cardNumber .cardNumber15{
+  left: 712px;
+}
+
+.dmv22_3 .cardNumber .cardNumber16{
+  left: 755px;
+}
+
+.dmv22_3 .expDate input{
+  height: 27px;
+  width: 23px;
+  font-size: 30px;
+  text-align: center;
+  top: 295px;
+}
+
+.dmv22_3 .expDate .expDate1{
+  left: 618px;
+}
+
+.dmv22_3 .expDate .expDate2{
+  left: 646px;
+}
+
+.dmv22_3 .expDate .expDate3{
+  left: 694px;
+}
+
+.dmv22_3 .expDate .expDate4{
+  left: 722px;
+}
+
+.dmv22_3 .input1{
+  top: 441px;
+  left: 156px;
+  width: 314px;
+}
+
+.dmv22_3 .input2{
+  top: 441px;
+  left: 694px;
+  width: 102px;
+}
+
+.dmv22_3 .input3{
+  top: 518px;
+  left: 244px;
+  width: 240px;
+}
+
+.dmv22_3 .input4{
+  top: 518px;
+  left: 496px;
+  width: 130px;
+}
+
+.dmv22_3 .input5{
+  top: 518px;
+  left: 636px;
+  width: 40px;
+}
+
+.dmv22_3 .input6{
+  top: 518px;
+  left: 686px;
+  width: 110px;
+}
+
+.dmv22_3 .input7{
+  top: 589px;
+  left: 300px;
+  width: 171px;
+}
+
+.dmv22_3 .input8{
+  top: 589px;
+  left: 569px;
+  width: 227px;
+}
+
+.dmv22_3 .input9{
+  top: 629px;
+  left: 526px;
+  width: 270px;
+}
+
+.custom-checkbox22_3_0>span::before {
+  top: 301px;
+  left: 170px;
+}
+.custom-checkbox22_3_0>input {
+  top: 301px;
+  left: 170px;
+}
+
+.custom-checkbox22_3_1>span::before {
+  top: 301px;
+  left: 307px;
+}
+.custom-checkbox22_3_1>input {
+  top: 301px;
+  left: 307px;
+}
+
+.custom-checkbox22_3_2>span::before {
+  top: 301px;
+  left: 395px;
+}
+.custom-checkbox22_3_2>input {
+  top: 301px;
+  left: 395px;
+}
+
+.nlv019{
+  position: relative;
+  width: 850px;
+  height: 1100px;
+  margin: auto;
+  background-image: url('./formBackgrounds/nvl019-1.png');
+  background-size: contain;
+}
+
+.nlv019 input{
+  height: 14px;
+  font-size: 12px;
+  text-align: center;
+}
+
+.nlv019 .name{
+  top: 155px;
+  left: 46px;
+  width: 370px;
+}
+
+.nlv019 .vehicleID input{
+  height: 22px;
+  width: 20px;
+  font-size: 24px;
+  text-align: center;
+  top: 625px;
+}
+
+.nlv019 .vehicleID .vehicleID1{
+  left: 232px;
+}
+
+.nlv019 .vehicleID .vehicleID2{
+  left: 260px;
+}
+
+.nlv019 .vehicleID .vehicleID3{
+  left: 289px;
+}
+
+.nlv019 .vehicleID .vehicleID4{
+  left: 317px;
+}
+
+.nlv019 .vehicleID .vehicleID5{
+  left: 346px;
+}
+
+.nlv019 .vehicleID .vehicleID6{
+  left: 375px;
+}
+
+.nlv019 .vehicleID .vehicleID7{
+  left: 403px;
+}
+
+.nlv019 .vehicleID .vehicleID8{
+  left: 432px;
+}
+
+.nlv019 .vehicleID .vehicleID9{
+  left: 461px;
+}
+
+.nlv019 .vehicleID .vehicleID10{
+  left: 490px;
+}
+
+.nlv019 .vehicleID .vehicleID11{
+  left: 518px;
+}
+
+.nlv019 .vehicleID .vehicleID12{
+  left: 547px;
+}
+
+.nlv019 .vehicleID .vehicleID13{
+  left: 575px;
+}
+
+.nlv019 .vehicleID .vehicleID14{
+  left: 604px;
+}
+
+.nlv019 .vehicleID .vehicleID15{
+  left: 633px;
+}
+
+.nlv019 .vehicleID .vehicleID16{
+  left: 661px;
+}
+
+.nlv019 .vehicleID .vehicleID17{
+  left: 690px;
+}
+
+.nlv019 .vehicleID .vehicleID18{
+  left: 719px; 
+}
+
+.nlv019 .year{
+  top: 651px;
+  left: 75px;
+  width: 87px; 
+}
+
+.nlv019 .make{
+  top: 651px;
+  left: 215px;
+  width: 237px; 
+}
+
+.nlv019 .model{
+  top: 651px;
+  left: 514px;
+  width: 295px; 
+}
+
+.nlv019 .firstName{
+  top: 681px;
+  left: 143px;
+  width: 190px; 
+}
+
+.nlv019 .middleName{
+  top: 681px;
+  left: 344px;
+  width: 270px; 
+}
+
+.nlv019 .lastName{
+  top: 681px;
+  left: 626px;
+  width: 183px; 
+}
+
+.nlv019 .driverLicense{
+  top: 717px;
+  left: 468px;
+  width: 341px; 
+}
+
+.nlv019 .address{
+  top: 747px;
+  left: 143px;
+  width: 300px; 
+}
+
+.nlv019 .city{
+  top: 747px;
+  left: 456px;
+  width: 120px; 
+}
+
+.nlv019 .state{
+  top: 747px;
+  left: 590px;
+  width: 80px; 
+}
+
+.nlv019 .zipCode{
+  top: 747px;
+  left: 684px;
+  width: 124px; 
+}
+
+.nlv019 .address2{
+  top: 782px;
+  left: 143px;
+  width: 300px; 
+}
+
+.nlv019 .city2{
+  top: 782px;
+  left: 456px;
+  width: 120px; 
+}
+
+.nlv019 .state2{
+  top: 782px;
+  left: 590px;
+  width: 80px; 
+}
+
+.nlv019 .zipCode2{
+  top: 782px;
+  left: 684px;
+  width: 124px; 
+}
+
+.nlv019 .telephone{
+  top: 817px;
+  left: 111px;
+  width: 265px; 
+}
+
+.nlv019 .email{
+  top: 817px;
+  left: 465px;
+  width: 292px; 
+}
+
+.nlv019 .input1{
+  top: 883px;
+  left: 630px;
+  width: 179px; 
+}
+
+.nlv019 .input2{
+  top: 920px;
+  left: 93px;
+  width: 118px; 
+}
+
+.nlv019 .input3{
+  top: 920px;
+  left: 299px;
+  width: 165px; 
+}
+
+.nlv019 .input4{
+  top: 940px;
+  left: 334px;
+  width: 99px; 
+}
+
+.nlv019 .input5{
+  top: 940px;
+  left: 475px;
+  width: 333px; 
+}
+
+
+
+
+
+
+
+
 
 
 
