@@ -71,7 +71,7 @@ function MainList() {
 
         if (numCallbackRuns === 1){
 
-          const text = file.target.result.split(TEXT_DELIMITER);
+          const text = file.target.result.split(TEXT_DELIMITER)
 
           user = delimeter(mapFor1Customer, text)
 
@@ -90,7 +90,7 @@ function MainList() {
            
         } else {
 
-          const text = file.target.result.split(TEXT_DELIMITER);
+          const text = file.target.result.split(TEXT_DELIMITER)
 
           user = delimeter(mapFor2Customer, text)
 
@@ -128,12 +128,7 @@ function MainList() {
   }, [])
 
   function changeOwners(e) {
-
-    if (e.target.value === '1'){
-      setChecked(!checked);
-    } else {
-      setChecked(!checked);
-    }
+      setChecked(!checked)
   }
 
   const {getRootProps, getInputProps} = useDropzone({onDrop})
@@ -151,7 +146,6 @@ function MainList() {
     zip3, setZip3, setAddress3, address3, setCity3, city3, setState3, state3, setLastName2, firstName2, setFirstName2, 
     middleName2, setMiddleName2, zip4, setZip4, setAddress4, address4, setCity4, city4, setState4, state4, driverLicense2, setDriverLicense2, 
     name, setName, arrValues, setArrValues, arrForms, setArrForms, cost1, setCost1, cost2, setCost2, cost3, setCost3, cost4, setCost4}
-
 
   return (
     <Context.Provider value={contextObj}>
@@ -194,10 +188,7 @@ function MainList() {
       </div>
 
           
-          {/* 
-          <div><Link to = "/example">Application sp66 – Personalized Plate</Link></div>
-          <div><Link to = "/example">Application sp45 – Circa 1982 Replicate Plate</Link></div>
-          <div><Link to = "/example">Application sp33 – Veterans</Link></div>
+          {/*
           <div><Link to = "/example">Application sp34 – Classic Vehicle</Link></div>
           <div><Link to = "/example">Application sp20 – Classic Rod</Link></div>
           <div><Link to = "/example">Odometer Certificate for Emissions Exemption Form EC018</Link></div>  */}

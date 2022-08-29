@@ -11,7 +11,6 @@ export default function App () {
                 <Route exact path='/' element={<MainList/>}/>
             </Routes>                
         </BrowserRouter>
-    );
-    
+    );    
 }
 

@@ -23,6 +23,12 @@ import DMV22Page1 from './formPages/DMV22/Form1';
 import DMV22Page2 from './formPages/DMV22/Form2';
 import DMV22Page3 from './formPages/DMV22/Form3';
 import NLV019Page from './formPages/NLV019/Form1';
+import SP66Page1 from './formPages/SP66/Form1';
+import SP66Page2 from './formPages/SP66/Form2';
+import SP66Page3 from './formPages/SP66/Form3';
+import SP45Page from './formPages/SP45/Form1';
+import SP33Page1 from './formPages/SP33/Form1';
+import SP33Page2 from './formPages/SP33/Form2';
 
 function ListOfForms() {
 
@@ -194,6 +200,36 @@ function ListOfForms() {
             }
           break;
 
+          case 'SP66Page':
+            if (!arrValues.includes(value)) {
+              setArrForms([...arrForms, SP66Page1, SP66Page2, SP66Page3]);
+              setArrValues([...arrValues, value]);
+            } else {
+              setArrForms(arrForms.filter(function(f) { return f !== SP66Page1 && f!== SP66Page2 && f!== SP66Page3}))
+              setArrValues(arrValues.filter(function(f) { return f !== value }));
+            }
+          break;
+
+          case 'SP45Page':
+            if (!arrValues.includes(value)) {
+              setArrForms([...arrForms, SP45Page]);
+              setArrValues([...arrValues, value]);
+            } else {
+              setArrForms(arrForms.filter(function(f) { return f !== SP45Page}))
+              setArrValues(arrValues.filter(function(f) { return f !== value }));
+            }
+          break;
+
+          case 'SP33Page':
+            if (!arrValues.includes(value)) {
+              setArrForms([...arrForms, SP33Page1, SP33Page2]);
+              setArrValues([...arrValues, value]);
+            } else {
+              setArrForms(arrForms.filter(function(f) { return f !== SP33Page1 && f!== SP33Page2}))
+              setArrValues(arrValues.filter(function(f) { return f !== value }));
+            }
+          break;
+
 
           default:
 
@@ -314,6 +350,27 @@ return (
             <label className="customCheckbox customCheckbox9">
               <input onChange={checkValue} type="checkbox" value="NLV019Page" /><span></span>
               <div className="listLinks"><p>Declaration of Responsibility NLV019</p></div>
+            </label>
+          </div>
+
+          <div className="formsListContainer">
+            <label className="customCheckbox customCheckbox9">
+              <input onChange={checkValue} type="checkbox" value="SP66Page" /><span></span>
+              <div className="listLinks"><p>Application sp66 – Personalized Plate</p></div>
+            </label>
+          </div>
+
+          <div className="formsListContainer">
+            <label className="customCheckbox customCheckbox9">
+              <input onChange={checkValue} type="checkbox" value="SP45Page" /><span></span>
+              <div className="listLinks"><p>Application sp45 – Circa 1982 Replicate Plate</p></div>
+            </label>
+          </div>
+
+          <div className="formsListContainer">
+            <label className="customCheckbox customCheckbox9">
+              <input onChange={checkValue} type="checkbox" value="SP33Page" /><span></span>
+              <div className="listLinks"><p>Application sp33 – Veterans</p></div>
             </label>
           </div>
 

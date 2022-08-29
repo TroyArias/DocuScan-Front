@@ -5436,6 +5436,1035 @@ input:focus {
   width: 333px; 
 }
 
+.sp66_1{
+  position: relative;
+  width: 850px;
+  height: 1100px;
+  margin: auto;
+  background-image: url('./formBackgrounds/sp66-1.png');
+  background-size: contain;
+}
+
+.sp66_1 input{
+  height: 14px;
+  font-size: 12px;
+  text-align: center;
+}
+
+.sp66_1 .firstChoise input{
+  height: 19px;
+  width: 17px;
+  font-size: 30px;
+  text-align: center;
+  top: 567px;
+}
+
+.sp66_1 .firstChoise .firstChoise1{
+  left: 142px;
+}
+
+.sp66_1 .firstChoise .firstChoise2{
+  left: 174px;
+}
+
+.sp66_1 .firstChoise .firstChoise3{
+  left: 206px;
+}
+
+.sp66_1 .firstChoise .firstChoise4{
+  left: 237px;
+}
+
+.sp66_1 .firstChoise .firstChoise5{
+  left: 269px;
+}
+
+.sp66_1 .firstChoise .firstChoise6{
+  left: 300px;
+}
+
+.sp66_1 .firstChoise .firstChoise7{
+  left: 332px;
+}
+
+.sp66_1 .secondChoise input{
+  height: 19px;
+  width: 17px;
+  font-size: 30px;
+  text-align: center;
+  top: 567px;
+}
+
+.sp66_1 .secondChoise .secondChoise1{
+  left: 493px;
+}
+
+.sp66_1 .secondChoise .secondChoise2{
+  left: 525px;
+}
+
+.sp66_1 .secondChoise .secondChoise3{
+  left: 556px;
+}
+
+.sp66_1 .secondChoise .secondChoise4{
+  left: 588px;
+}
+
+.sp66_1 .secondChoise .secondChoise5{
+  left: 620px;
+}
+
+.sp66_1 .secondChoise .secondChoise6{
+  left: 651px;
+}
+
+.sp66_1 .secondChoise .secondChoise7{
+  left: 683px;
+}
+
+.sp66_1 .thirdChoise input{
+  height: 19px;
+  width: 17px;
+  font-size: 30px;
+  text-align: center;
+  top: 599px;
+}
+
+.sp66_1 .thirdChoise .thirdChoise1{
+  left: 142px;
+}
+
+.sp66_1 .thirdChoise .thirdChoise2{
+  left: 174px;
+}
+
+.sp66_1 .thirdChoise .thirdChoise3{
+  left: 206px;
+}
+
+.sp66_1 .thirdChoise .thirdChoise4{
+  left: 237px;
+}
+
+.sp66_1 .thirdChoise .thirdChoise5{
+  left: 269px;
+}
+
+.sp66_1 .thirdChoise .thirdChoise6{
+  left: 300px;
+}
+
+.sp66_1 .thirdChoise .thirdChoise7{
+  left: 332px;
+}
+
+.custom-checkbox66_1_0>span::before {
+  top: 492px;
+  left: 42px;
+}
+.custom-checkbox66_1_0>input {
+  top: 492px;
+  left: 42px;
+}
+
+.custom-checkbox66_1_1>span::before {
+  top: 492px;
+  left: 374px;
+}
+.custom-checkbox66_1_1>input {
+  top: 492px;
+  left: 374px;
+}
+
+.custom-checkbox66_1_2>span::before {
+  top: 532px;
+  left: 42px;
+}
+.custom-checkbox66_1_2>input {
+  top: 532px;
+  left: 42px;
+}
+
+.sp66_1 .input1{
+  top: 513px;
+  left: 379px;
+  width: 427px; 
+}
+
+.sp66_1 .input2{
+  top: 602px;
+  left: 572px;
+  width: 174px; 
+}
+
+.sp66_1 .input3{
+  top: 675px;
+  left: 109px;
+  width: 685px; 
+}
+
+.sp66_1 .lastName1{
+  top: 734px;
+  left: 147px;
+  width: 210px; 
+}
+
+.sp66_1 .firstName1{
+  top: 734px;
+  left: 370px;
+  width: 200px; 
+}
+
+.sp66_1 .middleName1{
+  top: 734px;
+  left: 582px;
+  width: 213px; 
+}
+
+.sp66_1 .driveLic{
+  top: 766px;
+  left: 540px;
+  width: 255px; 
+}
+
+.sp66_1 .address1{
+  top: 792px;
+  left: 208px;
+  width: 260px; 
+}
+
+.sp66_1 .city1{
+  top: 792px;
+  left: 480px;
+  width: 140px; 
+}
+
+.sp66_1 .state1{
+  top: 792px;
+  left: 630px;
+  width: 56px; 
+}
+
+.sp66_1 .zip1{
+  top: 792px;
+  left: 696px;
+  width: 99px; 
+}
+
+.sp66_1 .address2{
+  top: 827px;
+  left: 158px;
+  width: 310px; 
+}
+
+.sp66_1 .city2{
+  top: 827px;
+  left: 480px;
+  width: 140px; 
+}
+
+.sp66_1 .state2{
+  top: 827px;
+  left: 630px;
+  width: 56px; 
+}
+
+.sp66_1 .zip2{
+  top: 827px;
+  left: 696px;
+  width: 99px; 
+}
+
+.sp66_1 .phone{
+  top: 863px;
+  left: 170px;
+  width: 222px; 
+}
+
+.sp66_1 .email{
+  top: 863px;
+  left: 495px;
+  width: 300px; 
+}
+
+.sp66_1 .input4{
+  top: 891px;
+  left: 529px;
+  width: 268px; 
+}
+
+.sp66_1 .input5{
+  top: 936px;
+  left: 39px;
+  width: 259px; 
+}
+
+.sp66_1 .input6{
+  top: 967px;
+  left: 480px;
+  width: 183px; 
+}
+
+.sp66_2{
+  position: relative;
+  width: 850px;
+  height: 1100px;
+  margin: auto;
+  background-image: url('./formBackgrounds/sp66-2.png');
+  background-size: contain;
+}
+
+.sp66_3{
+  position: relative;
+  width: 850px;
+  height: 1100px;
+  margin: auto;
+  background-image: url('./formBackgrounds/sp66-3.png');
+  background-size: contain;
+}
+
+.sp66_3 input{
+  height: 14px;
+  font-size: 12px;
+  text-align: center;
+}
+
+.sp66_3 .cardNumber input{
+  height: 30px;
+  width: 38px;
+  font-size: 30px;
+  text-align: center;
+  top: 222px;
+}
+
+.sp66_3 .cardNumber .cardNumber1{
+  left: 53px;
+}
+
+.sp66_3 .cardNumber .cardNumber2{
+  left: 96px;
+}
+
+.sp66_3 .cardNumber .cardNumber3{
+  left: 139px;
+}
+
+.sp66_3 .cardNumber .cardNumber4{
+  left: 182px;
+}
+
+.sp66_3 .cardNumber .cardNumber5{
+  left: 244px;
+}
+
+.sp66_3 .cardNumber .cardNumber6{
+  left: 287px;
+}
+
+.sp66_3 .cardNumber .cardNumber7{
+  left: 330px;
+}
+
+.sp66_3 .cardNumber .cardNumber8{
+  left: 373px;
+}
+
+.sp66_3 .cardNumber .cardNumber9{
+  left: 435px;
+}
+
+.sp66_3 .cardNumber .cardNumber10{
+  left: 478px;
+}
+
+.sp66_3 .cardNumber .cardNumber11{
+  left: 521px;
+}
+
+.sp66_3 .cardNumber .cardNumber12{
+  left: 564px;
+}
+
+.sp66_3 .cardNumber .cardNumber13{
+  left: 626px;
+}
+
+.sp66_3 .cardNumber .cardNumber14{
+  left: 669px;
+}
+
+.sp66_3 .cardNumber .cardNumber15{
+  left: 712px;
+}
+
+.sp66_3 .cardNumber .cardNumber16{
+  left: 755px;
+}
+
+.sp66_3 .expDate input{
+  height: 27px;
+  width: 23px;
+  font-size: 30px;
+  text-align: center;
+  top: 295px;
+}
+
+.sp66_3 .expDate .expDate1{
+  left: 618px;
+}
+
+.sp66_3 .expDate .expDate2{
+  left: 646px;
+}
+
+.sp66_3 .expDate .expDate3{
+  left: 694px;
+}
+
+.sp66_3 .expDate .expDate4{
+  left: 722px;
+}
+
+.sp66_3 .input1{
+  top: 441px;
+  left: 156px;
+  width: 314px;
+}
+
+.sp66_3 .input2{
+  top: 441px;
+  left: 694px;
+  width: 102px;
+}
+
+.sp66_3 .input3{
+  top: 518px;
+  left: 244px;
+  width: 240px;
+}
+
+.sp66_3 .input4{
+  top: 518px;
+  left: 496px;
+  width: 130px;
+}
+
+.sp66_3 .input5{
+  top: 518px;
+  left: 636px;
+  width: 40px;
+}
+
+.sp66_3 .input6{
+  top: 518px;
+  left: 686px;
+  width: 110px;
+}
+
+.sp66_3 .input7{
+  top: 589px;
+  left: 300px;
+  width: 171px;
+}
+
+.sp66_3 .input8{
+  top: 589px;
+  left: 569px;
+  width: 227px;
+}
+
+.sp66_3 .input9{
+  top: 629px;
+  left: 526px;
+  width: 270px;
+}
+
+.custom-checkbox66_3_0>span::before {
+  top: 301px;
+  left: 170px;
+}
+.custom-checkbox66_3_0>input {
+  top: 301px;
+  left: 170px;
+}
+
+.custom-checkbox66_3_1>span::before {
+  top: 301px;
+  left: 307px;
+}
+.custom-checkbox66_3_1>input {
+  top: 301px;
+  left: 307px;
+}
+
+.custom-checkbox66_3_2>span::before {
+  top: 301px;
+  left: 395px;
+}
+.custom-checkbox66_3_2>input {
+  top: 301px;
+  left: 395px;
+}   
+
+.sp45{
+  position: relative;
+  width: 850px;
+  height: 1100px;
+  margin: auto;
+  background-image: url('./formBackgrounds/sp45-1.png');
+  background-size: contain;
+}
+
+.sp45 input{
+  height: 14px;
+  font-size: 12px;
+  text-align: center;
+}
+
+.sp45 .replacement input{
+  height: 19px;
+  width: 17px;
+  font-size: 30px;
+  text-align: center;
+  top: 516px;
+}
+
+.sp45 .replacement .replacement1{
+  left: 152px;
+  top: 490px
+}
+
+.sp45 .replacement .replacement2{
+  left: 152px;
+}
+
+.sp45 .replacement .replacement3{
+  left: 178px;
+}
+
+.sp45 .replacement .replacement4{
+  left: 203px;
+}
+
+.sp45 .replacement .replacement5{
+  left: 229px;
+}
+
+.sp45 .replacement .replacement6{
+  left: 254px;
+}
+
+.sp45 .replacement .replacement7{
+  left: 280px;
+}
+
+.sp45 .firstChoise input{
+  height: 19px;
+  width: 17px;
+  font-size: 30px;
+  text-align: center;
+  top: 572px;
+}
+
+.sp45 .firstChoise .firstChoise1{
+  left: 152px;
+}
+
+.sp45 .firstChoise .firstChoise2{
+  left: 184px;
+}
+
+.sp45 .firstChoise .firstChoise3{
+  left: 216px;
+}
+
+.sp45 .firstChoise .firstChoise4{
+  left: 247px;
+}
+
+.sp45 .firstChoise .firstChoise5{
+  left: 279px;
+}
+
+.sp45 .firstChoise .firstChoise6{
+  left: 310px;
+}
+
+.sp45 .secondChoise input{
+  height: 19px;
+  width: 17px;
+  font-size: 30px;
+  text-align: center;
+  top: 572px;
+}
+
+.sp45 .secondChoise .secondChoise1{
+  left: 503px;
+}
+
+.sp45 .secondChoise .secondChoise2{
+  left: 535px;
+}
+
+.sp45 .secondChoise .secondChoise3{
+  left: 566px;
+}
+
+.sp45 .secondChoise .secondChoise4{
+  left: 598px;
+}
+
+.sp45 .secondChoise .secondChoise5{
+  left: 630px;
+}
+
+.sp45 .secondChoise .secondChoise6{
+  left: 661px;
+}
+
+.sp45 .thirdChoise input{
+  height: 19px;
+  width: 17px;
+  font-size: 30px;
+  text-align: center;
+  top: 603px;
+}
+
+.sp45 .thirdChoise .thirdChoise1{
+  left: 152px;
+}
+
+.sp45 .thirdChoise .thirdChoise2{
+  left: 184px;
+}
+
+.sp45 .thirdChoise .thirdChoise3{
+  left: 216px;
+}
+
+.sp45 .thirdChoise .thirdChoise4{
+  left: 247px;
+}
+
+.sp45 .thirdChoise .thirdChoise5{
+  left: 279px;
+}
+
+.sp45 .thirdChoise .thirdChoise6{
+  left: 310px;
+}
+
+.custom-checkbox45_0>span::before {
+  top: 456px;
+  left: 51px;
+}
+.custom-checkbox45_0>input {
+  top: 456px;
+  left: 51px;
+}
+
+.custom-checkbox45_1>span::before {
+  top: 554px;
+  left: 50px;
+}
+.custom-checkbox45_1>input {
+  top: 554px;
+  left: 50px;
+}
+
+.sp45 .input1{
+  top: 685px;
+  left: 118px;
+  width: 671px; 
+}
+
+.sp45 .firstName1{
+  top: 724px;
+  left: 157px;
+  width: 200px; 
+}
+
+.sp45 .middleName1{
+  top: 724px;
+  left: 370px;
+  width: 200px; 
+}
+
+.sp45 .lastName1{
+  top: 724px;
+  left: 582px;
+  width: 214px; 
+}
+
+.sp45 .driveLic{
+  top: 779px;
+  left: 225px;
+  width: 571px; 
+}
+
+.sp45 .address1{
+  top: 805px;
+  left: 170px;
+  width: 300px; 
+}
+
+.sp45 .city1{
+  top: 805px;
+  left: 480px;
+  width: 140px; 
+}
+
+.sp45 .state1{
+  top: 805px;
+  left: 630px;
+  width: 56px; 
+}
+
+.sp45 .zip1{
+  top: 805px;
+  left: 696px;
+  width: 100px; 
+}
+
+.sp45 .address2{
+  top: 841px;
+  left: 158px;
+  width: 310px; 
+}
+
+.sp45 .city2{
+  top: 841px;
+  left: 480px;
+  width: 140px; 
+}
+
+.sp45 .state2{
+  top: 841px;
+  left: 630px;
+  width: 56px; 
+}
+
+.sp45 .zip2{
+  top: 841px;
+  left: 696px;
+  width: 100px; 
+}
+
+.sp45 .phone{
+  top: 877px;
+  left: 156px;
+  width: 220px; 
+}
+
+.sp45 .email{
+  top: 877px;
+  left: 435px;
+  width: 361px; 
+}
+
+.sp45 .input2{
+  top: 920px;
+  left: 49px;
+  width: 266px; 
+}
+
+.sp45 .input3{
+  top: 975px;
+  left: 688px;
+  width: 108px; 
+}
+
+.sp33_1{
+  position: relative;
+  width: 850px;
+  height: 1100px;
+  margin: auto;
+  background-image: url('./formBackgrounds/sp33-1.png');
+  background-size: contain;
+}
+
+.sp33_2{
+  position: relative;
+  width: 850px;
+  height: 1100px;
+  margin: auto;
+  background-image: url('./formBackgrounds/sp33-2.png');
+  background-size: contain;
+}
+
+.sp33_2 input{
+  height: 14px;
+  font-size: 12px;
+  text-align: center;
+}
+
+.custom-checkbox33_2_0>span::before {
+  top: 191px;
+  left: 170px;
+}
+.custom-checkbox33_2_0>input {
+  top: 191px;
+  left: 170px;
+}
+
+.custom-checkbox33_2_1>span::before {
+  top: 191px;
+  left: 339px;
+}
+.custom-checkbox33_2_1>input {
+  top: 191px;
+  left: 339px;
+}
+
+.custom-checkbox33_2_2>span::before {
+  top: 191px;
+  left: 504px;
+}
+.custom-checkbox33_2_2>input {
+  top: 191px;
+  left: 504px;
+}
+
+.custom-checkbox33_2_3>span::before {
+  top: 191px;
+  left: 599px;
+}
+.custom-checkbox33_2_3>input {
+  top: 191px;
+  left: 599px;
+}
+
+.custom-checkbox33_2_4>span::before {
+  top: 223px;
+  left: 170px;
+}
+.custom-checkbox33_2_4>input {
+  top: 223px;
+  left: 170px;
+}
+
+.custom-checkbox33_2_5>span::before {
+  top: 223px;
+  left: 339px;
+}
+.custom-checkbox33_2_5>input {
+  top: 223px;
+  left: 339px;
+}
+
+.custom-checkbox33_2_6>span::before {
+  top: 223px;
+  left: 502px;
+}
+.custom-checkbox33_2_6>input {
+  top: 223px;
+  left: 502px;
+}
+
+.custom-checkbox33_2_7>span::before {
+  top: 254px;
+  left: 170px;
+}
+.custom-checkbox33_2_7>input {
+  top: 254px;
+  left: 170px;
+}
+
+.custom-checkbox33_2_8>span::before {
+  top: 254px;
+  left: 340px;
+}
+.custom-checkbox33_2_8>input {
+  top: 254px;
+  left: 340px;
+}
+
+.custom-checkbox33_2_9>span::before {
+  top: 254px;
+  left: 504px;
+}
+.custom-checkbox33_2_9>input {
+  top: 254px;
+  left: 504px;
+}
+
+.custom-checkbox33_2_10>span::before {
+  top: 299px;
+  left: 180px;
+}
+.custom-checkbox33_2_10>input {
+  top: 299px;
+  left: 180px;
+}
+
+.custom-checkbox33_2_11>span::before {
+  top: 299px;
+  left: 348px;
+}
+.custom-checkbox33_2_11>input {
+  top: 299px;
+  left: 348px;
+}
+
+.custom-checkbox33_2_12>span::before {
+  top: 299px;
+  left: 528px;
+}
+.custom-checkbox33_2_12>input {
+  top: 299px;
+  left: 528px;
+}
+
+.custom-checkbox33_2_13>span::before {
+  top: 338px;
+  left: 50px;
+}
+.custom-checkbox33_2_13>input {
+  top: 338px;
+  left: 50px;
+}
+
+.custom-checkbox33_2_14>span::before {
+  top: 338px;
+  left: 146px;
+}
+.custom-checkbox33_2_14>input {
+  top: 338px;
+  left: 146px;
+}
+
+.sp33_2 .firstChoise input{
+  height: 22px;
+  width: 20px;
+  font-size: 30px;
+  text-align: center;
+  top: 330px;
+}
+
+.sp33_2 .firstChoise .firstChoise1{
+  left: 584px;
+}
+
+.sp33_2 .firstChoise .firstChoise2{
+  left: 613px;
+}
+
+.sp33_2 .firstChoise .firstChoise3{
+  left: 642px;
+}
+
+.sp33_2 .firstChoise .firstChoise4{
+  left: 670px;
+}
+
+.sp33_2 .firstChoise .firstChoise5{
+  left: 699px;
+}
+
+.sp33_2 .input1{
+  top: 380px;
+  left: 261px;
+  width: 529px; 
+}
+
+.sp33_2 .firstName1{
+  top: 723px;
+  left: 178px;
+  width: 182px; 
+}
+
+.sp33_2 .middleName1{
+  top: 723px;
+  left: 370px;
+  width: 200px; 
+}
+
+.sp33_2 .lastName1{
+  top: 723px;
+  left: 582px;
+  width: 216px; 
+}
+
+.sp33_2 .driveLic{
+  top: 765px;
+  left: 497px;
+  width: 302px; 
+}
+
+.sp33_2 .address1{
+  top: 792px;
+  left: 189px;
+  width: 282px; 
+}
+
+.sp33_2 .city1{
+  top: 792px;
+  left: 480px;
+  width: 140px; 
+}
+
+.sp33_2 .state1{
+  top: 792px;
+  left: 630px;
+  width: 56px; 
+}
+
+.sp33_2 .zip1{
+  top: 792px;;
+  left: 696px;
+  width: 103px; 
+}
+
+.sp33_2 .address2{
+  top: 828px;
+  left: 183px;
+  width: 288px; 
+}
+
+.sp33_2 .city2{
+  top: 828px;
+  left: 480px;
+  width: 140px; 
+}
+
+.sp33_2 .state2{
+  top: 828px;
+  left: 630px;
+  width: 56px; 
+}
+
+.sp33_2 .zip2{
+  top: 828px;
+  left: 696px;
+  width: 103px; 
+}
+
+.sp33_2 .phone{
+  top: 864px;
+  left: 136px;
+  width: 285px; 
+}
+
+.sp33_2 .email{
+  top: 864px;
+  left: 500px;
+  width: 296px; 
+}
+
+.sp33_2 .input2{
+  top: 909px;
+  left: 618px;
+  width: 181px; 
+}
+
+.sp33_2 .input3{
+  top: 943px;
+  left: 146px;
+  width: 267px; 
+}
+
+
 
 
 
