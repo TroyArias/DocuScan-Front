@@ -18,6 +18,22 @@ function VP018Page() {
   return (
     <div className="vp018">
 
+      <label className="custom-checkbox custom-checkbox0181">
+        <input type="checkbox"/><span></span>
+      </label>
+
+      <label className="custom-checkbox custom-checkbox0182">
+        <input type="checkbox"/><span></span>
+      </label>
+
+      <label className="custom-checkbox custom-checkbox0181">
+        <input type="checkbox"/><span></span>
+      </label>
+
+      <label className="custom-checkbox custom-checkbox0182">
+        <input type="checkbox"/><span></span>
+      </label>
+
       <div className="vehicleID">
         <input className="vehicleID1" type="text" maxLength='1' value={vehicleID[0]} onChange={(event)=>{handleVal(event.target.value, 0)}}/>
         <input className="vehicleID2" type="text" maxLength='1' value={vehicleID[1]} onChange={(event)=>{handleVal(event.target.value, 1)}}/>

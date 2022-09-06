@@ -186,12 +186,6 @@ function MainList() {
       <div className='formStyle'>
         <Content ref={componentRef} pages={arrForms}/>
       </div>
-
-          
-          {/*
-          <div><Link to = "/example">Application sp34 – Classic Vehicle</Link></div>
-          <div><Link to = "/example">Application sp20 – Classic Rod</Link></div>
-          <div><Link to = "/example">Odometer Certificate for Emissions Exemption Form EC018</Link></div>  */}
       
     </Context.Provider>
   );

@@ -1,22 +1,39 @@
 import React, { useContext } from "react";
 import { Context } from "../../../context";
 
+function SP34Page() {
 
-function VP222Page() {
-
-  const {vehicleID, setVehicleID, year, setYear, make, setMake, model, setModel, weight, setWeight, driverLicense1, setDriverLicense1,
+  const {vehicleID, setVehicleID, year, setYear, make, setMake, model, setModel, driverLicense1, setDriverLicense1,
     zip1, setZip1, setAddress1, address1, setCity1, city1, setState1, state1, lastName1, setLastName1, firstName1, setFirstName1,
     middleName1, setMiddleName1, zip2, setZip2, setAddress2, address2, setCity2, city2, setState2, state2} = useContext(Context);
 
+    function handleVal(value, index){
+      let vehicleID2 = [...vehicleID]
+      vehicleID2[index] = value
+      setVehicleID(vehicleID2)
+    }
 
-  function handleVal(value, index){
-    let vehicleID2 = [...vehicleID]
-    vehicleID2[index] = value
-    setVehicleID(vehicleID2)
-  }
+    return (
+          
+    <div className="sp34">
 
-  return (
-    <div className="vp222">
+      <input className="firstName1" type="text" value={firstName1} onChange={(event)=>{setFirstName1(event.target.value)}}/>
+      <input className="middleName1" type="text" value={middleName1} onChange={(event)=>{setMiddleName1(event.target.value)}}/>
+      <input className="lastName1" type="text" value={lastName1} onChange={(event)=>{setLastName1(event.target.value)}}/>
+      
+      <input className="driveLic" type="text" value={driverLicense1} onChange={(event)=>{setDriverLicense1(event.target.value)}}/>
+
+      <input className="address1" type="text" value={address1} onChange={(event)=>{setAddress1(event.target.value)}}/>
+      <input className="city1" type="text" value={city1} onChange={(event)=>{setCity1(event.target.value)}}/>
+      <input className="state1" type="text" value={state1} onChange={(event)=>{setState1(event.target.value)}}/>
+      <input className="zip1" type="text" value={zip1} onChange={(event)=>{setZip1(event.target.value)}}/>
+      <input className="address2" type="text" value={address2} onChange={(event)=>{setAddress2(event.target.value)}}/>
+      <input className="city2" type="text" value={city2} onChange={(event)=>{setCity2(event.target.value)}}/>
+      <input className="state2" type="text" value={state2} onChange={(event)=>{setState2(event.target.value)}}/>
+      <input className="zip2" type="text" value={zip2} onChange={(event)=>{setZip2(event.target.value)}}/>
+
+      <input className="phone" type="text"/>
+      <input className="email" type="text"/>
 
       <div className="vehicleID">
         <input className="vehicleID1" type="text" maxLength='1' value={vehicleID[0]} onChange={(event)=>{handleVal(event.target.value, 0)}}/>
@@ -40,29 +57,21 @@ function VP222Page() {
       </div>
 
       <input className="year" type="text" value={year} onChange={(event)=>{setYear(event.target.value)}}/>
-      <input className="make" type="text" value={make} onChange={(event)=>{setMake(event.target.value)}}/>
       <input className="model" type="text" value={model} onChange={(event)=>{setModel(event.target.value)}}/>
-      <input className="weight" type="text" />
-      <input className="weight2" type="text" value={weight} onChange={(event)=>{setWeight(event.target.value)}}/>
-      <input className="country" type="text"/>
-      <input className="odometer" type="text"/>
-      <input className="firstName" type="text" value={firstName1} onChange={(event)=>{setFirstName1(event.target.value)}}/>
-      <input className="middleName" type="text" value={middleName1} onChange={(event)=>{setMiddleName1(event.target.value)}}/>
-      <input className="lastName" type="text" value={lastName1} onChange={(event)=>{setLastName1(event.target.value)}}/>
-      <input className="input1" type="text" value={driverLicense1} onChange={(event)=>{setDriverLicense1(event.target.value)}}/>
-      <input className="address" type="text" value={address1} onChange={(event)=>{setAddress1(event.target.value)}}/>
-      <input className="city" type="text" value={city1} onChange={(event)=>{setCity1(event.target.value)}}/>
-      <input className="state" type="text" value={state1} onChange={(event)=>{setState1(event.target.value)}}/>
-      <input className="zipCode" type="text" value={zip1} onChange={(event)=>{setZip1(event.target.value)}}/>
-      <input className="address2" type="text" value={address2} onChange={(event)=>{setAddress2(event.target.value)}}/>
-      <input className="city2" type="text" value={city2} onChange={(event)=>{setCity2(event.target.value)}}/>
-      <input className="state2" type="text" value={state2} onChange={(event)=>{setState2(event.target.value)}}/>
-      <input className="zipCode2" type="text" value={zip2} onChange={(event)=>{setZip2(event.target.value)}}/>
-      <input className="telephone" type="text"/>
-      <input className="email" type="text"/>
-      <input className="date" type="text"/>
-    </div>
-  );
-}
+      <input className="make" type="text" value={make} onChange={(event)=>{setMake(event.target.value)}}/>
 
-export default VP222Page;
+      <div className="odometer">
+        <input className="odometer1" type="text" maxLength='1'/>
+        <input className="odometer2" type="text" maxLength='1'/>
+        <input className="odometer3" type="text" maxLength='1'/>
+        <input className="odometer4" type="text" maxLength='1'/>
+        <input className="odometer5" type="text" maxLength='1'/>
+        <input className="odometer6" type="text" maxLength='1'/>
+        <input className="odometer7" type="text" maxLength='1'/>
+      </div>
+    </div>
+        
+    );
+  }
+  
+  export default SP34Page;

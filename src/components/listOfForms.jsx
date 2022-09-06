@@ -29,6 +29,9 @@ import SP66Page3 from './formPages/SP66/Form3';
 import SP45Page from './formPages/SP45/Form1';
 import SP33Page1 from './formPages/SP33/Form1';
 import SP33Page2 from './formPages/SP33/Form2';
+import SP34Page from './formPages/SP34/Form1';
+import SP20Page from './formPages/SP20/Form1';
+import EC018Page from './formPages/EC018/Form1';
 
 function ListOfForms() {
 
@@ -230,6 +233,35 @@ function ListOfForms() {
             }
           break;
 
+          case 'SP34Page':
+            if (!arrValues.includes(value)) {
+              setArrForms([...arrForms, SP34Page]);
+              setArrValues([...arrValues, value]);
+            } else {
+              setArrForms(arrForms.filter(function(f) { return f !== SP34Page}))
+              setArrValues(arrValues.filter(function(f) { return f !== value }));
+            }
+          break;
+
+          case 'SP20Page':
+            if (!arrValues.includes(value)) {
+              setArrForms([...arrForms, SP20Page]);
+              setArrValues([...arrValues, value]);
+            } else {
+              setArrForms(arrForms.filter(function(f) { return f !== SP20Page}))
+              setArrValues(arrValues.filter(function(f) { return f !== value }));
+            }
+          break;
+
+          case 'EC018Page':
+            if (!arrValues.includes(value)) {
+              setArrForms([...arrForms, EC018Page]);
+              setArrValues([...arrValues, value]);
+            } else {
+              setArrForms(arrForms.filter(function(f) { return f !== EC018Page}))
+              setArrValues(arrValues.filter(function(f) { return f !== value }));
+            }
+          break;
 
           default:
 
@@ -371,6 +403,27 @@ return (
             <label className="customCheckbox customCheckbox9">
               <input onChange={checkValue} type="checkbox" value="SP33Page" /><span></span>
               <div className="listLinks"><p>Application sp33 – Veterans</p></div>
+            </label>
+          </div>
+
+          <div className="formsListContainer">
+            <label className="customCheckbox customCheckbox9">
+              <input onChange={checkValue} type="checkbox" value="SP34Page" /><span></span>
+              <div className="listLinks"><p>Application sp34 – Classic Vehicle</p></div>
+            </label>
+          </div>
+
+          <div className="formsListContainer">
+            <label className="customCheckbox customCheckbox9">
+              <input onChange={checkValue} type="checkbox" value="SP20Page" /><span></span>
+              <div className="listLinks"><p>Application sp20 – Classic Rod</p></div>
+            </label>
+          </div>
+
+          <div className="formsListContainer">
+            <label className="customCheckbox customCheckbox9">
+              <input onChange={checkValue} type="checkbox" value="EC018Page" /><span></span>
+              <div className="listLinks"><p>Odometer Certificate for Emissions Exemption Form EC018</p></div>
             </label>
           </div>
 

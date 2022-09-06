@@ -5,6 +5,12 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  /* background-image: url("/Users/user/Desktop/DocuScan/src/formBackgrounds/platetyle_light.webp");
+  background-size: contain; */
+}
+
+.root{
+  min-width: 1100px
 }
 
 code {
@@ -27,11 +33,12 @@ input:focus {
 
 .menu{
   display: flex;
-  justify-content: space-around
+  justify-content: space-around;
 }
 
 .infoList{
   width: 500px;
+  height: 90%;
 }
 
 .infoList h4{
@@ -93,6 +100,7 @@ input:focus {
   display: flex;
   flex-direction: column;
   width: 600px;
+  align-items: center
 }
 
 .formsListContainer{
@@ -149,13 +157,13 @@ input:focus {
 }
 
 .formStyle{
-  margin-top: 80px;         
+  margin-top: 90px;         
 }
 
 .Navbar{
   display: flex;
-  height: 50px;
-  background: #34343f;
+  height: 70px;
+  background: #2a3040;
   position: fixed;
   width: 100vw;
   z-index: 3;
@@ -181,7 +189,7 @@ input:focus {
 
 .btn {
   position: fixed;
-  top: 10px;
+  top: 20px;
   right: 140px;
   z-index: 3;	
 	padding: 0 16px;
@@ -201,7 +209,7 @@ input:focus {
 
 .btn_2 {
   position: fixed;
-  top: 10px;
+  top: 20px;
   right: 40px;	
 	padding: 0 16px;
 	outline: none;
@@ -227,6 +235,8 @@ input:focus {
   border: 3px dashed black;
   background-color: #f8f9fa;
   margin: 50px auto;
+  border-radius: 30px;
+  box-shadow: 0 2px 40px rgb(47 43 50 / 20%);
 }
 
 @page {
@@ -862,6 +872,12 @@ input:focus {
   top: 980px;
   left: 536px;
   width: 264px;
+}
+
+.vp222 .date{
+  top: 1018px;
+  left: 622px;
+  width: 173px;
 }
 
 .vp247{
@@ -1659,123 +1675,226 @@ input:focus {
 }
 
 .vp019 .year{
-  top: 354px;
-  left: 90px;
-  width: 154px;
+  top: 318px;
+  left: 108px;
+  width: 100px;
 }
 
 .vp019 .make{
-  top: 354px;
-  left: 297px;
-  width: 229px;
+  top: 318px;
+  left: 268px;
+  width: 126px;
 }
 
 .vp019 .model{
-  top: 354px;
-  left: 588px;
-  width: 201px;
+  top: 318px;
+  left: 462px;
+  width: 128px;
 }
 
-.vp019 .vehicleID{
-  top: 405px;
-  left: 271px;
-  width: 525px;
+.vp019 .bodyType{
+  top: 318px;;
+  left: 693px;
+  width: 91px;
 }
 
 .vp019 .input1{
-  top: 482px;
-  left: 50px;
-  width: 738px;
+  top: 491px;
+  left: 62px;
+  width: 721px;
 }
 
 .vp019 .input2{
-  top: 520px;
-  left: 50px;
-  width: 738px;
+  top: 517px;
+  left: 62px;
+  width: 721px;
 }
 
 .vp019 .input3{
-  top: 559px;
-  left: 50px;
-  width: 738px;
+  top: 542px;
+  left: 62px;
+  width: 721px;
 }
 
-.vp019 .name{
-  top: 619px;
-  left: 297px;
-  width: 498px;
+.vp019 .vehicleID input{
+  height: 29px;
+  width: 34px;
+  font-size: 18px;
+  text-align: center;
+  top: 398px;
+}
+
+.vp019 .vehicleID .vehicleID1{
+  left: 63px;
+  width: 39px;
+}
+
+.vp019 .vehicleID .vehicleID2{
+  left: 108px;
+}
+
+.vp019 .vehicleID .vehicleID3{
+  left: 148px;
+}
+
+.vp019 .vehicleID .vehicleID4{
+  left: 188px;
+}
+
+.vp019 .vehicleID .vehicleID5{
+  left: 228px;
+}
+
+.vp019 .vehicleID .vehicleID6{
+  left: 268px;
+}
+
+.vp019 .vehicleID .vehicleID7{
+  left: 308px;
+}
+
+.vp019 .vehicleID .vehicleID8{
+  left: 348px;
+}
+
+.vp019 .vehicleID .vehicleID9{
+  left: 388px;
+}
+
+.vp019 .vehicleID .vehicleID10{
+  left: 428px;
+}
+
+.vp019 .vehicleID .vehicleID11{
+  left: 468px;
+}
+
+.vp019 .vehicleID .vehicleID12{
+  left: 508px;
+}
+
+.vp019 .vehicleID .vehicleID13{
+  left: 548px;
+}
+
+.vp019 .vehicleID .vehicleID14{
+  left: 588px;
+}
+
+.vp019 .vehicleID .vehicleID15{
+  left: 628px;
+}
+
+.vp019  .vehicleID .vehicleID16{
+  left: 668px;
+}
+
+.vp019  .vehicleID .vehicleID17{
+  left: 708px;
+}
+
+.vp019  .vehicleID .vehicleID18{
+  left: 748px;
+  width: 34px;
+} 
+
+.vp019 .firstName1{
+  top: 636px;
+  left: 188px;
+  width: 190px;
+}
+
+.vp019 .middleName1{
+  top: 636px;
+  left: 390px;
+  width: 170px;
+}
+
+.vp019 .lastName1{
+  top: 636px;
+  left: 570px;
+  width: 213px;
 }
 
 .vp019 .input4{
-  top: 670px;
-  left: 395px;
-  width: 396px;
+  top: 688px;
+  left: 406px;
+  width: 378px;
 }
 
 .vp019 .address1{
-  top: 705px;
-  left: 178px;
-  width: 240px;
+  top: 718px;
+  left: 200px;
+  width: 216px;
 }
 
 .vp019 .city1{
-  top: 705px;
+  top: 718px;
   left: 430px;
   width: 170px;
 }
 
 .vp019 .state1{
-  top: 705px;
+  top: 718px;
   left: 610px;
   width: 80px;
 }
 
 .vp019 .zip1{
-  top: 705px;
+  top: 718px;
   left: 700px;
   width: 84px;
 }
 
 .vp019 .address2{
-  top: 756px;
-  left: 173px;
-  width: 240px;
+  top: 758px;
+  left: 187px;
+  width: 230px;
 }
 
 .vp019 .city2{
-  top: 756px;
+  top: 758px;
   left: 430px;
   width: 170px;
 }
 
 .vp019 .state2{
-  top: 756px;
+  top: 758px;
   left: 610px;
   width: 80px;
 }
 
 .vp019 .zip2{
-  top: 756px;
+  top: 758px;
   left: 700px;
-  width: 95px;
+  width: 84px;
 }
 
 .vp019 .input5{
-  top: 805px;
-  left: 254px;
-  width: 173px;
+  top: 815px;
+  left: 131px;
+  width: 115px;
 }
 
 .vp019 .input6{
-  top: 843px;
-  left: 309px;
-  width: 118px;
+  top: 815px;
+  left: 344px;
+  width: 133px;
 }
 
 .vp019 .input7{
-  top: 939px;
-  left: 349px;
-  width: 424px;
+  top: 850px;
+  left: 325px;
+  width: 152px;
+}
+
+.custom-checkbox0191>span::before {
+  top: 341px;
+  left: 402px;
+}
+.custom-checkbox0191>input {
+  top: 341px;
+  left: 402px;
 }
 
 .vp185{
@@ -1988,368 +2107,383 @@ input:focus {
 }
 
 .vp012_2 .year{
-  top: 125px;
-  left: 86px;
-  width: 176px;
+  top: 124px;
+  left: 95px;
+  width: 108px;
 }
 
 .vp012_2 .make{
-  top: 125px;
-  left: 317px;
-  width: 176px;
+  top: 124px;
+  left: 262px;
+  width: 140px;
 }
 
 .vp012_2 .model{
-  top: 125px;
-  left: 550px;
-  width: 250px;
+  top: 124px;
+  left: 462px;
+  width: 122px;
+}
+
+.vp012_2 .bodyType{
+  top: 124px;
+  left: 675px;
+  width: 109px;
 }
 
 .vp012_2 .nevadaLic{
-  top: 153px;
-  left: 240px;
-  width: 266px;
+  top: 174px;
+  left: 242px;
+  width: 267px;
 }
 
 .vp012_2 .firstName1{
-  top: 222px;
-  left: 174px;
+  top: 231px;
+  left: 175px;
   width: 190px;
 }
 
 .vp012_2 .middleName1{
-  top: 222px;
+  top: 231px;
   left: 380px;
   width: 170px;
 }
 
 .vp012_2 .lastName1{
-  top: 222px;
+  top: 231px;
   left: 570px;
-  width: 222px;
+  width: 225px;
 }
 
 .vp012_2 .driverLic1{
-  top: 258px;
+  top: 267px;
   left: 624px;
-  width: 168px;
+  width: 171px;
 }
 
 .vp012_2 .address1{
-  top: 281px;
-  left: 174px;
+  top: 290px;
+  left: 175px;
   width: 260px;
 }
 
 .vp012_2 .city1{
-  top: 281px;
+  top: 290px;
   left: 450px;
   width: 170px;
 }
 
 .vp012_2 .state1{
-  top: 281px;
+  top: 290px;
   left: 636px;
   width: 50px;
 }
 
 .vp012_2 .zip1{
-  top: 281px;
+  top: 290px;
   left: 700px;
-  width: 92px;
+  width: 95px;
 }
 
 .vp012_2 .address2{
-  top: 317px;
-  left: 174px;
+  top: 325px;
+  left: 175px;
   width: 260px;
 }
 
 .vp012_2 .city2{
-  top: 317px;
+  top: 325px;
   left: 450px;
   width: 170px;
 }
 
 .vp012_2 .state2{
-  top: 317px;
+  top: 325px;
   left: 636px;
   width: 50px;
 }
 
 .vp012_2 .zip2{
-  top: 317px;
+  top: 325px;
   left: 700px;
-  width: 92px;
+  width: 95px;
 }
 
 .vp012_2 .firstName2{
-  top: 353px;
+  top: 362px;
   left: 175px;
   width: 190px;
 }
 
 .vp012_2 .middleName2{
-  top: 353px;
+  top: 362px;
   left: 380px;
   width: 170px;
 }
 
 .vp012_2 .lastName2{
-  top: 353px;
+  top: 362px;
   left: 570px;
-  width: 222px;
+  width: 225px;
 }
 
 .vp012_2 .driverLic2{
-  top: 389px;
+  top: 398px;
   left: 624px;
-  width: 168px;
+  width: 171px;
 }
 
 .vp012_2 .address3{
-  top: 412px;
-  left: 174px;
+  top: 421px;
+  left: 175px;
   width: 260px;
 }
 
 .vp012_2 .city3{
-  top: 412px;
+  top: 421px;
   left: 450px;
   width: 170px;
 }
 
 .vp012_2 .state3{
-  top: 412px;
+  top: 421px;
   left: 636px;
   width: 50px;
 }
 
 .vp012_2 .zip3{
-  top: 412px;
+  top: 421px;
   left: 700px;
-  width: 92px;
+  width: 95px;
 }
 
 .vp012_2 .address4{
-  top: 448px;
-  left: 174px;
+  top: 457px;
+  left: 175px;
   width: 260px;
 }
 
 .vp012_2 .city4{
-  top: 448px;
+  top: 457px;
   left: 450px;
   width: 170px;
 }
 
 .vp012_2 .state4{
-  top: 448px;
+  top: 457px;
   left: 636px;
   width: 50px;
 }
 
 .vp012_2 .zip4{
-  top: 448px;
+  top: 457px;
   left: 700px;
-  width: 92px;
+  width: 95px;
 }
 
 .vp012_2 .input3{
-  top: 514px;
-  left: 174px;
-  width: 619px;
+  top: 519px;
+  left: 183px;
+  width: 612px;
 }
 
 .vp012_2 .input4{
-  top: 537px;
-  left: 586px;
-  width: 207px;
+  top: 543px;
+  left: 595px;
+  width: 200px;
 }
 
 .vp012_2 .input5{
-  top: 560px;
-  left: 113px;
+  top: 566px;
+  left: 116px;
   width: 320px;
 }
 
 .vp012_2 .input6{
-  top: 560px;
+  top: 566px;
   left: 450px;
   width: 170px;
 }
 
 .vp012_2 .input7{
-  top: 560px;
+  top: 566px;
   left: 636px;
   width: 50px;
 }
 
 .vp012_2 .input8{
-  top: 560px;
+  top: 566px;
   left: 700px;
-  width: 92px;
+  width: 95px;
 }
 
 .vp012_2 .input9{
-  top: 597px;
-  left: 148px;
-  width: 645px;
+  top: 602px;
+  left: 158px;
+  width: 637px;
 }
 
 .vp012_2 .input10{
-  top: 620px;
-  left: 586px;
-  width: 207px;
+  top: 625px;
+  left: 531px;
+  width: 264px;
 }
 
 .vp012_2 .input11{
-  top: 642px;
-  left: 113px;
+  top: 648px;
+  left: 116px;
   width: 320px;
 }
 
 .vp012_2 .input12{
-  top: 642px;
+  top: 648px;
   left: 450px;
   width: 170px;
 }
 
 .vp012_2 .input13{
-  top: 642px;
+  top: 648px;
   left: 636px;
   width: 50px;
 }
 
 .vp012_2 .input14{
-  top: 642px;
+  top: 648px;
   left: 700px;
-  width: 92px;
+  width: 95px;
 }
 
 .vp012_2 .input15{
-  top: 714px;
-  left: 148px;
-  width: 645px;
+  top: 720px;
+  left: 158px;
+  width: 637px;
 }
 
 .vp012_2 .input16{
-  top: 737px;
-  left: 112px;
+  top: 743px;
+  left: 116px;
   width: 280px;
 }
 
 .vp012_2 .input17{
-  top: 737px;
+  top: 743px;
   left: 410px;
   width: 170px;
 }
 
 .vp012_2 .input18{
-  top: 737px;
+  top: 743px;
   left: 594px;
-  width: 70px;
+  width: 73px;
 }
 
 .vp012_2 .input19{
-  top: 737px;
+  top: 743px;
   left: 680px;
-  width: 112px;
+  width: 115px;
 }
 
 .vp012_2 .input20{
-  top: 830px;
-  left: 408px;
-  width: 388px;
+  top: 825px;
+  left: 440px;
+  width: 356px;
 }
 
 .vp012_2 .input21{
-  top: 859px;
-  left: 224px;
-  width: 198px;
+  top: 857px;
+  left: 100px;
+  width: 165px;
 }
 
 .vp012_2 .input22{
-  top: 886px;
-  left: 81px;
-  width: 547px;
+  top: 883px;
+  left: 75px;
+  width: 490px;
 }
 
 .vp012_2 .input23{
-  top: 886px;
-  left: 687px;
-  width: 117px;
+  top: 883px;
+  left: 618px;
+  width: 178px;
 }
 
 .vp012_2 .input24{
   top: 923px;
-  left: 112px;
-  width: 280px;
+  left: 106px;
+  width: 260px;
 }
 
 .vp012_2 .input25{
   top: 923px;
-  left: 410px;
+  left: 378px;
   width: 170px;
 }
 
 .vp012_2 .input26{
   top: 923px;
-  left: 594px;
+  left: 560px;
   width: 70px;
 }
 
 .vp012_2 .input27{
   top: 923px;
-  left: 680px;
-  width: 120px;
+  left: 650px;
+  width: 146px;
 }
 
 .vp012_2 .input28{
-  top: 961px;
-  left: 325px;
-  width: 97px;
+  top: 959px;
+  left: 356px;
+  width: 102px;
 }
 
 .vp012_2 .input29{
-  top: 990px;
-  left: 50px;
-  width: 320px;
+  top: 857px;
+  left: 344px;
+  width: 108px;
 }
 
 .custom-checkbox0121>span::before {
-  top: 831px;
-  left: 76px;
+  top: 825px;
+  left: 75px;
 }
 .custom-checkbox0121>input {
-  top: 831px;
-  left: 76px;
+  top: 825px;
+  left: 75px;
 }
 
 .custom-checkbox0122>span::before {
-  top: 831px;
-  left: 151px;
+  top: 825px;
+  left: 150px;
 }
 .custom-checkbox0122>input {
-  top: 831px;
-  left: 151px;
+  top: 825px;
+  left: 150px;
 }
 
 .custom-checkbox0123>span::before {
-  top: 831px;
-  left: 239px;
+  top: 825px;
+  left: 238px;
 }
 .custom-checkbox0123>input {
-  top: 831px;
-  left: 239px;
+  top: 825px;
+  left: 238px;
 }
 
 .custom-checkbox0124>span::before {
-  top: 831px;
-  left: 351px;
+  top: 825px;
+  left: 350px;
 }
 .custom-checkbox0124>input {
-  top: 831px;
+  top: 825px;
+  left: 350px;
+}
+
+.custom-checkbox0125>span::before {
+  top: 148px;
+  left: 351px;
+}
+.custom-checkbox0125>input {
+  top: 148px;
   left: 351px;
 }
 
@@ -2466,221 +2600,222 @@ input:focus {
 }
 
 .vp104 .input1{
-  top: 277px;
-  left: 213px;
-  width: 423px;
+  top: 294px;
+  left: 196px;
+  width: 272px;
 }
 
 .vp104 .input2{
-  top: 277px;
-  left: 702px;
-  width: 89px;
+  top: 294px;
+  left: 534px;
+  width: 64px;
 }
 
 .vp104 .firstName1{
-  top: 376px;
-  left: 175px;
-  width: 190px;
-}
-
-.vp104 .middleName1{
-  top: 376px;
-  left: 380px;
+  top: 379px;
+  left: 239px;
   width: 160px;
 }
 
+.vp104 .middleName1{
+  top: 379px;
+  left: 408px;
+  width: 150px;
+}
+
 .vp104 .lastName1{
-  top: 376px;
-  left: 563px;
-  width: 190px;
+  top: 379px;
+  left: 570px;
+  width: 168px;
 }
 
 .vp104 .driverLicense1{
-  top: 412px;
-  left: 625px;
-  width: 193px;
+  top: 409px;
+  left: 619px;
+  width: 176px;
 }
 
 .vp104 .address1{
-  top: 438px;
-  left: 175px;
+  top: 429px;
+  left: 164px;
   width: 270px;
 }
 
 .vp104 .city1{
-  top: 438px;
-  left: 460px;
+  top: 429px;
+  left: 450px;
   width: 150px;
 }
 
 .vp104 .state1{
-  top: 438px;
+  top: 429px;
   left: 624px;
   width: 70px;
 }
 
 .vp104 .zip1{
-  top: 438px;
+  top: 429px;
   left: 710px;
-  width: 108px;
+  width: 86px;
 }
 
 .vp104 .address2{
-  top: 474px;
-  left: 169px;
+  top: 464px;
+  left: 164px;
   width: 270px;
 }
 
 .vp104 .city2{
-  top: 474px;
-  left: 460px;
+  top: 464px;
+  left: 450px;
   width: 150px;
 }
 
 .vp104 .state2{
-  top: 474px;
+  top: 464px;
   left: 624px;
   width: 70px;
 }
 
 .vp104 .zip2{
-  top: 474px;
+  top: 464px;
   left: 710px;
-  width: 108px;
+  width: 86px;
 }
 
 .vp104 .firstName2{
-  top: 516px;
-  left: 175px;
-  width: 210px;
+  top: 494px;
+  left: 239px;
+  width: 170px;
 }
 
 .vp104 .middleName2{
-  top: 516px;
-  left: 396px;
-  width: 190px;
+  top: 494px;
+  left: 418px;
+  width: 170px;
 }
 
 .vp104 .lastName2{
-  top: 516px;
+  top: 494px;
   left: 600px;
-  width: 218px;
+  width: 196px;
 }
 
 .vp104 .driverLicense2{
-  top: 552px;
-  left: 625px;
-  width: 193px;
+  top: 523px;
+  left: 619px;
+  width: 177px;
 }
 
 .vp104 .address3{
-  top: 585px;
-  left: 175px;
+  top: 546px;
+  left: 164px;
   width: 270px;
 }
 
 .vp104 .city3{
-  top: 585px;
+  top: 546px;
   left: 460px;
   width: 150px;
 }
 
 .vp104 .state3{
-  top: 585px;
+  top: 546px;
   left: 624px;
   width: 70px;
 }
 
 .vp104 .zip3{
-  top: 585px;
-  left: 710px;
-  width: 108px;
+  top: 546px;
+  left: 706px;
+  width: 90px;
 }
 
 .vp104 .address4{
-  top: 621px;
-  left: 169px;
+  top: 576px;
+  left: 164px;
   width: 270px;
 }
 
 .vp104 .city4{
-  top: 621px;
+  top: 576px;
   left: 460px;
   width: 150px;
 }
 
 .vp104 .state4{
-  top: 621px;
+  top: 576px;
   left: 624px;
   width: 70px;
 }
 
 .vp104 .zip4{
-  top: 621px;
-  left: 710px;
-  width: 108px;
+  top: 576px;
+  left: 706px;
+  width: 90px;
 }
 
 .vp104 .date{
-  top: 652px;
+  top: 607px;
   left: 708px;
-  width: 96px;
+  width: 87px;
 }
 
 .vp104 .telephone{
-  top: 680px;
-  left: 136px;
-  width: 244px;
+  top: 634px;
+  left: 126px;
+  width: 324px;
 }
 
 .vp104 .email{
-  top: 680px;
-  left: 500px;
-  width: 318px;
+  top: 634px;
+  left: 555px;
+  width: 240px;
 }
 
 .vp104 .vehicleID input{
-  height: 35px;
-  width: 33px;
+  height: 30px;
+  width: 37px;
   font-size: 18px;
   text-align: center;
-  top: 731px;
+  top: 701px;
 }
 
 .vp104 .vehicleID .vehicleID1{
-  left: 52px;
+  left: 50px;
+  width: 34px;
 }
 
 .vp104 .vehicleID .vehicleID2{
-  left: 94px;
+  left: 89px;
 }
 
 .vp104 .vehicleID .vehicleID3{
-  left: 135px;
+  left: 131px;
 }
 
 .vp104 .vehicleID .vehicleID4{
-  left: 177px;
+  left: 173px;
 }
 
 .vp104 .vehicleID .vehicleID5{
-  left: 218px;
+  left: 215px;
 }
 
 .vp104 .vehicleID .vehicleID6{
-  left: 260px;
+  left: 257px;
 }
 
 .vp104 .vehicleID .vehicleID7{
-  left: 301px;
+  left: 299px;
 }
 
 .vp104 .vehicleID .vehicleID8{
-  left: 342px;
+  left: 341px;
 }
 
 .vp104 .vehicleID .vehicleID9{
-  left: 384px;
+  left: 383px;
 }
 
 .vp104 .vehicleID .vehicleID10{
@@ -2688,170 +2823,186 @@ input:focus {
 }
 
 .vp104 .vehicleID .vehicleID11{
-  left:467px;
+  left: 467px;
 }
 
 .vp104 .vehicleID .vehicleID12{
-  left: 508px;
+  left: 509px;
 }
 
 .vp104 .vehicleID .vehicleID13{
-  left: 550px;
+  left: 551px;
 }
 
 .vp104 .vehicleID .vehicleID14{
-  left: 591px;
+  left: 593px;
 }
 
 .vp104 .vehicleID .vehicleID15{
-  left: 633px;
+  left: 635px;
 }
 
 .vp104 .vehicleID .vehicleID16{
-  left: 675px;
+  left: 677px;
 }
 
 .vp104 .vehicleID .vehicleID17{
-  left: 716px;
+  left: 719px;
 }
 
 .vp104 .vehicleID .vehicleID18{
-  left: 758px;
+  left: 761px;
+  width: 34px;
 } 
 
 .vp104 .year{
-  top: 770px;
-  left: 101px;
-  width: 109px;
+  top: 740px;
+  left: 93px;
+  width: 117px;
 }
 
 .vp104 .make{
-  top: 770px;
-  left: 279px;
-  width: 222px;
+  top: 740px;
+  left: 281px;
+  width: 140px;
 }
 
 .vp104 .model{
-  top: 770px;
-  left: 574px;
-  width: 247px;
+  top: 740px;
+  left: 494px;
+  width: 96px;
+}
+
+.vp104 .bodyType{
+  top: 740px;
+  left: 681px;
+  width: 115px;
 }
 
 .vp104 .input3{
-  top: 806px;
+  top: 800px;
   left: 252px;
-  width: 569px;
+  width: 544px;
 }
 
 .vp104 .input4{
-  top: 842px;
+  top: 830px;
   left: 656px;
-  width: 165px;
+  width: 140px;
 }
 
 .vp104 .input5{
-  top: 864px;
+  top: 850px;
   left: 116px;
   width: 320px;
 }
 
 .vp104 .input6{
-  top: 864px;
+  top: 850px;
   left: 450px;
   width: 160px;
 }
 
 .vp104 .input7{
-  top: 864px;
+  top: 850px;
   left: 624px;
-  width: 80px;
+  width: 70px;
 }
 
 .vp104 .input8{
-  top: 864px;
-  left: 716px;
-  width: 105px;
+  top: 850px;
+  left: 704px;
+  width: 92px;
 }
 
 .vp104 .input9{
-  top: 929px;
-  left: 208px;
-  width: 200px;
+  top: 927px;
+  left: 212px;
+  width: 202px;
 }
 
 .vp104 .input10{
-  top: 929px;
+  top: 927px;
   left: 420px;
   width: 180px;
 }
 
 .vp104 .input11{
-  top: 929px;
+  top: 927px;
   left: 614px;
-  width: 207px;
+  width: 182px;
 }
 
 .vp104 .input12{
-  top: 965px;
-  left: 625px;
-  width: 196px;
+  top: 957px;
+  left: 619px;
+  width: 177px;
 }
 
 .vp104 .input13{
-  top: 988px;
+  top: 976px;
   left: 162px;
   width: 280px;
 }
 
 .vp104 .input14{
-  top: 988px;
+  top: 976px;
   left: 452px;
   width: 160px;
 }
 
 .vp104 .input15{
-  top: 988px;
+  top: 976px;
   left: 624px;
-  width: 78px;
+  width: 70px;
 }
 
 .vp104 .input16{
-  top: 988px;
-  left: 714px;
-  width: 107px;
+  top: 976px;
+  left: 704px;
+  width: 92px;
 }
 
 .vp104 .input17{
-  top: 1014px;
+  top: 1006px;
   left: 582px;
-  width: 239px;
+  width: 214px;
 }
 
 .custom-checkbox104_1>span::before {
-  top: 361px;
-  left: 765px;
+  top: 363px;
+  left: 750px;
 }
 .custom-checkbox104_1>input {
-  top: 361px;
-  left: 765px;
+  top: 363px;
+  left: 750px;
 }
 
 .custom-checkbox104_2>span::before {
-  top: 376px;
-  left: 765px;
+  top: 379px;
+  left: 750px;
 }
 .custom-checkbox104_2>input {
-  top: 376px;
-  left: 765px;
+  top: 379px;
+  left: 750px;
 }
 
 .custom-checkbox104_3>span::before {
-  top: 785px;
-  left: 49px;
+  top: 780px;
+  left: 50px;
 }
 .custom-checkbox104_3>input {
-  top: 785px;
-  left: 49px;
+  top: 780px;
+  left: 50px;
+}
+
+.custom-checkbox104_3>span::before {
+  top: 760px;
+  left: 346px;
+}
+.custom-checkbox104_3>input {
+  top: 760px;
+  left: 346px;
 }
 
 .vp265_1{
@@ -3438,63 +3589,63 @@ input:focus {
 }
 
 .vp018 .vehicleID input{
-  height: 34px;
-  width: 33px;
+  height: 31px;
+  width: 34px;
   font-size: 30px;
   text-align: center;
-  top: 370px;
+  top: 373px;
 }
 
 .vp018 .vehicleID .vehicleID1{
-  left: 39px;
+  left: 70px;
 }
 
 .vp018 .vehicleID .vehicleID2{
-  left: 81px;
-}
+  left: 109px;
+} 
 
 .vp018 .vehicleID .vehicleID3{
-  left: 123px;
+  left: 148px;
 }
 
 .vp018 .vehicleID .vehicleID4{
-  left: 164px;
+  left: 187px;
 }
 
 .vp018 .vehicleID .vehicleID5{
-  left: 206px;
+  left: 226px;
 }
 
 .vp018 .vehicleID .vehicleID6{
-  left: 247px;
+  left: 266px;
 }
 
 .vp018 .vehicleID .vehicleID7{
-  left: 289px;
+  left: 305px;
 }
 
 .vp018 .vehicleID .vehicleID8{
-  left: 330px;
+  left: 344px;
 }
 
 .vp018 .vehicleID .vehicleID9{
-  left: 372px;
+  left: 383px;
 }
 
 .vp018 .vehicleID .vehicleID10{
-  left: 413px;
+  left: 423px;
 }
 
 .vp018 .vehicleID .vehicleID11{
-  left: 455px;
+  left: 462px;
 }
 
 .vp018 .vehicleID .vehicleID12{
-  left: 496px;
+  left: 501px;
 }
 
 .vp018 .vehicleID .vehicleID13{
-  left: 538px;
+  left: 540px;
 }
 
 .vp018 .vehicleID .vehicleID14{
@@ -3502,229 +3653,229 @@ input:focus {
 }
 
 .vp018 .vehicleID .vehicleID15{
-  left: 620px;
+  left: 619px;
 }
 
 .vp018 .vehicleID .vehicleID16{
-  left: 662px;
+  left: 658px;
 }
 
 .vp018 .vehicleID .vehicleID17{
-  left: 704px;
+  left: 697px;
 }
 
 .vp018 .vehicleID .vehicleID18{
-  left: 745px;
-}
+  left: 736px;
+} 
 
 .vp018 .year{
-  top: 420px;
-  left: 89px;
-  width: 118px;
+  top: 417px;
+  left: 109px;
+  width: 74px;
 }
 
 .vp018 .make{
-  top: 420px;
-  left: 260px;
-  width: 126px;
+  top: 417px;
+  left: 239px;
+  width: 110px;
 }
 
 .vp018 .model{
-  top: 420px;
-  left: 444px;
+  top: 417px;
+  left: 410px;
   width: 127px;
 }
 
 .vp018 .bodyType{
-  top: 420px;
-  left: 663px;
-  width: 127px;
+  top: 417px;
+  left: 632px;
+  width: 139px;
 }
 
 .vp018 .odometer{
-  top: 448px;
-  left: 255px;
-  width: 118px;
-}
-
-.vp018 .input1{
-  top: 496px;
-  left: 179px;
-  width: 136px;
-}
-
-.vp018 .input2{
-  top: 496px;
-  left: 357px;
-  width: 136px;
-}
-
-.vp018 .input3{
-  top: 496px;
-  left: 540px;
-  width: 137px;
-}
-
-.vp018 .input4{
-  top: 535px;
-  left: 179px;
-  width: 136px;
-}
-
-.vp018 .input5{
-  top: 535px;
-  left: 357px;
-  width: 136px;
-}
-
-.vp018 .input6{
-  top: 535px;
-  left: 540px;
-  width: 137px;
-}
-
-.vp018 .input7{
-  top: 566px;
-  left: 240px;
-  width: 230px;
-}
-
-.vp018 .input8{
-  top: 566px;
-  left: 484px;
-  width: 140px;
-}
-
-.vp018 .input9{
-  top: 566px;
-  left: 636px;
-  width: 40px;
-}
-
-.vp018 .input10{
-  top: 566px;
-  left: 688px;
-  width: 96px;
-}
-
-.vp018 .firstName1{
-  top: 614px;
+  top: 453px;
   left: 262px;
-  width: 180px;
-}
-
-.vp018 .middleName1{
-  top: 614px;
-  left: 450px;
-  width: 180px;
-}
-
-.vp018 .lastName1{
-  top: 614px;
-  left: 640px;
   width: 147px;
 }
 
+.vp018 .input1{
+  top: 508px;
+  left: 194px;
+  width: 106px;
+}
+
+.vp018 .input2{
+  top: 508px;
+  left: 414px;
+  width: 107px;
+}
+
+.vp018 .input3{
+  top: 508px;
+  left: 631px;
+  width: 140px;
+}
+
+.vp018 .input4{
+  top: 544px;
+  left: 175px;
+  width: 125px;
+}
+
+.vp018 .input5{
+  top: 544px;
+  left: 412px;
+  width: 108px;
+}
+
+.vp018 .input6{
+  top: 544px;
+  left: 633px;
+  width: 138px;
+}
+
+.vp018 .input7{
+  top: 573px;
+  left: 256px;
+  width: 190px;
+}
+
+.vp018 .input8{
+  top: 573px;
+  left: 460px;
+  width: 120px;
+}
+
+.vp018 .input9{
+  top: 573px;
+  left: 590px;
+  width: 50px;
+}
+
+.vp018 .input10{
+  top: 573px;
+  left: 650px;
+  width: 121px;
+}
+
+.vp018 .firstName1{
+  top: 628px;
+  left: 275px;
+  width: 170px;
+}
+
+.vp018 .middleName1{
+  top: 628px;
+  left: 454px;
+  width: 170px;
+}
+
+.vp018 .lastName1{
+  top: 628px;
+  left: 636px;
+  width: 135px;
+}
+
 .vp018 .driveLic{
-  top: 672px;
-  left: 394px;
-  width: 395px;
+  top: 700px;
+  left: 381px;
+  width: 390px;
 }
 
 .vp018 .address1{
-  top: 710px;
-  left: 182px;
-  width: 240px;
+  top: 736px;
+  left: 193px;
+  width: 170px;
 }
 
 .vp018 .city1{
-  top: 710px;
-  left: 436px;
-  width: 140px;
+  top: 736px;
+  left: 372px;
+  width: 128px;
 }
 
 .vp018 .state1{
-  top: 710px;
-  left: 586px;
-  width: 50px;
+  top: 736px;
+  left: 510px;
+  width: 70px;
 }
 
 .vp018 .zip1{
-  top: 710px;
-  left: 648px;
-  width: 142px;
+  top: 736px;
+  left: 590px;
+  width: 181px;
 }
 
 .vp018 .address2{
-  top: 749px;
-  left: 173px;
-  width: 250px;
+  top: 774px;
+  left: 187px;
+  width: 174px;
 }
 
 .vp018 .city2{
-  top: 749px;
-  left: 436px;
-  width: 140px;
+  top: 774px;
+  left: 370px;
+  width: 130px;
 }
 
 .vp018 .state2{
-  top: 749px;
-  left: 586px;
-  width: 50px;
+  top: 774px;
+  left: 510px;
+  width: 70px;
 }
 
 .vp018 .zip2{
-  top: 749px;
-  left: 648px;
-  width: 142px;
+  top: 774px;
+  left: 590px;
+  width: 181px;
 }
 
 .vp018 .input11{
-  top: 800px;
-  left: 254px;
-  width: 145px;
+  top: 820px;
+  left: 262px;
+  width: 216px;
 }
 
 .vp018 .input12{
-  top: 835px;
-  left: 340px;
-  width: 118px;
+  top: 851px;
+  left: 344px;
+  width: 133px;
 }
 
 .custom-checkbox0181>span::before {
-  top: 272px;
-  left: 210px;
+  top: 264px;
+  left: 203px;
 }
 .custom-checkbox0181>input {
-  top: 272px;
-  left: 210px;
+  top: 264px;
+  left: 203px;
 }
 
 .custom-checkbox0182>span::before {
-  top: 272px;
-  left: 271px;
+  top: 264px;
+  left: 259px;
 }
 .custom-checkbox0182>input {
-  top: 272px;
-  left: 271px;
+  top: 264px;
+  left: 259px;
 }
 
 .custom-checkbox0183>span::before {
-  top: 301px;
-  left: 609px;
+  top: 294px;
+  left: 582px;
 }
 .custom-checkbox0183>input {
-  top: 301px;
-  left: 609px;
+  top: 294px;
+  left: 582px;
 }
 
 .custom-checkbox0184>span::before {
-  top: 301px;
-  left: 671px;
+  top: 294px;
+  left: 638px;
 }
 .custom-checkbox0184>input {
-  top: 301px;
-  left: 671px;
+  top: 294px;
+  left: 638px;
 }
 
 .vp013_1{
@@ -6463,6 +6614,781 @@ input:focus {
   left: 146px;
   width: 267px; 
 }
+
+.sp34{
+  position: relative;
+  width: 850px;
+  height: 1100px;
+  margin: auto;
+  background-image: url('./formBackgrounds/sp34-1.png');
+  background-size: contain;
+}
+
+.sp34 input{
+  height: 14px;
+  font-size: 12px;
+  text-align: center;
+}
+
+.sp34 .firstName1{
+  top: 571px;
+  left: 168px;
+  width: 210px; 
+}
+
+.sp34 .middleName1{
+  top: 571px;
+  left: 390px;
+  width: 180px; 
+}
+
+.sp34 .lastName1{
+  top: 571px;
+  left: 582px;
+  width: 214px; 
+}
+
+.sp34 .driveLic{
+  top: 607px;
+  left: 557px;
+  width: 239px; 
+}
+
+.sp34 .address1{
+  top: 639px;
+  left: 225px;
+  width: 274px; 
+}
+
+.sp34 .city1{
+  top: 639px;
+  left: 510px;
+  width: 128px; 
+}
+
+.sp34 .state1{
+  top: 639px;
+  left: 650px;
+  width: 56px; 
+}
+
+.sp34 .zip1{
+  top: 639px;
+  left: 716px;
+  width: 80px; 
+}
+
+.sp34 .address2{
+  top: 677px;
+  left: 162px;
+  width: 330px; 
+}
+
+.sp34 .city2{
+  top: 677px;
+  left: 504px;
+  width: 128px; 
+}
+
+.sp34 .state2{
+  top: 677px;
+  left: 644px;
+  width: 56px; 
+}
+
+.sp34 .zip2{
+  top: 677px;
+  left: 710px;
+  width: 86px;  
+}
+
+.sp34 .phone{
+  top: 714px;
+  left: 130px;
+  width: 304px; 
+}
+
+.sp34 .email{
+  top: 714px;
+  left: 499px;
+  width: 297px; 
+}
+
+.sp34 .vehicleID input{
+  height: 29px;
+  width: 36px;
+  font-size: 30px;
+  text-align: center;
+  top: 761px;
+}
+
+.sp34 .vehicleID .vehicleID1{
+  left: 51px;
+}
+
+.sp34 .vehicleID .vehicleID2{
+  left: 93px;
+}
+
+.sp34 .vehicleID .vehicleID3{
+  left: 134px;
+}
+
+.sp34 .vehicleID .vehicleID4{
+  left: 176px;
+}
+
+.sp34 .vehicleID .vehicleID5{
+  left: 218px;
+}
+
+.sp34 .vehicleID .vehicleID6{
+  left: 259px;
+}
+
+.sp34 .vehicleID .vehicleID7{
+  left: 301px;
+}
+
+.sp34 .vehicleID .vehicleID8{
+  left: 343px;
+}
+
+.sp34 .vehicleID .vehicleID9{
+  left: 384px;
+}
+
+.sp34 .vehicleID .vehicleID10{
+  left: 426px;
+}
+
+.sp34 .vehicleID .vehicleID11{
+  left: 467px;
+}
+
+.sp34 .vehicleID .vehicleID12{
+  left: 509px;
+}
+
+.sp34 .vehicleID .vehicleID13{
+  left: 551px;
+}
+
+.sp34 .vehicleID .vehicleID14{
+  left: 593px;
+}
+
+.sp34 .vehicleID .vehicleID15{
+  left: 634px;
+}
+
+.sp34 .vehicleID .vehicleID16{
+  left: 676px;
+}
+
+.sp34 .vehicleID .vehicleID17{
+  left: 717px;
+}
+
+.sp34 .vehicleID .vehicleID18{
+  left: 759px;
+}
+
+.sp34 .year{
+  top: 806px;
+  left: 50px;
+  width: 208px; 
+}
+
+.sp34 .make{
+  top: 806px;
+  left: 291px;
+  width: 223px; 
+}
+
+.sp34 .model{
+  top: 806px;
+  left: 578px;
+  width: 218px; 
+}
+
+.sp34 .odometer input{
+  height: 36px;
+  width: 43px;
+  font-size: 30px;
+  text-align: center;
+  top: 882px;
+}
+
+.sp34 .odometer .odometer1{
+  left: 56px;
+}
+
+.sp34 .odometer .odometer2{
+  left: 105px;
+}
+
+.sp34 .odometer .odometer3{
+  left: 154px;
+}
+
+.sp34 .odometer .odometer4{
+  left: 202px;
+}
+
+.sp34 .odometer .odometer5{
+  left: 251px;
+}
+
+.sp34 .odometer .odometer6{
+  left: 300px;
+}
+
+.sp34 .odometer .odometer7{
+  left: 363px;
+}
+
+.sp20{
+  position: relative;
+  width: 850px;
+  height: 1100px;
+  margin: auto;
+  background-image: url('./formBackgrounds/sp20-1.png');
+  background-size: contain;
+}
+
+.sp20 input{
+  height: 14px;
+  font-size: 12px;
+  text-align: center;
+}
+
+.sp20 .firstName1{
+  top: 548px;
+  left: 169px;
+  width: 210px; 
+}
+
+.sp20 .middleName1{
+  top: 548px;
+  left: 390px;
+  width: 180px; 
+}
+
+.sp20 .lastName1{
+  top: 548px;
+  left: 582px;
+  width: 227px; 
+}
+
+.sp20 .driveLic{
+  top: 583px;
+  left: 550px;
+  width: 259px; 
+}
+
+.sp20 .address1{
+  top: 616px;
+  left: 231px;
+  width: 274px; 
+}
+
+.sp20 .city1{
+  top: 616px;
+  left: 510px;
+  width: 128px; 
+}
+
+.sp20 .state1{
+  top: 616px;
+  left: 650px;
+  width: 56px; 
+}
+
+.sp20 .zip1{
+  top: 616px;
+  left: 716px;
+  width: 93px; 
+}
+
+.sp20 .address2{
+  top: 652px;
+  left: 162px;
+  width: 330px; 
+}
+
+.sp20 .city2{
+  top: 652px;
+  left: 504px;
+  width: 128px; 
+}
+
+.sp20 .state2{
+  top: 652px;
+  left: 644px;
+  width: 56px; 
+}
+
+.sp20 .zip2{
+  top: 652px;
+  left: 710px;
+  width: 99px;  
+}
+
+.sp20 .phone{
+  top: 688px;
+  left: 130px;
+  width: 316px; 
+}
+
+.sp20 .email{
+  top: 688px;
+  left: 508px;
+  width: 301px; 
+}
+
+.sp20 .vehicleID input{
+  height: 30px;
+  width: 40px;
+  font-size: 30px;
+  text-align: center;
+  top: 738px;
+}
+
+.sp20 .vehicleID .vehicleID1{
+  left: 51px;
+}
+
+.sp20 .vehicleID .vehicleID2{
+  left: 96px;
+}
+
+.sp20 .vehicleID .vehicleID3{
+  left: 141px;
+}
+
+.sp20 .vehicleID .vehicleID4{
+  left: 185px;
+}
+
+.sp20 .vehicleID .vehicleID5{
+  left: 230px;
+}
+
+.sp20 .vehicleID .vehicleID6{
+  left: 275px;
+}
+
+.sp20 .vehicleID .vehicleID7{
+  left: 320px;
+}
+
+.sp20 .vehicleID .vehicleID8{
+  left: 365px;
+}
+
+.sp20 .vehicleID .vehicleID9{
+  left: 410px;
+}
+
+.sp20 .vehicleID .vehicleID10{
+  left: 455px;
+}
+
+.sp20 .vehicleID .vehicleID11{
+  left: 499px;
+}
+
+.sp20 .vehicleID .vehicleID12{
+  left: 544px;
+}
+
+.sp20 .vehicleID .vehicleID13{
+  left: 589px;
+}
+
+.sp20 .vehicleID .vehicleID14{
+  left: 634px;
+}
+
+.sp20 .vehicleID .vehicleID15{
+  left: 679px;
+}
+
+.sp20 .vehicleID .vehicleID16{
+  left: 723px;
+}
+
+.sp20 .vehicleID .vehicleID17{
+  left: 768px;
+}
+
+.sp20 .year{
+  top: 784px;
+  left: 47px;
+  width: 179px; 
+}
+
+.sp20 .make{
+  top: 784px;
+  left: 289px;
+  width: 224px; 
+}
+
+.sp20 .model{
+  top: 784px;
+  left: 576px;
+  width: 223px; 
+}
+
+.sp20 .odometer input{
+  height: 41px;
+  width: 46px;
+  font-size: 30px;
+  text-align: center;
+  top: 855px;
+}
+
+.sp20 .odometer .odometer1{
+  left: 56px;
+}
+
+.sp20 .odometer .odometer2{
+  left: 108px;
+}
+
+.sp20 .odometer .odometer3{
+  left: 160px;
+}
+
+.sp20 .odometer .odometer4{
+  left: 213px;
+}
+
+.sp20 .odometer .odometer5{
+  left: 265px;
+}
+
+.sp20 .odometer .odometer6{
+  left: 317px;
+}
+
+.sp20 .odometer .odometer7{
+  left: 385px;
+}
+
+.ec018{
+  position: relative;
+  width: 850px;
+  height: 1100px;
+  margin: auto;
+  background-image: url('./formBackgrounds/ec018-1.png');
+  background-size: contain;
+}
+
+.ec018 input{
+  height: 14px;
+  font-size: 12px;
+  text-align: center;
+}
+
+.custom-checkbox018_0>span::before {
+  top: 301px;
+  left: 190px;
+}
+.custom-checkbox018_0>input {
+  top: 301px;
+  left: 190px;
+}
+
+.custom-checkbox018_1>span::before {
+  top: 301px;
+  left: 390px;
+}
+.custom-checkbox018_1>input {
+  top: 301px;
+  left: 390px;
+}
+
+.custom-checkbox018_2>span::before {
+  top: 334px;
+  left: 190px;
+}
+.custom-checkbox018_2>input {
+  top: 334px;
+  left: 190px;
+}
+
+.custom-checkbox018_3>span::before {
+  top: 334px;
+  left: 390px;
+}
+.custom-checkbox018_3>input {
+  top: 334px;
+  left: 390px;
+}
+
+.custom-checkbox018_4>span::before {
+  top: 334px;
+  left: 558px;
+}
+.custom-checkbox018_4>input {
+  top: 334px;
+  left: 558px;
+}
+
+.ec018 .firstName1{
+  top: 370px;
+  left: 194px;
+  width: 210px; 
+}
+
+.ec018 .middleName1{
+  top: 370px;
+  left: 414px;
+  width: 180px; 
+}
+
+.ec018 .lastName1{
+  top: 370px;
+  left: 603px;
+  width: 193px; 
+}
+
+.ec018 .address1{
+  top: 427px;
+  left: 193px;
+  width: 260px; 
+}
+
+.ec018 .city1{
+  top: 427px;
+  left: 464px;
+  width: 150px; 
+}
+
+.ec018 .state1{
+  top: 427px;
+  left: 650px;
+  width: 56px; 
+}
+
+.ec018 .zip1{
+  top: 427px;
+  left: 716px;
+  width: 80px; 
+}
+
+.ec018 .address2{
+  top: 477px;
+  left: 177px;
+  width: 254px; 
+}
+
+.ec018 .city2{
+  top: 477px;
+  left: 464px;
+  width: 150px; 
+}
+
+.ec018 .state2{
+  top: 477px;
+  left: 650px;
+  width: 56px;  
+}
+
+.ec018 .zip2{
+  top: 477px;
+  left: 716px;
+  width: 80px;  
+}
+
+.ec018 .phone{
+  top: 527px;
+  left: 195px;
+  width: 234px; 
+}
+
+.ec018 .email{
+  top: 527px;
+  left: 564px;
+  width: 232px; 
+}
+
+.ec018 .year{
+  top: 569px;
+  left: 119px;
+  width: 127px; 
+}
+
+.ec018 .make{
+  top: 569px;
+  left: 274px;
+  width: 248px; 
+}
+
+.ec018 .model{
+  top: 569px;
+  left: 543px;
+  width: 253px; 
+}
+
+.ec018 .vehicleID input{
+  height: 38px;
+  width: 38px;
+  font-size: 30px;
+  text-align: center;
+  top: 633px;
+}
+
+.ec018 .vehicleID .vehicleID1{
+  left: 52px;
+}
+
+.ec018 .vehicleID .vehicleID2{
+  left: 95px;
+}
+
+.ec018 .vehicleID .vehicleID3{
+  left: 138px;
+}
+
+.ec018 .vehicleID .vehicleID4{
+  left: 182px;
+}
+
+.ec018 .vehicleID .vehicleID5{
+  left: 225px;
+}
+
+.ec018 .vehicleID .vehicleID6{
+  left: 268px;
+}
+
+.ec018 .vehicleID .vehicleID7{
+  left: 312px;
+}
+
+.ec018 .vehicleID .vehicleID8{
+  left: 355px;
+}
+
+.ec018 .vehicleID .vehicleID9{
+  left: 398px;
+}
+
+.ec018 .vehicleID .vehicleID10{
+  left: 442px;
+}
+
+.ec018 .vehicleID .vehicleID11{
+  left: 485px;
+}
+
+.ec018 .vehicleID .vehicleID12{
+  left: 528px;
+}
+
+.ec018 .vehicleID .vehicleID13{
+  left: 572px;
+}
+
+.ec018 .vehicleID .vehicleID14{
+  left: 615px;
+}
+
+.ec018 .vehicleID .vehicleID15{
+  left: 658px;
+}
+
+.ec018 .vehicleID .vehicleID16{
+  left: 701px;
+}
+
+.ec018 .vehicleID .vehicleID17{
+  left: 745px;
+}
+
+.ec018 .odometer input{
+  height: 33px;
+  width: 43px;
+  font-size: 30px;
+  text-align: center;
+  top: 702px;
+}
+
+.ec018 .odometer .odometer1{
+  left: 50px;
+}
+
+.ec018 .odometer .odometer2{
+  left: 98px;
+}
+
+.ec018 .odometer .odometer3{
+  left: 146px;
+}
+
+.ec018 .odometer .odometer4{
+  left: 250px;
+  width: 39px;
+}
+
+.ec018 .odometer .odometer5{
+  left: 294px;
+  width: 39px;
+}
+
+.ec018 .odometer .odometer6{
+  left: 338px;
+  width: 39px;
+}
+
+.ec018 .odometer .odometer7{
+  left: 400px;
+  width: 39px;
+}
+
+.ec018 .vehicleLicense input{
+  height: 32px;
+  width: 36px;
+  font-size: 30px;
+  text-align: center;
+  top: 793px;
+}
+
+.ec018 .vehicleLicense .vehicleLicense1{
+  left: 50px;
+}
+
+.ec018 .vehicleLicense .vehicleLicense2{
+  left: 92px;
+}
+
+.ec018 .vehicleLicense .vehicleLicense3{
+  left: 133px;
+}
+
+.ec018 .vehicleLicense .vehicleLicense4{
+  left: 175px;
+}
+
+.ec018 .vehicleLicense .vehicleLicense5{
+  left: 216px;
+}
+
+.ec018 .vehicleLicense .vehicleLicense6{
+  left: 257px;
+}
+
+.ec018 .vehicleLicense .vehicleLicense7{
+  left: 299px;
+}
+
+.ec018 .vehicleLicense .vehicleLicense8{
+  left: 340px;
+}
+
 
 
 
