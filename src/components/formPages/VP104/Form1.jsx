@@ -25,31 +25,31 @@ function VP104Page() {
       <input className="input1" type="text"/>
       <input className="input2" type="text"/>
 
-      <input className="firstName1" type="text" value={firstName1} onChange={(event)=>{setFirstName1(event.target.value)}}/>
-      <input className="middleName1" type="text" value={middleName1} onChange={(event)=>{setMiddleName1(event.target.value)}}/>
-      <input className="lastName1" type="text" value={lastName1} onChange={(event)=>{setLastName1(event.target.value)}}/>
-      <input className="driverLicense1" type="text" value={driverLicense1} onChange={(event)=>{setDriverLicense1(event.target.value)}}/>
-      <input className="address1" type="text" value={address1} onChange={(event)=>{setAddress1(event.target.value)}}/>
-      <input className="city1" type="text" value={city1} onChange={(event)=>{setCity1(event.target.value)}}/>
-      <input className="state1" type="text" value={state1} onChange={(event)=>{setState1(event.target.value)}}/>
-      <input className="zip1" type="text" value={zip1} onChange={(event)=>{setZip1(event.target.value)}}/>
-      <input className="address2" type="text" value={address2} onChange={(event)=>{setAddress2(event.target.value)}}/>
-      <input className="city2" type="text" value={city2} onChange={(event)=>{setCity2(event.target.value)}}/>
-      <input className="state2" type="text" value={state2} onChange={(event)=>{setState2(event.target.value)}}/>
-      <input className="zip2" type="text" value={zip2} onChange={(event)=>{setZip2(event.target.value)}}/>
+      <input className="firstName1" type="text" />
+      <input className="middleName1" type="text" />
+      <input className="lastName1" type="text" />
+      <input className="driverLicense1" type="text" />
+      <input className="address1" type="text" />
+      <input className="city1" type="text" />
+      <input className="state1" type="text" />
+      <input className="zip1" type="text" />
+      <input className="address2" type="text" />
+      <input className="city2" type="text" />
+      <input className="state2" type="text" />
+      <input className="zip2" type="text" />
 
-      <input className="firstName2" type="text" value={firstName2} onChange={(event)=>{setFirstName2(event.target.value)}}/>
-      <input className="middleName2" type="text" value={middleName2} onChange={(event)=>{setMiddleName2(event.target.value)}}/>
-      <input className="lastName2" type="text" value={lastName2} onChange={(event)=>{setLastName2(event.target.value)}}/>
-      <input className="driverLicense2" type="text" value={driverLicense2} onChange={(event)=>{setDriverLicense2(event.target.value)}}/>
-      <input className="address3" type="text" value={address3} onChange={(event)=>{setAddress3(event.target.value)}}/>
-      <input className="city3" type="text" value={city3} onChange={(event)=>{setCity3(event.target.value)}}/>
-      <input className="state3" type="text" value={state3} onChange={(event)=>{setState3(event.target.value)}}/>
-      <input className="zip3" type="text" value={zip3} onChange={(event)=>{setZip3(event.target.value)}}/>
-      <input className="address4" type="text" value={address4} onChange={(event)=>{setAddress4(event.target.value)}}/>
-      <input className="city4" type="text" value={city4} onChange={(event)=>{setCity4(event.target.value)}}/>
-      <input className="state4" type="text" value={state4} onChange={(event)=>{setState4(event.target.value)}}/>
-      <input className="zip4" type="text" value={zip4} onChange={(event)=>{setZip4(event.target.value)}}/>
+      <input className="firstName2" type="text" />
+      <input className="middleName2" type="text" />
+      <input className="lastName2" type="text" />
+      <input className="driverLicense2" type="text" />
+      <input className="address3" type="text" />
+      <input className="city3" type="text" />
+      <input className="state3" type="text" />
+      <input className="zip3" type="text" />
+      <input className="address4" type="text" />
+      <input className="city4" type="text" />
+      <input className="state4" type="text" />
+      <input className="zip4" type="text" />
 
       <input className="date" type="tex"/>
       <input className="telephone" type="text"/>
@@ -85,16 +85,16 @@ function VP104Page() {
       <input className="input4" type="text"/>
       <input className="input5" type="text"/>
       <input className="input6" type="text"/>
-      <input className="input7" type="text"/>
+      <input className="input7" type="text" />
       <input className="input8" type="text"/>
-      <input className="input9" type="text"/>
-      <input className="input10" type="text"/>
-      <input className="input11" type="text"/>
-      <input className="input12" type="text"/>
-      <input className="input13" type="text"/>
-      <input className="input14" type="text"/>
-      <input className="input15" type="text"/>
-      <input className="input16" type="text"/>
+      <input className="input9" type="text" value={firstName1} onChange={(event)=>{setFirstName1(event.target.value)}}/>
+      <input className="input10" type="text" value={middleName1} onChange={(event)=>{setMiddleName1(event.target.value)}}/>
+      <input className="input11" type="text" value={lastName1} onChange={(event)=>{setLastName1(event.target.value)}}/>
+      <input className="input12" type="text" value={driverLicense1} onChange={(event)=>{setDriverLicense1(event.target.value)}}/>
+      <input className="input13" type="text" value={address1} onChange={(event)=>{setAddress1(event.target.value)}}/>
+      <input className="input14" type="text" value={city1} onChange={(event)=>{setCity1(event.target.value)}}/>
+      <input className="input15" type="text" value={state1} onChange={(event)=>{setState1(event.target.value)}}/>
+      <input className="input16" type="text" value={zip1} onChange={(event)=>{setZip1(event.target.value)}}/>
       <input className="input17" type="text"/>
 
       <label className="custom-checkbox custom-checkbox104_1">
