@@ -1,4 +1,9 @@
+import React, { useContext } from "react";
+import { Context } from "../../../context";
+
 function ContractPage() {
+
+    const {name} = useContext(Context);
 
     return (
       <div className="App">
@@ -71,8 +76,8 @@ function ContractPage() {
                 <option value="2 Months"/>
             </datalist>
 
-            <input className="input4" type="text"/>
             <input className="input5" type="text"/>
+            <input className="input4" type="text" value={name.middleName === undefined ? name.firstName + " " + name.lastName : name.firstName + " " + name.middleName + " " + name.lastName} />
             <input className="input6" type="text"/>
             <input className="input7" type="text"/>
             
@@ -86,6 +91,13 @@ function ContractPage() {
                 <option value="Jessica Glenn NVPD2014515171"/>
                 <option value="Carmen Arias NVDP20188202809"/>
             </datalist>
+
+            <input className="input8" type="text" placeholder="NV20151689040"/>
+            <input className="input9" type="text" placeholder="11/30/22"/>
+            <input className="input10" type="text" placeholder="BL107980"/>
+            <input className="input11" type="text" placeholder="07/31/2022"/>
+            <input className="input12" type="text" placeholder="NV5127185"/>
+            <input className="input13" type="text" placeholder="$50,000.00" />
     
         </div>
         

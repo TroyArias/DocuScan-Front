@@ -1,7 +1,8 @@
 import React, { useState, useCallback, useRef } from 'react';
 import { useReactToPrint } from 'react-to-print';
 import {useDropzone} from 'react-dropzone';
-import { AiOutlineDownload} from 'react-icons/ai';
+import { BsFileEarmarkFontFill} from 'react-icons/bs';
+import { BsFileArrowDownFill } from "react-icons/bs";
 import Drag from "./components/dragDrop"
 import {TEXT_DELIMITER, mapFor1Customer, mapFor2Customer} from "./constants.jsx"
 import {delimeter} from "./functions"
@@ -131,6 +132,48 @@ function MainList() {
       setChecked(!checked)
   }
 
+  const getData = async () => {
+    return await fetch(`http://localhost:4000/document/getDoc`, {
+    method: 'GET',
+    headers: {
+        'Content-type': 'application/json; charset=UTF-8',
+    }})
+    .then(res => res.json())
+    .then(data => {
+      setLastName1(data.firstOwner.lastName)
+      setFirstName1(data.firstOwner.firstName)
+      setMiddleName1(data.firstOwner.middleName)
+      setAddress1(data.firstOwner.address)
+      data.firstOwner.city2 === undefined ? setCity1(data.firstOwner.city) : setCity1(data.firstOwner.city + ' ' + data.firstOwner.city2)
+      setState1(data.firstOwner.state)
+      setZip1(data.firstOwner.zipCode)
+      setAddress2(data.firstOwner.address)
+      data.firstOwner.city2 === undefined ? setCity2(data.firstOwner.city) : setCity2(data.firstOwner.city + ' ' + data.firstOwner.city2)
+      setState2(data.firstOwner.state)
+      setZip2(data.firstOwner.zipCode)
+      setDriverLicense1(data.firstOwner.driverLicense)
+      setVehicleID(data.certOfTitle.vehicleID);
+      setYear(data.certOfTitle.year);
+      setMake(data.certOfTitle.make);
+      setModel(data.certOfTitle.model);
+      setBody(data.certOfTitle.vechBody);
+      setFuel(data.certOfTitle.fuelType);
+      setLastName2(data.secondOwner.lastName2)
+      setFirstName2(data.secondOwner.firstName2)
+      setMiddleName2(data.secondOwner.middleName2)
+      setAddress3(data.secondOwner.address2)
+      data.secondOwner.city4 === undefined ? setCity3(data.secondOwner.city3) : setCity3(data.secondOwner.city3 + ' ' + data.secondOwner.city4)
+      setState3(data.secondOwner.state2)
+      setZip3(data.secondOwner.zipCode2)
+      setAddress4(data.secondOwner.address2)
+      data.secondOwner.city4 === undefined ? setCity4(data.secondOwner.city3) : setCity4(data.secondOwner.city3 + ' ' + data.secondOwner.city4)
+      setState4(data.secondOwner.state2)
+      setZip4(data.secondOwner.zipCode2)
+      setDriverLicense2(data.secondOwner.driverLicense2)
+    }
+    );
+  }
+
   const {getRootProps, getInputProps} = useDropzone({onDrop})
 
   const componentRef = useRef();
@@ -152,9 +195,13 @@ function MainList() {
       <div className='formStyle'>
         <Drag getRootProps={getRootProps} getInputProps={getInputProps}/>
         <button className='btn' onClick={handlePrint}>
-            <div><AiOutlineDownload/></div>
+            <div><BsFileEarmarkFontFill/></div>
         </button>
       </div>
+
+      <button className='btn_2' onClick={() => getData()}>
+        <div><BsFileArrowDownFill /></div>
+      </button>
 
       <div className="menu">
 

@@ -5,8 +5,6 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  /* background-image: url("/Users/user/Desktop/DocuScan/src/formBackgrounds/platetyle_light.webp");
-  background-size: contain; */
 }
 
 .root{
@@ -189,14 +187,14 @@ input:focus {
 
 .btn {
   position: fixed;
-  top: 20px;
+  top: 18px;
   right: 140px;
   z-index: 3;	
 	padding: 0 16px;
 	outline: none;
 	border: none;    
-	border-radius: 3px;
-	height: 30px;
+	border-radius: 4px;
+	height: 36px;
 	font-size: 28px;
 	color: #34343f;
 	background-color: #fff;
@@ -207,15 +205,20 @@ input:focus {
   color: rgb(98, 151, 19);
 }
 
+.btn div {
+  display: flex;
+}
+
 .btn_2 {
   position: fixed;
-  top: 20px;
+  top: 18px;
   right: 40px;	
 	padding: 0 16px;
 	outline: none;
+  z-index: 3;	
 	border: none;    
-	border-radius: 3px;
-	height: 30px;
+	border-radius: 4px;
+	height: 36px;
 	font-size: 28px;
 	color: #34343f;
 	background-color: #fff;
@@ -223,7 +226,11 @@ input:focus {
 }
 
 .btn_2 div:hover {
-  color: red;
+  color: blueviolet;
+}
+
+.btn_2 div {
+  display: flex;
 }
 
 .drag_drop{
@@ -2582,6 +2589,108 @@ input:focus {
   top: 900px;
   left: 60px;
   width: 300px;
+}
+
+.contractPage .input8{
+  top: 866px;
+  left: 625px;
+  width: 148px;
+  text-align: left;
+  background-color:#ffffff;
+}
+
+.contractPage .input8:focus {
+  background-color:#ffffff;
+  outline: none;
+}
+
+.contractPage .input8::placeholder {
+  color: #000;
+}
+
+.contractPage .input9{
+  top: 883px;
+  left: 623px;
+  width: 148px;
+  text-align: left;
+  background-color:#ffffff;
+}
+
+.contractPage .input9:focus {
+  background-color:#ffffff;
+  outline: none;
+}
+
+.contractPage .input9::placeholder {
+  color: #000;
+}
+
+.contractPage .input10{
+  top: 900px;
+  left: 680px;
+  width: 100px;
+  text-align: left;
+  background-color:#ffffff;
+}
+
+.contractPage .input10:focus {
+  background-color:#ffffff;
+  outline: none;
+}
+
+.contractPage .input10::placeholder {
+  color: #000;
+}
+
+.contractPage .input11{
+  top: 917px;
+  left: 616px;
+  width: 148px;
+  text-align: left;
+  background-color:#ffffff;
+}
+
+.contractPage .input11:focus {
+  background-color:#ffffff;
+  outline: none;
+}
+
+.contractPage .input11::placeholder {
+  color: #000;
+}
+
+.contractPage .input12{
+  top: 934px;
+  left: 621px;
+  width: 148px;
+  text-align: left;
+  background-color:#ffffff;
+}
+
+.contractPage .input12:focus {
+  background-color:#ffffff;
+  outline: none;
+}
+
+.contractPage .input12::placeholder {
+  color: #000;
+}
+
+.contractPage .input13{
+  top: 951px;
+  left: 632px;
+  width: 148px;
+  text-align: left;
+  background-color:#ffffff;
+}
+
+.contractPage .input13:focus {
+  background-color:#ffffff;
+  outline: none;
+}
+
+.contractPage .input13::placeholder {
+  color: #000;
 }
 
 .vp104{
