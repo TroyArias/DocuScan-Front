@@ -91,16 +91,16 @@ function VP012Page() {
       <input className="input17" type="text"/>
       <input className="input18" type="text"/>
       <input className="input19" type="text"/>
-      <input className="input20" type="text"/>
-      <input className="input21" type="text"/>
-      <input className="input22" type="text"/>
+      <input className="input20" type="text" />
+      <input className="input21" type="text" placeholder="Nevada" />
+      <input className="input22" type="text" />
       <input className="input23" type="text"/>
       <input className="input24" type="text"/>
       <input className="input25" type="text"/>
       <input className="input26" type="text"/>
       <input className="input27" type="text"/>
       <input className="input28" type="text"/>
-      <input className="input29" type="text"/>
+      <input className="input29" type="text" placeholder="Clark"/>
 
       <label className="custom-checkbox custom-checkbox0121">
         <input type="checkbox"/><span></span>

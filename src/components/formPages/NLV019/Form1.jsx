@@ -61,8 +61,8 @@ function NLV019Page() {
       <input className="email" type="text"/>
 
       <input className="input1" type="text" />
-      <input className="input2" type="text" />
-      <input className="input3" type="text" />
+      <input className="input2" type="text" placeholder="Nevada"/>
+      <input className="input3" type="text" placeholder="Clark"/>
       <input className="input4" type="text" />
       <input className="input5" type="text" />
     </div>

@@ -15,7 +15,7 @@ function EC008Page2() {
       <input className="driverLic1" type="text" value={driverLicense1} onChange={(event)=>{setDriverLicense1(event.target.value)}}/>
  
       <input className="address1" type="text" value={address1} onChange={(event)=>{setAddress1(event.target.value)}}/>
-      <input className="input1" type="text"/>
+      <input className="input1" type="text" placeholder="Clark"/>
 
       <input className="city1" type="text" value={city1} onChange={(event)=>{setCity1(event.target.value)}}/>
       <input className="state1" type="text" value={state1} onChange={(event)=>{setState1(event.target.value)}}/>
@@ -49,6 +49,8 @@ function EC008Page2() {
       <input className="input13" type="text"/>
       <input className="input14" type="text"/>
       <input className="input15" type="text"/>
+      <input className="input16" type="text" placeholder="Clark"/>
+      <input className="input17" type="text" placeholder="Nevada"/>
 
       <label className="custom-checkbox custom-checkbox0081">
         <input type="checkbox"/><span></span>

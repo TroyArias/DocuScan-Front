@@ -88,7 +88,7 @@ function VP018Page() {
       <input className="state2" type="text" value={state2} onChange={(event)=>{setState2(event.target.value)}}/>
       <input className="zip2" type="text" value={zip2} onChange={(event)=>{setZip2(event.target.value)}}/>
 
-      <input className="input11" type="text"/>
+      <input className="input11" type="text" placeholder="Clark"/>
       <input className="input12" type="text"/>
 
       <label className="custom-checkbox custom-checkbox0181">

@@ -133,13 +133,15 @@ function MainList() {
   }
 
   const getData = async () => {
-    return await fetch(`http://localhost:4000/document/getDoc`, {
+    return await fetch(`http://67.205.156.196/document/getDoc`, {
     method: 'GET',
     headers: {
         'Content-type': 'application/json; charset=UTF-8',
     }})
     .then(res => res.json())
     .then(data => {
+      console.log(data)
+      console.log(data.certOfTitle.vehicleID)
       setLastName1(data.firstOwner.lastName)
       setFirstName1(data.firstOwner.firstName)
       setMiddleName1(data.firstOwner.middleName)
@@ -152,7 +154,7 @@ function MainList() {
       setState2(data.firstOwner.state)
       setZip2(data.firstOwner.zipCode)
       setDriverLicense1(data.firstOwner.driverLicense)
-      setVehicleID(data.certOfTitle.vehicleID);
+      if (data.certOfTitle.vehicleID !== undefined) {setVehicleID(data.certOfTitle.vehicleID)}
       setYear(data.certOfTitle.year);
       setMake(data.certOfTitle.make);
       setModel(data.certOfTitle.model);

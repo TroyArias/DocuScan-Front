@@ -7,7 +7,7 @@ function VP013Page1() {
   const {vehicleID, setVehicleID, year, setYear, make, setMake, model, setModel, driverLicense1, setDriverLicense1,
     zip1, setZip1, setAddress1, address1, setCity1, city1, setState1, state1, lastName1, setLastName1, firstName1, setFirstName1,
     middleName1, setMiddleName1, zip2, setZip2, setAddress2, address2, setCity2, city2, setState2, state2,
-    body, setBody} = useContext(Context);
+    body, setBody, name} = useContext(Context);
 
 
   function handleVal(value, index){
@@ -66,13 +66,13 @@ function VP013Page1() {
 
       <input className="input3" type="text"/>
       <input className="input4" type="text"/>
-      <input className="input5" type="text"/>
-      <input className="input6" type="text"/>
-      <input className="input7" type="text"/>
-      <input className="input8" type="text"/>
-      <input className="input9" type="text"/>
-      <input className="input10" type="text"/>
-      <input className="input11" type="text"/>
+      <input className="input5" type="text" value={name.middleName === undefined ? name.firstName + " " + name.lastName : name.firstName + " " + name.middleName + " " + name.lastName}/>
+      <input className="input6" type="text" placeholder="Clark"/>
+      <input className="input7" type="text" placeholder="Nevada"/>
+      <input className="input8" type="text" placeholder="ARIAS LCC"/>
+      <input className="input9" type="text" />
+      <input className="input10" type="text" placeholder="Clark"/>
+      <input className="input11" type="text" placeholder="Nevada"/>
       <input className="input12" type="text"/>
       <input className="input13" type="text"/>
       <input className="input14" type="text"/>

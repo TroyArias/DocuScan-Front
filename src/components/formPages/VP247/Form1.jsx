@@ -86,7 +86,7 @@ function VP247Page() {
       <input className="fuel" type="text" value={fuel} onChange={(event)=>{setFuel(event.target.value)}}/>
       <input className="weight" type="text" />
       <input className="length" type="text"/>
-      <input className="country" type="text"/>
+      <input className="country" type="text" placeholder="Clark"/>
 
       <input className="axles" type="text"/>
       <input className="weight2" type="text" value={weight} onChange={(event)=>{setWeight(event.target.value)}}/>

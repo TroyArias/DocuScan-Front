@@ -7,6 +7,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+input::placeholder {
+  color: black;
+}
+
 .root{
   min-width: 1100px
 }
@@ -4680,6 +4684,18 @@ input:focus {
   top: 835px;
   left: 531px;
   width: 258px;
+}
+
+.ec008_2 .input16{
+  top: 978px;
+  left: 270px;
+  width: 215px;
+}
+
+.ec008_2 .input17{
+  top: 978px;
+  left: 554px;
+  width: 218px;
 }
 
 .custom-checkbox0081>span::before {

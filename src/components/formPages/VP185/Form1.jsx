@@ -26,7 +26,7 @@ function VP185Page() {
       <input className="input1" type="text" />
       <input className="input2" type="text" />
       <input className="input3" type="text" value={driverLicense1} onChange={(event)=>{setDriverLicense1(event.target.value)}}/>
-      <input className="input4" type="text" />
+      <input className="input4" type="text" placeholder="Clark"/>
       <input className="input5" type="text" />
       <input className="input6" type="text" />
     </div>

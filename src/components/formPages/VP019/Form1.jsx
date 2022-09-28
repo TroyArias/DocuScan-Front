@@ -71,8 +71,8 @@ function VP019Page() {
       <input className="state2" type="text" value={state2} onChange={(event)=>{setState2(event.target.value)}}/>
       <input className="zip2" type="text" value={zip2} onChange={(event)=>{setZip2(event.target.value)}}/>
 
-      <input className="input5" type="text" />
-      <input className="input6" type="text" />
+      <input className="input5" type="text" placeholder="Nevada"/>
+      <input className="input6" type="text" placeholder="Clark"/>
       <input className="input7" type="text" />
     </div>
   );

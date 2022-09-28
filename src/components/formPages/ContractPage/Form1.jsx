@@ -97,7 +97,7 @@ function ContractPage() {
             <input className="input10" type="text" placeholder="BL107980"/>
             <input className="input11" type="text" placeholder="07/31/2022"/>
             <input className="input12" type="text" placeholder="NV5127185"/>
-            <input className="input13" type="text" placeholder="$50,000.00" />
+            <input className="input13" type="text" placeholder="$50,000.00"/>
     
         </div>
         
