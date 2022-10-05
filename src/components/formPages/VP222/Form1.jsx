@@ -44,7 +44,7 @@ function VP222Page() {
       <input className="model" type="text" value={model} onChange={(event)=>{setModel(event.target.value)}}/>
       <input className="weight" type="text" />
       <input className="weight2" type="text" value={weight} onChange={(event)=>{setWeight(event.target.value)}}/>
-      <input className="country" type="text"/>
+      <input className="country" type="text" placeholder="Clark"/>
       <input className="odometer" type="text"/>
       <input className="firstName" type="text" value={firstName1} onChange={(event)=>{setFirstName1(event.target.value)}}/>
       <input className="middleName" type="text" value={middleName1} onChange={(event)=>{setMiddleName1(event.target.value)}}/>

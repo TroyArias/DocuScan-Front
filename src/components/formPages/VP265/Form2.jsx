@@ -43,7 +43,7 @@ function VP265Page2() {
       <input className="input7" type="text" value={cost2}/>
       <input className="input8" type="text" value={cost3} onChange={(event)=>{customSetCost2(event.target.value)}}/>
       <input className="input9" type="text" value={cost4}/>
-      <input className="input10" type="text"/>
+      <input className="input10" type="text" value={name.middleName === undefined ? name.firstName + " " + name.lastName : name.firstName + " " + name.middleName + " " + name.lastName}/>
       <input className="input11" type="text"/>
       <input className="input12" type="text"/>
       <input className="input13" type="text"/>

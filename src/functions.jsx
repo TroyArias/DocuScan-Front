@@ -24,7 +24,7 @@ export function delimeter (map, text) {
                 })
   
               } else {
-                user[value] = textValue;
+                user[value] = textValue.trim();
               }
             }
           })

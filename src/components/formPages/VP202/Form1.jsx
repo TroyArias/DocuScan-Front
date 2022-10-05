@@ -6,7 +6,7 @@ function VP202Page() {
 
   const {driverLicense1, setDriverLicense1, zip1, setZip1, setAddress1, address1, setCity1, city1, 
     setState1, state1, lastName1, setLastName1, firstName1, setFirstName1,middleName1, 
-    setMiddleName1, zip2, setZip2, setAddress2, address2, setCity2, city2, setState2, state2} = useContext(Context);
+    setMiddleName1, zip2, setZip2, setAddress2, address2, setCity2, city2, setState2, state2, name} = useContext(Context);
 
 
   return (
@@ -29,7 +29,7 @@ function VP202Page() {
         <input className="state2" type="text" value={state2} onChange={(event)=>{setState2(event.target.value)}}/>
         <input className="zip2" type="text" value={zip2} onChange={(event)=>{setZip2(event.target.value)}}/>
 
-        <input className="input3" type="text" />
+        <input className="input3" type="text" value={name.middleName === undefined ? name.firstName + " " + name.lastName : name.firstName + " " + name.middleName + " " + name.lastName}/>
         <input className="input4" type="text" /> 
         <input className="input5" type="text" />
         <input className="input6" type="text" /> 

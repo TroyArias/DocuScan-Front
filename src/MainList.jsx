@@ -140,8 +140,6 @@ function MainList() {
     }})
     .then(res => res.json())
     .then(data => {
-      console.log(data)
-      console.log(data.certOfTitle.vehicleID)
       setLastName1(data.firstOwner.lastName)
       setFirstName1(data.firstOwner.firstName)
       setMiddleName1(data.firstOwner.middleName)

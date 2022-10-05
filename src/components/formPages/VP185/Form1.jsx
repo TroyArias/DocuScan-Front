@@ -11,7 +11,7 @@ function VP185Page() {
   return (
     <div className="vp185">
 
-<input className="name" type="text" value={name.middleName === undefined ? name.firstName + " " + name.lastName : name.firstName + " " + name.middleName + " " + name.lastName}/>
+    <input className="name" type="text" value={name.middleName === undefined ? name.firstName + " " + name.lastName : name.firstName + " " + name.middleName + " " + name.lastName}/>
 
       <input className="address1" type="text" value={address1} onChange={(event)=>{setAddress1(event.target.value)}}/>
       <input className="city1" type="text" value={city1} onChange={(event)=>{setCity1(event.target.value)}}/>
@@ -23,7 +23,7 @@ function VP185Page() {
       <input className="state2" type="text" value={state2} onChange={(event)=>{setState2(event.target.value)}}/>
       <input className="zip2" type="text" value={zip2} onChange={(event)=>{setZip2(event.target.value)}}/>
 
-      <input className="input1" type="text" />
+      <input className="input1" type="text" value={name.middleName === undefined ? name.firstName + " " + name.lastName : name.firstName + " " + name.middleName + " " + name.lastName}/>
       <input className="input2" type="text" />
       <input className="input3" type="text" value={driverLicense1} onChange={(event)=>{setDriverLicense1(event.target.value)}}/>
       <input className="input4" type="text" placeholder="Clark"/>
