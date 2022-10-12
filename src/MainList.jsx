@@ -133,14 +133,14 @@ function MainList() {
   }
 
   const clearDocument = async () => {
-    return await fetch(`http://localhost:3001/document/clearDoc`, {
+    return await fetch(`http://67.205.156.196/document/clearDoc`, {
     method: 'DELETE',
     headers: {
         'Content-type': 'application/json; charset=UTF-8',
     }})}
 
   const getData = async () => {
-    return await fetch(`http://localhost:3001/document/getDoc`, {
+    return await fetch(`http://67.205.156.196/document/getDoc`, {
     method: 'GET',
     headers: {
         'Content-type': 'application/json; charset=UTF-8',
