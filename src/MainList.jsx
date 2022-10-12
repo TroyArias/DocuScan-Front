@@ -2,7 +2,7 @@ import React, { useState, useCallback, useRef } from 'react';
 import { useReactToPrint } from 'react-to-print';
 import {useDropzone} from 'react-dropzone';
 import { BsFileEarmarkFontFill} from 'react-icons/bs';
-import { BsFileArrowDownFill } from "react-icons/bs";
+import { BsFileArrowDownFill, BsFillFileEarmarkXFill } from "react-icons/bs";
 import Drag from "./components/dragDrop"
 import {TEXT_DELIMITER, mapFor1Customer, mapFor2Customer} from "./constants.jsx"
 import {delimeter} from "./functions"
@@ -132,44 +132,53 @@ function MainList() {
       setChecked(!checked)
   }
 
+  const clearDocument = async () => {
+    return await fetch(`http://localhost:3001/document/clearDoc`, {
+    method: 'DELETE',
+    headers: {
+        'Content-type': 'application/json; charset=UTF-8',
+    }})}
+
   const getData = async () => {
-    return await fetch(`http://67.205.156.196/document/getDoc`, {
+    return await fetch(`http://localhost:3001/document/getDoc`, {
     method: 'GET',
     headers: {
         'Content-type': 'application/json; charset=UTF-8',
     }})
     .then(res => res.json())
     .then(data => {
-      setLastName1(data.firstOwner.lastName)
-      setFirstName1(data.firstOwner.firstName)
-      setMiddleName1(data.firstOwner.middleName)
-      setAddress1(data.firstOwner.address)
-      data.firstOwner.city2 === undefined ? setCity1(data.firstOwner.city) : setCity1(data.firstOwner.city + ' ' + data.firstOwner.city2)
-      setState1(data.firstOwner.state)
-      setZip1(data.firstOwner.zipCode)
-      setAddress2(data.firstOwner.address)
-      data.firstOwner.city2 === undefined ? setCity2(data.firstOwner.city) : setCity2(data.firstOwner.city + ' ' + data.firstOwner.city2)
-      setState2(data.firstOwner.state)
-      setZip2(data.firstOwner.zipCode)
-      setDriverLicense1(data.firstOwner.driverLicense)
-      if (data.certOfTitle.vehicleID !== undefined) {setVehicleID(data.certOfTitle.vehicleID)}
-      setYear(data.certOfTitle.year);
-      setMake(data.certOfTitle.make);
-      setModel(data.certOfTitle.model);
-      setBody(data.certOfTitle.vechBody);
-      setFuel(data.certOfTitle.fuelType);
-      setLastName2(data.secondOwner.lastName2)
-      setFirstName2(data.secondOwner.firstName2)
-      setMiddleName2(data.secondOwner.middleName2)
-      setAddress3(data.secondOwner.address2)
-      data.secondOwner.city4 === undefined ? setCity3(data.secondOwner.city3) : setCity3(data.secondOwner.city3 + ' ' + data.secondOwner.city4)
-      setState3(data.secondOwner.state2)
-      setZip3(data.secondOwner.zipCode2)
-      setAddress4(data.secondOwner.address2)
-      data.secondOwner.city4 === undefined ? setCity4(data.secondOwner.city3) : setCity4(data.secondOwner.city3 + ' ' + data.secondOwner.city4)
-      setState4(data.secondOwner.state2)
-      setZip4(data.secondOwner.zipCode2)
-      setDriverLicense2(data.secondOwner.driverLicense2)
+      if(Object.keys(data).length != 0){
+        setLastName1(data.firstOwner.lastName)
+        setFirstName1(data.firstOwner.firstName)
+        setMiddleName1(data.firstOwner.middleName)
+        setAddress1(data.firstOwner.address)
+        data.firstOwner.city2 === undefined ? setCity1(data.firstOwner.city) : setCity1(data.firstOwner.city + ' ' + data.firstOwner.city2)
+        setState1(data.firstOwner.state)
+        setZip1(data.firstOwner.zipCode)
+        setAddress2(data.firstOwner.address)
+        data.firstOwner.city2 === undefined ? setCity2(data.firstOwner.city) : setCity2(data.firstOwner.city + ' ' + data.firstOwner.city2)
+        setState2(data.firstOwner.state)
+        setZip2(data.firstOwner.zipCode)
+        setDriverLicense1(data.firstOwner.driverLicense)
+        if (data.certOfTitle.vehicleID !== undefined) {setVehicleID(data.certOfTitle.vehicleID)}
+        setYear(data.certOfTitle.year);
+        setMake(data.certOfTitle.make);
+        setModel(data.certOfTitle.model);
+        setBody(data.certOfTitle.vechBody);
+        setFuel(data.certOfTitle.fuelType);
+        setLastName2(data.secondOwner.lastName2)
+        setFirstName2(data.secondOwner.firstName2)
+        setMiddleName2(data.secondOwner.middleName2)
+        setAddress3(data.secondOwner.address2)
+        data.secondOwner.city4 === undefined ? setCity3(data.secondOwner.city3) : setCity3(data.secondOwner.city3 + ' ' + data.secondOwner.city4)
+        setState3(data.secondOwner.state2)
+        setZip3(data.secondOwner.zipCode2)
+        setAddress4(data.secondOwner.address2)
+        data.secondOwner.city4 === undefined ? setCity4(data.secondOwner.city3) : setCity4(data.secondOwner.city3 + ' ' + data.secondOwner.city4)
+        setState4(data.secondOwner.state2)
+        setZip4(data.secondOwner.zipCode2)
+        setDriverLicense2(data.secondOwner.driverLicense2)
+      }
     }
     );
   }
@@ -201,6 +210,10 @@ function MainList() {
 
       <button className='btn_2' onClick={() => getData()}>
         <div><BsFileArrowDownFill /></div>
+      </button>
+
+      <button className='btn_3' onClick={() => clearDocument()}>
+        <div><BsFillFileEarmarkXFill /></div>
       </button>
 
       <div className="menu">
