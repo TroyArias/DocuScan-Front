@@ -148,6 +148,7 @@ function MainList() {
     .then(res => res.json())
     .then(data => {
       if(Object.keys(data).length != 0){
+        if(data.firstOwner.firstName !== undefined && data.firstOwner.lastName !== undefined){setName({...name, firstName: data.firstOwner.firstName, lastName: data.firstOwner.lastName, middleName: data.firstOwner.middleName})}
         setLastName1(data.firstOwner.lastName)
         setFirstName1(data.firstOwner.firstName)
         setMiddleName1(data.firstOwner.middleName)
