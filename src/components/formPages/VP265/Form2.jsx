@@ -33,7 +33,7 @@ function VP265Page2() {
       <input className="zip1" type="text" value={zip1} onChange={(event)=>{setZip1(event.target.value)}}/>
     
 
-      <input className="input1" type="text"/>
+      <input className="input1" type="text" placeholder="aa_dmv@yahoo.com"/>
       <input className="input2" type="text"/>
       <input className="input3" type="text"/>
       <input className="input3" type="text"/>

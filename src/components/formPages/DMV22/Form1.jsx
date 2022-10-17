@@ -15,11 +15,11 @@ function DMV22Page1() {
           <input className="middleName1" type="text" value={middleName1} onChange={(event)=>{setMiddleName1(event.target.value)}}/>
           <input className="suffix" type="text"/>
           <input className="nevadaIdNumber" type="text" value={driverLicense1} onChange={(event)=>{setDriverLicense1(event.target.value)}}/>
-          <input className="state1" type="text" value={state1} onChange={(event)=>{setState1(event.target.value)}}/>
+          <input className="state1" type="text" />
           <input className="country" type="text"/>
           <input className="dateOfBirth" type="text"/>
-          <input className="address1" type="text" value={address1} onChange={(event)=>{setAddress1(event.target.value)}}/>
-          <input className="address2" type="text" value={address2} onChange={(event)=>{setAddress2(event.target.value)}}/>
+          <input className="address1" type="text" />
+          <input className="address2" type="text" />
           <input className="cityStateZip1" type="text" value={city1 + ' ' + state1 + ' ' + zip1}/>
           <input className="cityStateZip2" type="text" value={city2 + ' ' + state2 + ' ' + zip2} onChange={(event)=>{setCity2(event.target.value)}}/>
           <input className="phone_code" type="text"/>
