@@ -6,7 +6,7 @@ function VP019Page() {
 
   const {vehicleID, setVehicleID, year, setYear, make, setMake, model, setModel, zip1, setZip1, setAddress1, address1, setCity1, 
     city1, setState1, state1, zip2, setZip2,  setAddress2, address2, setCity2, city2, setState2, state2, driverLicense1, 
-    setDriverLicense1, lastName1, setLastName1, firstName1, setFirstName1, middleName1, setMiddleName1, body, setBody} = useContext(Context);
+    setDriverLicense1, lastName1, setLastName1, firstName1, setFirstName1, middleName1, setMiddleName1, body, setBody, date, setDate} = useContext(Context);
 
 
     function handleVal(value, index){
@@ -73,7 +73,7 @@ function VP019Page() {
 
       <input className="input5" type="text" placeholder="Nevada"/>
       <input className="input6" type="text" placeholder="Clark"/>
-      <input className="input7" type="text" />
+      <input className="input7" type="text" value={date} onChange={(event)=>{setDate(event.target.value)}}/>
     </div>
   );
 }

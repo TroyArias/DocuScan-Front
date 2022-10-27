@@ -29,7 +29,6 @@ function VP013Page2() {
           <input className="expDate4" type="text" maxLength='1'/>
         </div>
 
-
         <input className="input1" type="text"/>
         <input className="input2" type="text"/>
         <input className="input3" type="text"/>

@@ -1,8 +1,5 @@
 import React, { useContext } from "react";
 import { Context } from "../context";
-import ExampleFormPage1 from './formPages/Example/Form1';
-import ExampleFormPage2 from './formPages/Example/Form2';
-import VP012Page1 from './formPages/VP012/Form1';
 import VP012Page2 from './formPages/VP012/Form2';
 import VP019Page from './formPages/VP019/Form1';
 import VP185Page from './formPages/VP185/Form1';
@@ -10,24 +7,19 @@ import VP247Page from './formPages/VP247/Form1';
 import VP222Page from './formPages/VP222/Form1';
 import ContractPage from './formPages/ContractPage/Form1';
 import VP104Page from './formPages/VP104/Form1';
-import VP265Page1 from './formPages/VP265/Form1';
 import VP265Page2 from './formPages/VP265/Form2';
 import VP136Page from './formPages/VP136/Form1';
 import VP202Page from './formPages/VP202/Form1';
 import VP018Page from './formPages/VP018/Form1';
 import VP013Page1 from './formPages/VP013/Form1';
 import VP013Page2 from './formPages/VP013/Form2';
-import EC008Page1 from './formPages/EC008/Form1';
 import EC008Page2 from './formPages/EC008/Form2';
 import DMV22Page1 from './formPages/DMV22/Form1';
 import DMV22Page2 from './formPages/DMV22/Form2';
 import DMV22Page3 from './formPages/DMV22/Form3';
 import NLV019Page from './formPages/NLV019/Form1';
 import SP66Page1 from './formPages/SP66/Form1';
-import SP66Page2 from './formPages/SP66/Form2';
-import SP66Page3 from './formPages/SP66/Form3';
 import SP45Page from './formPages/SP45/Form1';
-import SP33Page1 from './formPages/SP33/Form1';
 import SP33Page2 from './formPages/SP33/Form2';
 import SP34Page from './formPages/SP34/Form1';
 import SP20Page from './formPages/SP20/Form1';
@@ -49,16 +41,6 @@ function ListOfForms() {
               setArrValues([...arrValues, value]);
             } else {
               setArrForms(arrForms.filter(function(f) { return f !== ContractPage}))
-              setArrValues(arrValues.filter(function(f) { return f !== value }));
-            }
-          break;
-      
-          case 'ExampleFormPage':
-            if (!arrValues.includes(value)) {
-              setArrForms([...arrForms, ExampleFormPage1, ExampleFormPage2]);
-              setArrValues([...arrValues, value]);
-            } else {
-              setArrForms(arrForms.filter(function(f) { return (f !== ExampleFormPage1 && f !== ExampleFormPage2)}))
               setArrValues(arrValues.filter(function(f) { return f !== value }));
             }
           break;
@@ -105,10 +87,10 @@ function ListOfForms() {
       
           case 'VP012Page':
             if (!arrValues.includes(value)) {
-              setArrForms([...arrForms, VP012Page1, VP012Page2]);
+              setArrForms([...arrForms, VP012Page2]);
               setArrValues([...arrValues, value]);
             } else {
-              setArrForms(arrForms.filter(function(f) { return (f !== VP012Page1 && f!== VP012Page2)}))
+              setArrForms(arrForms.filter(function(f) { return f!== VP012Page2}))
               setArrValues(arrValues.filter(function(f) { return f !== value }));
             }
           break;
@@ -125,10 +107,10 @@ function ListOfForms() {
 
           case 'VP265Page':
             if (!arrValues.includes(value)) {
-              setArrForms([...arrForms, VP265Page1, VP265Page2]);
+              setArrForms([...arrForms, VP265Page2]);
               setArrValues([...arrValues, value]);
             } else {
-              setArrForms(arrForms.filter(function(f) { return (f !== VP265Page1 && f!== VP265Page2)}))
+              setArrForms(arrForms.filter(function(f) { return f!== VP265Page2}))
               setArrValues(arrValues.filter(function(f) { return f !== value }));
             }
           break;
@@ -175,10 +157,10 @@ function ListOfForms() {
 
           case 'EC008Page':
             if (!arrValues.includes(value)) {
-              setArrForms([...arrForms, EC008Page1, EC008Page2]);
+              setArrForms([...arrForms, EC008Page2]);
               setArrValues([...arrValues, value]);
             } else {
-              setArrForms(arrForms.filter(function(f) { return (f!== EC008Page1 && f!== EC008Page2)}))
+              setArrForms(arrForms.filter(function(f) { return ( f!== EC008Page2)}))
               setArrValues(arrValues.filter(function(f) { return f !== value }));
             }
           break;
@@ -205,10 +187,10 @@ function ListOfForms() {
 
           case 'SP66Page':
             if (!arrValues.includes(value)) {
-              setArrForms([...arrForms, SP66Page1, SP66Page2, SP66Page3]);
+              setArrForms([...arrForms, SP66Page1]);
               setArrValues([...arrValues, value]);
             } else {
-              setArrForms(arrForms.filter(function(f) { return f !== SP66Page1 && f!== SP66Page2 && f!== SP66Page3}))
+              setArrForms(arrForms.filter(function(f) { return f !== SP66Page1 }))
               setArrValues(arrValues.filter(function(f) { return f !== value }));
             }
           break;
@@ -225,10 +207,10 @@ function ListOfForms() {
 
           case 'SP33Page':
             if (!arrValues.includes(value)) {
-              setArrForms([...arrForms, SP33Page1, SP33Page2]);
+              setArrForms([...arrForms, SP33Page2]);
               setArrValues([...arrValues, value]);
             } else {
-              setArrForms(arrForms.filter(function(f) { return f !== SP33Page1 && f!== SP33Page2}))
+              setArrForms(arrForms.filter(function(f) { return f!== SP33Page2}))
               setArrValues(arrValues.filter(function(f) { return f !== value }));
             }
           break;

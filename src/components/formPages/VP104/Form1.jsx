@@ -6,7 +6,7 @@ function VP104Page() {
 
   const {vehicleID, setVehicleID, year, setYear, make, setMake, model, setModel, driverLicense1, setDriverLicense1, body, setBody,
     zip1, setZip1, setAddress1, address1, setCity1, city1, setState1, state1, lastName1, setLastName1, firstName1, setFirstName1,
-    middleName1, setMiddleName1} = useContext(Context);
+    middleName1, setMiddleName1, date, setDate} = useContext(Context);
 
     function handleVal(value, index){
       let vehicleID2 = [...vehicleID]
@@ -17,7 +17,6 @@ function VP104Page() {
 
   return (
 
-    
     <div className="vp104">
 
       <input className="input1" type="text"/>
@@ -49,7 +48,7 @@ function VP104Page() {
       <input className="state4" type="text" />
       <input className="zip4" type="text" />
 
-      <input className="date" type="tex"/>
+      <input className="date" type="text" placeholder={date}/>
       <input className="telephone" type="text"/>
       <input className="email" type="text"/>
 
@@ -93,7 +92,7 @@ function VP104Page() {
       <input className="input14" type="text" value={city1} onChange={(event)=>{setCity1(event.target.value)}}/>
       <input className="input15" type="text" value={state1} onChange={(event)=>{setState1(event.target.value)}}/>
       <input className="input16" type="text" value={zip1} onChange={(event)=>{setZip1(event.target.value)}}/>
-      <input className="input17" type="text"/>
+      <input className="input17" type="text" value={date} onChange={(event)=>{setDate(event.target.value)}}/>
 
       <label className="custom-checkbox custom-checkbox104_1">
         <input type="checkbox"/><span></span>

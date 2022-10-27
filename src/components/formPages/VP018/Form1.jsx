@@ -4,7 +4,7 @@ import { Context } from "../../../context";
 
 function VP018Page() {
 
-  const {vehicleID, setVehicleID, year, setYear, make, setMake, model, setModel, driverLicense1, setDriverLicense1,
+  const {vehicleID, setVehicleID, year, setYear, make, setMake, model, setModel, driverLicense1, setDriverLicense1, date, setDate,
     zip1, setZip1, setAddress1, address1, setCity1, city1, setState1, state1, lastName1, setLastName1, firstName1, setFirstName1,
     middleName1, setMiddleName1, zip2, setZip2, setAddress2, address2, setCity2, city2, setState2, state2, body, setBody} = useContext(Context);
 
@@ -89,7 +89,7 @@ function VP018Page() {
       <input className="zip2" type="text" value={zip2} onChange={(event)=>{setZip2(event.target.value)}}/>
 
       <input className="input11" type="text" placeholder="Clark"/>
-      <input className="input12" type="text"/>
+      <input className="input12" type="text" value={date} onChange={(event)=>{setDate(event.target.value)}}/>
 
       <label className="custom-checkbox custom-checkbox0181">
         <input type="checkbox"/><span></span>

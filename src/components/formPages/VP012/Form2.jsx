@@ -6,7 +6,7 @@ function VP012Page() {
 
   const {vehicleID, setVehicleID, year, setYear, make, setMake, model, setModel, driverLicense1, setDriverLicense1, body, setBody,
     zip1, setZip1, setAddress1, address1, setCity1, city1, setState1, state1, lastName1, setLastName1, firstName1, setFirstName1,
-    middleName1, setMiddleName1, zip2, setZip2, setAddress2, address2, setCity2, city2, setState2, state2, lastName2, 
+    middleName1, setMiddleName1, zip2, setZip2, setAddress2, address2, setCity2, city2, setState2, state2, lastName2, date, setDate,
     zip3, setZip3, setAddress3, address3, setCity3, city3, setState3, state3, setLastName2, firstName2, setFirstName2, 
     middleName2, setMiddleName2, zip4, setZip4, setAddress4, address4, setCity4, city4, setState4, state4, driverLicense2, setDriverLicense2} = useContext(Context);
 
@@ -93,13 +93,13 @@ function VP012Page() {
       <input className="input19" type="text"/>
       <input className="input20" type="text" />
       <input className="input21" type="text" placeholder="Nevada" />
-      <input className="input22" type="text" />
-      <input className="input23" type="text"/>
+      <input className="input22" type="text"/>
+      <input className="input23" type="text" value={date} onChange={(event)=>{setDate(event.target.value)}}/>
       <input className="input24" type="text"/>
       <input className="input25" type="text"/>
       <input className="input26" type="text"/>
       <input className="input27" type="text"/>
-      <input className="input28" type="text"/>
+      <input className="input28" type="text" placeholder={date}/>
       <input className="input29" type="text" placeholder="Clark"/>
 
       <label className="custom-checkbox custom-checkbox0121">

@@ -5,7 +5,7 @@ function SP45Page() {
 
   const {driverLicense1, setDriverLicense1,
     zip1, setZip1, setAddress1, address1, setCity1, city1, setState1, state1, lastName1, setLastName1, firstName1, setFirstName1,
-    middleName1, setMiddleName1, zip2, setZip2, setAddress2, address2, setCity2, city2, setState2, state2, body, setBody} = useContext(Context);
+    middleName1, setMiddleName1, zip2, setZip2, setAddress2, address2, setCity2, city2, setState2, state2, date, setDate} = useContext(Context);
 
 
     return (
@@ -78,7 +78,7 @@ function SP45Page() {
       <input className="email" type="text"/>
 
       <input className="input2" type="text"/>
-      <input className="input3" type="text"/>
+      <input className="input3" type="text" value={date} onChange={(event)=>{setDate(event.target.value)}}/>
 
     </div>
         

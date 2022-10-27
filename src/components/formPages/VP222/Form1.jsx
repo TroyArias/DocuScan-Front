@@ -6,7 +6,7 @@ function VP222Page() {
 
   const {vehicleID, setVehicleID, year, setYear, make, setMake, model, setModel, weight, setWeight, driverLicense1, setDriverLicense1,
     zip1, setZip1, setAddress1, address1, setCity1, city1, setState1, state1, lastName1, setLastName1, firstName1, setFirstName1,
-    middleName1, setMiddleName1, zip2, setZip2, setAddress2, address2, setCity2, city2, setState2, state2} = useContext(Context);
+    middleName1, setMiddleName1, zip2, setZip2, setAddress2, address2, setCity2, city2, setState2, state2, date, setDate} = useContext(Context);
 
 
   function handleVal(value, index){
@@ -60,7 +60,7 @@ function VP222Page() {
       <input className="zipCode2" type="text" value={zip2} onChange={(event)=>{setZip2(event.target.value)}}/>
       <input className="telephone" type="text"/>
       <input className="email" type="text"/>
-      <input className="date" type="text"/>
+      <input className="date" type="text" value={date} onChange={(event)=>{setDate(event.target.value)}}/>
     </div>
   );
 }

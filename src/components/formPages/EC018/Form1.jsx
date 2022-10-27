@@ -3,7 +3,7 @@ import { Context } from "../../../context";
 
 function EC018Page() {
 
-  const {vehicleID, setVehicleID, year, setYear, make, setMake, model, setModel, driverLicense1, setDriverLicense1,
+  const {vehicleID, setVehicleID, year, setYear, make, setMake, model, setModel, date, setDate,
     zip1, setZip1, setAddress1, address1, setCity1, city1, setState1, state1, lastName1, setLastName1, firstName1, setFirstName1,
     middleName1, setMiddleName1, zip2, setZip2, setAddress2, address2, setCity2, city2, setState2, state2} = useContext(Context);
 
@@ -97,6 +97,8 @@ function EC018Page() {
         <input className="vehicleLicense7" type="text" maxLength='1'/>
         <input className="vehicleLicense8" type="text" maxLength='1'/>
       </div>
+
+      <input className="date" type="text" value={date} onChange={(event)=>{setDate(event.target.value)}}/>
     </div>
         
     );

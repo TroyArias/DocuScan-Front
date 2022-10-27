@@ -1,21 +1,17 @@
-import React, { useState, useCallback, useRef } from 'react';
+import React, { useState, useRef } from 'react';
 import { useReactToPrint } from 'react-to-print';
-import {useDropzone} from 'react-dropzone';
-import { BsFileEarmarkFontFill} from 'react-icons/bs';
-import { BsFileArrowDownFill, BsFillFileEarmarkXFill } from "react-icons/bs";
-import Drag from "./components/dragDrop"
-import {TEXT_DELIMITER, mapFor1Customer, mapFor2Customer} from "./constants.jsx"
-import {delimeter} from "./functions"
+import { BsFileArrowDownFill, BsFileEarmarkFontFill, BsFillTrashFill} from "react-icons/bs";
+import { ImExit } from "react-icons/im";
 import { Content } from './forPrint/content';
 import ListOfForms from './components/listOfForms';
 import FirstOwner from './components/fisrtOwnerInfo';
 import SecondOwner from './components/secondOwnerInfo';
 import VehicleInfo from './components/vehicleInfo';
 import { Context } from "./context.jsx";
+import moment from "moment";
+import PropTypes from 'prop-types';
 
-function MainList() {
-
-  let user = {};
+function MainList({setToken}) {
 
   const [businessName, setBusinessName] = useState('ARIAS LLC')
   const [regNumber, setRegNumber] = useState('RS90')
@@ -56,79 +52,27 @@ function MainList() {
   const [arrForms, setArrForms] = useState([]);
   const [name, setName] = useState({firstName: '', middleName: '', lastName: ''});
   const [checked, setChecked] = useState(true);
+  const [date, setDate] = useState(moment().format('L'));
   const [cost1, setCost1] = useState('');
   const [cost2, setCost2] = useState("0.00");
   const [cost3, setCost3] = useState("0.00");
   const [cost4, setCost4] = useState("0.00");
+  const [fee1, setFee1] = useState('');
+  const [fee2, setFee2] = useState('');
+  const [fee3, setFee3] = useState('');
 
-  const onDrop = useCallback((acceptedFiles) => {
 
-    let numCallbackRuns = 1
-
-    acceptedFiles.forEach((file) => {
-
-      const reader = new FileReader()
-      reader.onload = (file) => {
-
-        if (numCallbackRuns === 1){
-
-          const text = file.target.result.split(TEXT_DELIMITER)
-
-          user = delimeter(mapFor1Customer, text)
-
-          setLastName1(user.lastName)
-          setFirstName1(user.firstName)
-          setMiddleName1(user.middleName)
-          setAddress1(user.address)
-          user.city2 === undefined ? setCity1(user.city) : setCity1(user.city + ' ' + user.city2)
-          setState1(user.state)
-          setZip1(user.zipCode)
-          setAddress2(user.address)
-          user.city2 === undefined ? setCity2(user.city) : setCity2(user.city + ' ' + user.city2)
-          setState2(user.state)
-          setZip2(user.zipCode)
-          setDriverLicense1(user.driverLicense)
-           
-        } else {
-
-          const text = file.target.result.split(TEXT_DELIMITER)
-
-          user = delimeter(mapFor2Customer, text)
-
-          setLastName2(user.lastName2)
-          setFirstName2(user.firstName2)
-          setMiddleName2(user.middleName2)
-          setAddress3(user.address2)
-          user.city4 === undefined ? setCity3(user.city3) : setCity3(user.city3 + ' ' + user.city4)
-          setState3(user.state2)
-          setZip3(user.zipCode2)
-          setAddress4(user.address2)
-          user.city4 === undefined ? setCity4(user.city3) : setCity4(user.city3 + ' ' + user.city4)
-          setState4(user.state2)
-          setZip4(user.zipCode2)
-          setDriverLicense2(user.driverLicense2)
-          
-        }
-        
-      if (user.vehicleID !== undefined) {setVehicleID(user.vehicleID)}
-      setYear(user.year)
-      setMake(user.make)
-      setModel(user.model)
-      setBody(user.vechBody)
-      setFuel(user.fuelType)
-      if(user.firstName !== undefined && user.lastName !== undefined){setName({...name, firstName: user.firstName, lastName: user.lastName, middleName: user.middleName})}
-      if (user.weight !== undefined) {setWeight(user.weight.replace(/^0+/, ''))}
-
-      numCallbackRuns++
-
-      }
-      reader.readAsText(file)
-      
+  const logout = async () => {
+    return await fetch(`http://localhost:4000/auth/logout`, {
+    method: 'POST',
+    headers: {'Content-type': 'application/json; charset=UTF-8'},
     })
-    
-  }, [])
+    .then(res => res.json())
+    .then(data => {
+      setToken(data.token)     
+  })}
 
-  function changeOwners(e) {
+  const changeOwners = () => {
       setChecked(!checked)
   }
 
@@ -137,7 +81,7 @@ function MainList() {
     method: 'DELETE',
     headers: {
         'Content-type': 'application/json; charset=UTF-8',
-    }})}
+  }})}
 
   const getData = async () => {
     return await fetch(`http://67.205.156.196/document/getDoc`, {
@@ -147,7 +91,7 @@ function MainList() {
     }})
     .then(res => res.json())
     .then(data => {
-      if(Object.keys(data).length != 0){
+      if(Object.keys(data).length !== 0){
         if(data.firstOwner.firstName !== undefined && data.firstOwner.lastName !== undefined){setName({...name, firstName: data.firstOwner.firstName, lastName: data.firstOwner.lastName, middleName: data.firstOwner.middleName})}
         setLastName1(data.firstOwner.lastName)
         setFirstName1(data.firstOwner.firstName)
@@ -161,12 +105,7 @@ function MainList() {
         setState2(data.firstOwner.state)
         setZip2(data.firstOwner.zipCode)
         setDriverLicense1(data.firstOwner.driverLicense)
-        if (data.certOfTitle.vehicleID !== undefined) {setVehicleID(data.certOfTitle.vehicleID)}
-        setYear(data.certOfTitle.year);
-        setMake(data.certOfTitle.make);
-        setModel(data.certOfTitle.model);
-        setBody(data.certOfTitle.vechBody);
-        setFuel(data.certOfTitle.fuelType);
+        
         setLastName2(data.secondOwner.lastName2)
         setFirstName2(data.secondOwner.firstName2)
         setMiddleName2(data.secondOwner.middleName2)
@@ -179,12 +118,23 @@ function MainList() {
         setState4(data.secondOwner.state2)
         setZip4(data.secondOwner.zipCode2)
         setDriverLicense2(data.secondOwner.driverLicense2)
-      }
-    }
-    );
-  }
 
-  const {getRootProps, getInputProps} = useDropzone({onDrop})
+        if (data.certOfTitle.vehicleID !== undefined) {setVehicleID(data.certOfTitle.vehicleID)}
+        setYear(data.certOfTitle.year);
+        setMake(data.certOfTitle.make);
+        setModel(data.certOfTitle.model);
+        if (data.certOfTitle.weight !== undefined) {setWeight(data.certOfTitle.weight.replace(/^0+/, ''))}
+        setBody(data.certOfTitle.vechBody);
+        setFuel(data.certOfTitle.fuelType);
+
+        if (data.regist.vehicleID !== undefined) {setVehicleID(data.regist.vehicleID)}
+        setYear(data.regist.year);
+        setMake(data.regist.make);
+        setModel(data.regist.model);
+        if (data.regist.weight !== undefined) {setWeight(data.regist.weight.replace(/^0+/, ''))}
+        setBody(data.regist.vechBody);
+        setFuel(data.regist.fuelType);
+  }})}
 
   const componentRef = useRef();
   const handlePrint = useReactToPrint({
@@ -195,61 +145,69 @@ function MainList() {
   const contextObj = {vehicleID, setVehicleID, year, setYear, make, setMake, model, setModel, weight, setWeight, regNumber, setRegNumber, 
     representative, setRepresentative, phone, setPhone, fuel, setFuel, body, setBody, businessName, setBusinessName, driverLicense1, setDriverLicense1,
     zip1, setZip1, setAddress1, address1, setCity1, city1, setState1, state1, lastName1, setLastName1, firstName1, setFirstName1,
-    middleName1, setMiddleName1, zip2, setZip2, setAddress2, address2, setCity2, city2, setState2, state2, lastName2, 
+    middleName1, setMiddleName1, zip2, setZip2, setAddress2, address2, setCity2, city2, setState2, state2, lastName2, date, setDate,
     zip3, setZip3, setAddress3, address3, setCity3, city3, setState3, state3, setLastName2, firstName2, setFirstName2, 
     middleName2, setMiddleName2, zip4, setZip4, setAddress4, address4, setCity4, city4, setState4, state4, driverLicense2, setDriverLicense2, 
-    name, setName, arrValues, setArrValues, arrForms, setArrForms, cost1, setCost1, cost2, setCost2, cost3, setCost3, cost4, setCost4}
+    name, setName, arrValues, setArrValues, arrForms, setArrForms, cost1, setCost1, cost2, setCost2, cost3, setCost3, cost4, setCost4, fee1, setFee1, fee2, setFee2, fee3, setFee3}
 
   return (
     <Context.Provider value={contextObj}>
       <div className='formStyle'>
-        <Drag getRootProps={getRootProps} getInputProps={getInputProps}/>
-        <button className='btn' onClick={handlePrint}>
+        
+        <button className='btn' onClick={handlePrint} title="PRINT">
             <div><BsFileEarmarkFontFill/></div>
         </button>
-      </div>
-
-      <button className='btn_2' onClick={() => getData()}>
-        <div><BsFileArrowDownFill /></div>
-      </button>
-
-      <button className='btn_3' onClick={() => clearDocument()}>
-        <div><BsFillFileEarmarkXFill /></div>
-      </button>
-
-      <div className="menu">
-
-        <ListOfForms/>
-
-        <div className="infoList">
-          <h4>Vehicle information</h4>
-          
-          <VehicleInfo/>
-
-          <h4>Owner information</h4>
-
-          <div className ="ownerRadio">
-            <div className ="ownerList">
-              <input type="radio" id="html" value="1" name="owners" onChange={changeOwners} defaultChecked={checked}/>
-              <label htmlFor="html">1 owner</label>
-            </div>
-              
-            <div className ="ownerList">
-              <input type="radio" id="2owner" value="2" name="owners" onChange={changeOwners}/>
-              <label htmlFor="2owner">2 owners</label>
-            </div>
-          </div>
-          {checked === false ? <><FirstOwner/><div className="margin"></div><SecondOwner/></> : <FirstOwner/>}
-         
-        </div>
-      </div>
-
-      <div className='formStyle'>
-        <Content ref={componentRef} pages={arrForms}/>
-      </div>
       
+        <button className='btn_2' onClick={() => getData()} title="GET DATA">
+          <div><BsFileArrowDownFill/></div>
+        </button>
+
+        <button className='btn_3' onClick={() => clearDocument()} title="CLEAR SHEET">
+          <div><BsFillTrashFill/></div>
+        </button>
+
+        <button className='btn_4' onClick={() => logout()} title="EXIT">
+          <div><ImExit/></div>
+        </button>
+
+        <div className="menu">
+
+          <ListOfForms/>
+
+          <div className="infoList">
+              <h4>Vehicle information</h4>
+              
+              <VehicleInfo/>
+
+              <h4>Owner information</h4>
+
+              <div className ="ownerRadio">
+                <div className ="ownerList">
+                  <input type="radio" id="html" value="1" name="owners" onChange={changeOwners} defaultChecked={checked}/>
+                  <label htmlFor="html">1 owner</label>
+                </div>
+                  
+                <div className ="ownerList">
+                  <input type="radio" id="2owner" value="2" name="owners" onChange={changeOwners}/>
+                  <label htmlFor="2owner">2 owners</label>
+                </div>
+              </div>
+              {checked === false ? <><FirstOwner/><div className="margin"></div><SecondOwner/></> : <FirstOwner/>}
+          
+          </div>
+        </div>
+
+        <div className='formStyle'>
+          <Content ref={componentRef} pages={arrForms}/>
+        </div>
+      
+      </div> 
     </Context.Provider>
   );
+}
+
+MainList.propTypes = {
+  setToken: PropTypes.func.isRequired
 }
 
 export default MainList;

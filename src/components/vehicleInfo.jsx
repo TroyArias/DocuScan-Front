@@ -17,7 +17,6 @@ return (
           <div className="vehicleInformation">
             <p>VIN</p><input className="vehicleID" type="text" value={vehicleID} onChange={(event)=>{setVehicleID(event.target.value)}}/>
           </div>}
-        
 
           <div className="vehicleInformation">
             <p>Year</p><input className="year" type="text" value={year} onChange={(event)=>{setYear(event.target.value)}}/>

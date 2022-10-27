@@ -1,25 +1,33 @@
-import React, { useContext } from "react";
+import React, { useContext} from "react";
 import { Context } from "../../../context";
 
 
 function VP265Page2() {
 
   const {
-    zip1, setZip1, setAddress1, address1, setCity1, city1, setState1, state1, name,
+    zip1, setZip1, setAddress1, address1, setCity1, city1, setState1, state1, name, 
     cost1, setCost1, cost2, setCost2, cost3, setCost3, cost4, setCost4} = useContext(Context);
 
-
     function customSetCost1(value){
-      setCost1(+value);
+      setCost1(value);
       let summ = (+value * 20)
-      setCost2(summ + ".00")
-      setCost4(summ + ".00")
+      setCost2(summ.toFixed(2))
+
+      let summ2 = +summ.toFixed(2) + +cost3 
+
+      setCost4(summ2.toFixed(2))
     }
 
     function customSetCost2(value){
-      setCost3(+value);
+      setCost2(value);
+      let summ = +value + +cost3 
+      setCost4(summ.toFixed(2))
+    }
+
+    function customSetCost3(value){
+      setCost3(value);
       let summ = (+value + +cost2)
-      setCost4(summ + ".00")
+      setCost4(summ.toFixed(2))
     }
 
 
@@ -38,11 +46,11 @@ function VP265Page2() {
       <input className="input3" type="text"/>
       <input className="input3" type="text"/>
       <input className="input4" type="text" value={cost1} onChange={(event)=>{customSetCost1(event.target.value)}}/>
-      <input className="input5" type="text" value={cost2} />
+      <input className="input5" type="text" value={cost2} onChange={(event)=>{customSetCost2(event.target.value)}}/>
       <input className="input6" type="text"/>
-      <input className="input7" type="text" value={cost2}/>
-      <input className="input8" type="text" value={cost3} onChange={(event)=>{customSetCost2(event.target.value)}}/>
-      <input className="input9" type="text" value={cost4}/>
+      <input className="input7" type="text" value={cost2} onChange={(event)=>{customSetCost2(event.target.value)}}/>
+      <input className="input8" type="text" value={cost3} onChange={(event)=>{customSetCost3(event.target.value)}}/>
+      <input className="input9" type="text" value={cost4} />
       <input className="input10" type="text" value={name.middleName === undefined ? name.firstName + " " + name.lastName : name.firstName + " " + name.middleName + " " + name.lastName}/>
       <input className="input11" type="text"/>
       <input className="input12" type="text"/>

@@ -7,6 +7,24 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+@media all {
+  .page-break {
+    display: none;
+    page-break-before: always;
+  }
+}
+
+@media print {
+  .page {
+    page-break-before: always;
+  }
+
+  .contractPage input {
+    background: white !important;
+    border-bottom: none !important;
+  }
+}
+
 input::placeholder {
   color: black;
 }
@@ -192,7 +210,7 @@ input:focus {
 .btn {
   position: fixed;
   top: 18px;
-  right: 140px;
+  right: 540px;
   z-index: 3;	
 	padding: 0 16px;
 	outline: none;
@@ -216,7 +234,7 @@ input:focus {
 .btn_2 {
   position: fixed;
   top: 18px;
-  right: 40px;	
+  right: 440px;	
 	padding: 0 16px;
 	outline: none;
   z-index: 3;	
@@ -240,7 +258,7 @@ input:focus {
 .btn_3 {
   position: fixed;
   top: 18px;
-  right: 240px;	
+  right: 640px;	
 	padding: 0 16px;
 	outline: none;
   z-index: 3;	
@@ -258,6 +276,30 @@ input:focus {
 }
 
 .btn_3 div {
+  display: flex;
+}
+
+.btn_4 {
+  position: fixed;
+  top: 18px;
+  right: 40px;	
+	padding: 0px 16px;
+	outline: none;
+  z-index: 3;	
+	border: none;    
+	border-radius: 4px;
+	height: 36px;
+	font-size: 28px;
+	color: #34343f;
+	background-color: #fff;
+	cursor: pointer;
+}
+
+.btn_4 div:hover {
+  color: red;
+}
+
+.btn_4 div {
   display: flex;
 }
 
@@ -2542,45 +2584,59 @@ input:focus {
 }
 
 .contractPage .dropdown1{
-  top: 388px;
+  top: 387px;
   left: 94px;
-  width: 200px;
+  width: 204px;
+  background-color: aqua;
+  border-bottom: 1px solid black;
 }
 
 .contractPage .dropdown2{
-  top: 388px;
-  left: 320px;
-  width: 200px;
+  top: 387px;
+  left: 321px;
+  width: 204px;
+  background-color: aqua;
+  border-bottom: 1px solid black;
 }
 
 .contractPage .dropdown3{
-  top: 388px;
+  top: 387px;
   left: 547px;
-  width: 200px;
+  width: 204px;
+  background-color: aqua;
+  border-bottom: 1px solid black;
 }
 
 .contractPage .input1{
-  top: 422px;
+  top: 421px;
   left: 208px;
-  width: 104px;
+  width: 106px;
+  background-color: aqua;
+  border-bottom: 1px solid black;
 }
 
 .contractPage .input2{
-  top: 422px;
-  left: 422px;
-  width: 104px;
+  top: 421px;
+  left: 423px;
+  width: 106px;
+  background-color: aqua;
+  border-bottom: 1px solid black;
 }
 
 .contractPage .input3{
-  top: 422px;
-  left: 608px;
-  width: 104px;
+  top: 421px;
+  left: 609px;
+  width: 106px;
+  background-color: aqua;
+  border-bottom: 1px solid black;
 }
 
 .contractPage .dropdown4{
-  top: 456px;
+  top: 455px;
   left: 414px;
-  width: 180px;
+  width: 183px;
+  background-color: aqua;
+  border-bottom: 1px solid black;
 }
 
 .contractPage .input4{
@@ -2617,6 +2673,7 @@ input:focus {
   top: 900px;
   left: 60px;
   width: 300px;
+  background-color: aqua;
 }
 
 .contractPage .input8{
@@ -6961,6 +7018,12 @@ input:focus {
   width: 218px; 
 }
 
+.sp34 .date{
+  top: 994px;
+  left: 578px;
+  width: 218px; 
+}
+
 .sp34 .odometer input{
   height: 36px;
   width: 43px;
@@ -7094,6 +7157,12 @@ input:focus {
   top: 688px;
   left: 508px;
   width: 301px; 
+}
+
+.sp20 .date{
+  top: 983px;
+  left: 578px;
+  width: 236px; 
 }
 
 .sp20 .vehicleID input{
@@ -7382,6 +7451,12 @@ input:focus {
   width: 253px; 
 }
 
+.ec018 .date{
+  top: 994px;
+  left: 646px;
+  width: 150px; 
+}
+
 .ec018 .vehicleID input{
   height: 38px;
   width: 38px;
@@ -7536,6 +7611,125 @@ input:focus {
 
 .ec018 .vehicleLicense .vehicleLicense8{
   left: 340px;
+}
+
+.Registration{
+  background-color: #2a3040;
+  height: calc(100vh - 80px);
+  padding-top: 80px;
+}
+
+.ui-form {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  padding: 20px 30px 30px;
+  margin: 70px auto;
+  background: white;
+}
+
+.ui-form h3 {
+  z-index: 5;
+  margin-bottom: 70px;
+  text-align: center;
+  color: #4a90e2;
+  font-size: 32px;
+  font-weight: 600;
+}
+
+.form-row {
+  margin-bottom: 46px;
+  display: flex;
+  height: 40px;
+}
+
+.form-row input {
+  padding-left: 12px;
+  height: 40px;
+  font-family: 'Roboto', sans-serif;
+  background: none;
+  width: 388px;
+  border-bottom: 3px solid #4a90e2;
+  transition: all 0.2s ease;
+  margin-bottom: 20px;
+}
+
+.form-row label {
+  color: #9d959d;
+  font-size: 22px;
+  font-weight: 300;
+  padding-left: 14px;
+  transition: all 0.2s ease;
+}
+
+.form-row input:focus {
+  outline: 0;
+}
+
+.form-row input:focus+label, .form-row input:valid+label {
+  transform: translateY(-20px);
+  margin-left: -14px;
+  font-size: 14px;
+  font-weight: 400;
+  outline: 0;
+  color: #4a90e2;
+}
+
+.button-7 {
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  padding: 15px;
+  color: green;
+  justify-content: center;
+  width: 200px;
+  margin: auto;
+  cursor: pointer;
+}
+
+.button-7 span {
+  display: block;
+  overflow: hidden;
+  max-width: 0;
+  opacity: 0;
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  white-space: nowrap;
+  letter-spacing: 1px;
+  line-height: 1;
+  transition: .4s ease;
+}
+
+.button-7:after {
+  content: '\2794';
+  font-family: Linearicons-Free;
+  font-style: normal;
+  font-weight: 400;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 34px;
+  color: green;
+}
+
+.button-7:hover span {
+  max-width: 150px;
+  opacity: 1;
+  margin-right: 6px;
+}
+
+.error{
+  margin-top: 20px;
+  text-align: center;
+  color: red;
+}
+
+.logo2 {
+  display: flex;
+  justify-content: center;
 }
 
 

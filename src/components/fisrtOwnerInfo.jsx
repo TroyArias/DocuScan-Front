@@ -5,7 +5,7 @@ import { Context } from "../context";
 function FirstOwner() {
 
     const {driverLicense1, setDriverLicense1,zip1, setZip1, setAddress1, address1, setCity1, city1, setState1, 
-          name, setName, state1, lastName1, setLastName1, firstName1, setFirstName1, middleName1, setMiddleName1, } = useContext(Context);
+          name, setName, state1, lastName1, setLastName1, firstName1, setFirstName1, middleName1, setMiddleName1} = useContext(Context);
 
 
     function changeFirstName(value){

@@ -5,13 +5,12 @@ import { Context } from "../../../context";
 function VP202Page() {
 
   const {driverLicense1, setDriverLicense1, zip1, setZip1, setAddress1, address1, setCity1, city1, 
-    setState1, state1, lastName1, setLastName1, firstName1, setFirstName1,middleName1, 
+    setState1, state1, lastName1, setLastName1, firstName1, setFirstName1,middleName1, date, setDate,
     setMiddleName1, zip2, setZip2, setAddress2, address2, setCity2, city2, setState2, state2, name} = useContext(Context);
 
 
   return (
     <div className="vp202">
-
 
         <input className="input1" type="text" placeholder="Clark"/>
         <input className="input2" type="text" />    
@@ -34,7 +33,7 @@ function VP202Page() {
         <input className="input5" type="text" />
         <input className="input6" type="text" /> 
         <input className="input7" type="text" placeholder="Clark"/>
-        <input className="input8" type="text" /> 
+        <input className="input8" type="text" value={date} onChange={(event)=>{setDate(event.target.value)}}/> 
         <input className="input9" type="text" />
         <input className="input10" type="text" /> 
         <input className="input11" type="text" />

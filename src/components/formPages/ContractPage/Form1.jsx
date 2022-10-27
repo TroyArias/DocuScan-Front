@@ -1,17 +1,17 @@
 import React, { useContext, useState, useEffect } from "react";
 import { Context } from "../../../context";
-import moment from "moment"
+
 
 function ContractPage() {
 
-    const {name} = useContext(Context);
+    const {name, date, setDate, fee1, setFee1, fee2, setFee2, fee3, setFee3} = useContext(Context);
     const [area, setArea] = useState('NV20151689040');
     const [area2, setArea2] = useState('11/30/22');
     const [area3, setArea3] = useState('BL107980');
     const [area4, setArea4] = useState('07/31/2022');
     const [area5, setArea5] = useState('NV5127185');
     const [area6, setArea6] = useState('$50,000.00');
-    const [date, setDate] = useState(moment().format('L'));
+
 
     useEffect(()=>{
         let area = localStorage.getItem('area')
@@ -57,6 +57,18 @@ function ContractPage() {
     function saveArea6(value) {
         localStorage.setItem('area6', value)
         setArea6(value)
+    }
+
+    function customSetFee1(value){
+        setFee1(value)
+        let summ = (+value + +fee2)
+        setFee3(summ.toFixed(2))
+    }
+
+    function customSetFee2(value){
+        setFee2(value)
+        let summ = (+value + +fee1)
+        setFee3(summ.toFixed(2))
     }
 
     return (
@@ -118,9 +130,9 @@ function ContractPage() {
                 <option value="Substitute Registration"/>
             </datalist>
 
-            <input className="input1" type="text"/>
-            <input className="input2" type="text"/>
-            <input className="input3" type="text"/>
+            <input className="input1" type="text" value={fee1} onChange={(event)=>{customSetFee1(event.target.value)}}/>
+            <input className="input2" type="text" value={fee2} onChange={(event)=>{customSetFee2(event.target.value)}}/>
+            <input className="input3" type="text" value={fee3}/>
 
             <input className="dropdown4" list="4dropdown" />
             <datalist id="4dropdown">
@@ -132,8 +144,8 @@ function ContractPage() {
 
             <input className="input5" type="text" value={date} onChange={(event)=>{setDate(event.target.value)}}/>
             <input className="input4" type="text" value={name.middleName === undefined ? name.firstName + " " + name.lastName : name.firstName + " " + name.middleName + " " + name.lastName} />
-            <input className="input6" type="text"/>
-            <input className="input7" type="text"/>
+            <input className="input6" type="text" placeholder={date}/>
+            <input className="input7" type="text" placeholder={date}/>
             
             <input className="dropdown5" list="5dropdown" placeholder="Select A Rep"/>
             <datalist id="5dropdown">
