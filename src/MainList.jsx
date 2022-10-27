@@ -63,7 +63,7 @@ function MainList({setToken}) {
 
 
   const logout = async () => {
-    return await fetch(`http://localhost:4000/auth/logout`, {
+    return await fetch(`http://67.205.156.196/auth/logout`, {
     method: 'POST',
     headers: {'Content-type': 'application/json; charset=UTF-8'},
     })
