@@ -17,7 +17,7 @@ export default function App () {
         <BrowserRouter>  
         <Navbar/>  
             <Routes>
-                <Route exact path='/' element={<MainList setToken={setToken}/>}/>
+                <Route exact path='/' element={<MainList setToken={setToken} token={token}/>}/>
             </Routes>                
         </BrowserRouter>
     );    

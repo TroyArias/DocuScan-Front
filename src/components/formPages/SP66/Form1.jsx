@@ -5,7 +5,7 @@ function SP66Page1() {
 
   const {driverLicense1, setDriverLicense1,
     zip1, setZip1, setAddress1, address1, setCity1, city1, setState1, state1, lastName1, setLastName1, firstName1, setFirstName1,
-    middleName1, setMiddleName1, zip2, setZip2, setAddress2, address2, setCity2, city2, setState2, state2, date, setDate} = useContext(Context);
+    middleName1, setMiddleName1, zip2, setZip2, setAddress2, address2, setCity2, city2, setState2, state2, date, setDate, mobilePhone, setMobilePhone} = useContext(Context);
 
     return (
           
@@ -73,7 +73,7 @@ function SP66Page1() {
       <input className="state2" type="text" value={state2} onChange={(event)=>{setState2(event.target.value)}}/>
       <input className="zip2" type="text" value={zip2} onChange={(event)=>{setZip2(event.target.value)}}/>
 
-      <input className="phone" type="text"/>
+      <input className="phone" type="text" value={mobilePhone} onChange={(event)=>{setMobilePhone(event.target.value)}}/>
       <input className="email" type="text"/>
 
       <input className="input4" type="text"/>

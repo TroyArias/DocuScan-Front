@@ -12,7 +12,6 @@ function ContractPage() {
     const [area5, setArea5] = useState('NV5127185');
     const [area6, setArea6] = useState('$50,000.00');
 
-
     useEffect(()=>{
         let area = localStorage.getItem('area')
         let area2 = localStorage.getItem('area2')

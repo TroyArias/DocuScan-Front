@@ -13,9 +13,10 @@ function VP136Page() {
 
     
     <div className="vp136">
-      {console.log(name.middleName)}
 
-        <input className="input1" type="text" placeholder="Аrias LLC dba AA DMV Services" value={name.middleName === undefined ? name.firstName + " " + name.lastName : name.firstName + " " + name.middleName + " " + name.lastName}/>
+        <input className="input1" type="text" value={name.middleName.length === 0 && name.firstName.length === 0 && name.lastName.length === 0 ? name.placeholder 
+        : name.middleName === undefined ? name.firstName + " " + name.lastName : name.firstName + " " + name.middleName + " " + name.lastName}/>
+        
         <input className="input2" type="text" placeholder="Clark"/>
         <input className="input3" type="text" placeholder="Nevada"/>
 

@@ -6,7 +6,7 @@ function VP104Page() {
 
   const {vehicleID, setVehicleID, year, setYear, make, setMake, model, setModel, driverLicense1, setDriverLicense1, body, setBody,
     zip1, setZip1, setAddress1, address1, setCity1, city1, setState1, state1, lastName1, setLastName1, firstName1, setFirstName1,
-    middleName1, setMiddleName1, date, setDate} = useContext(Context);
+    middleName1, setMiddleName1, date, setDate, mobilePhone, setMobilePhone} = useContext(Context);
 
     function handleVal(value, index){
       let vehicleID2 = [...vehicleID]
@@ -49,7 +49,7 @@ function VP104Page() {
       <input className="zip4" type="text" />
 
       <input className="date" type="text" placeholder={date}/>
-      <input className="telephone" type="text"/>
+      <input className="telephone" type="text" value={mobilePhone} onChange={(event)=>{setMobilePhone(event.target.value)}}/>
       <input className="email" type="text"/>
 
       <div className="vehicleID">

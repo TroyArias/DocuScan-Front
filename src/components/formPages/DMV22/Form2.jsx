@@ -4,7 +4,7 @@ import { Context } from "../../../context";
 
 function DMV22Page2() {
 
-  const {name, driverLicense1, setDriverLicense1} = useContext(Context);
+  const {name, driverLicense1, setDriverLicense1, date, setDate,} = useContext(Context);
 
 
   return (
@@ -15,7 +15,7 @@ function DMV22Page2() {
       <input className="input3" type="text"/>
       <input className="input4" type="text" value={name.middleName === undefined ? name.firstName + " " + name.lastName : name.firstName + " " + name.middleName + " " + name.lastName} />
       <input className="input5" type="text" value={driverLicense1} onChange={(event)=>{setDriverLicense1(event.target.value)}}/>
-      <input className="input6" type="text"/>
+      <input className="input6" type="text" value={date} onChange={(event)=>{setDate(event.target.value)}}/>
 
       <label className="custom-checkbox custom-checkbox22_2_0">
         <input type="checkbox"/><span></span>

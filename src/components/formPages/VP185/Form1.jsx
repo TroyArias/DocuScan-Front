@@ -11,7 +11,7 @@ function VP185Page() {
   return (
     <div className="vp185">
 
-    <input className="name" type="text" value={name.middleName === undefined ? name.firstName + " " + name.lastName : name.firstName + " " + name.middleName + " " + name.lastName}/>
+      <input className="name" type="text" value={name.middleName === undefined ? name.firstName + " " + name.lastName : name.firstName + " " + name.middleName + " " + name.lastName}/>
 
       <input className="address1" type="text" value={address1} onChange={(event)=>{setAddress1(event.target.value)}}/>
       <input className="city1" type="text" value={city1} onChange={(event)=>{setCity1(event.target.value)}}/>

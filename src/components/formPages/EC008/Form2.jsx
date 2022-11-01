@@ -4,7 +4,7 @@ import { Context } from "../../../context";
 
 function EC008Page2() {
 
-  const {name, vehicleID, setVehicleID, year, setYear, make, setMake, model, setModel, driverLicense1, setDriverLicense1, date, setDate,
+  const {name, vehicleID, setVehicleID, year, setYear, make, setMake, model, setModel, driverLicense1, setDriverLicense1, date, setDate, mobilePhone, setMobilePhone,
     zip1, setZip1, setAddress1, address1, setCity1, city1, setState1, state1, zip2, setZip2, setAddress2, address2, setCity2, city2, setState2, state2,} = useContext(Context);
 
 
@@ -20,7 +20,7 @@ function EC008Page2() {
       <input className="city1" type="text" value={city1} onChange={(event)=>{setCity1(event.target.value)}}/>
       <input className="state1" type="text" value={state1} onChange={(event)=>{setState1(event.target.value)}}/>
       <input className="zip1" type="text" value={zip1} onChange={(event)=>{setZip1(event.target.value)}}/>
-      <input className="input2" type="text"/>
+      <input className="input2" type="text" value={mobilePhone} onChange={(event)=>{setMobilePhone(event.target.value)}}/>
 
       <input className="address2" type="text" value={address2} onChange={(event)=>{setAddress2(event.target.value)}}/>
       <input className="input3" type="text"/>

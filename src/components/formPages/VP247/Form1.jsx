@@ -4,7 +4,7 @@ import { Context } from "../../../context";
 
 function VP247Page() {
 
-  const {vehicleID, setVehicleID, year, setYear, make, setMake, model, setModel, weight, setWeight, regNumber, setRegNumber, 
+  const {vehicleID, setVehicleID, year, setYear, make, setMake, model, setModel, weight, setWeight, regNumber, setRegNumber, odometer, setOdometer, mobilePhone, setMobilePhone,
     representative, setRepresentative, phone, setPhone, fuel, setFuel, body, setBody, businessName, setBusinessName, driverLicense1, setDriverLicense1,
     zip1, setZip1, setAddress1, address1, setCity1, city1, setState1, state1, lastName1, setLastName1, firstName1, setFirstName1,
     middleName1, setMiddleName1, zip2, setZip2, setAddress2, address2, setCity2, city2, setState2, state2, lastName2, 
@@ -55,7 +55,7 @@ function VP247Page() {
       <input className="state4" type="text" value={state4} onChange={(event)=>{setState4(event.target.value)}}/>
       <input className="zip4" type="text" value={zip4} onChange={(event)=>{setZip4(event.target.value)}}/>
 
-      <input className="telephone" type="text"/>
+      <input className="telephone" type="text" value={mobilePhone} onChange={(event)=>{setMobilePhone(event.target.value)}}/>
       <input className="email" type="text"/>
 
       <div className="vehicleID">
@@ -85,12 +85,12 @@ function VP247Page() {
       
       <input className="fuel" type="text" placeholder="G" value={fuel} onChange={(event)=>{setFuel(event.target.value)}}/>
       <input className="weight" type="text" />
-      <input className="length" type="text"/>
+      <input className="length" type="text" />
       <input className="country" type="text" placeholder="Clark"/>
 
       <input className="axles" type="text" placeholder="2"/>
       <input className="weight2" type="text" value={weight} onChange={(event)=>{setWeight(event.target.value)}}/>
-      <input className="odometer" type="text"/>
+      <input className="odometer" type="text" value={odometer} onChange={(event)=>{setOdometer(event.target.value)}}/>
 
       <input className="input3" type="text"/>
       <input className="input4" type="text"/>

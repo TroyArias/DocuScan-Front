@@ -13,7 +13,7 @@ function VP202Page() {
     <div className="vp202">
 
         <input className="input1" type="text" placeholder="Clark"/>
-        <input className="input2" type="text" />    
+        <input className="input2" type="text" value={date} onChange={(event)=>{setDate(event.target.value)}}/>    
 
         <input className="firstName" type="text" value={firstName1} onChange={(event)=>{setFirstName1(event.target.value)}}/>
         <input className="middleName" type="text" value={middleName1} onChange={(event)=>{setMiddleName1(event.target.value)}}/>

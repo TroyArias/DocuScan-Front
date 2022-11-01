@@ -4,7 +4,7 @@ import { Context } from "../context";
 
 function FirstOwner() {
 
-    const {driverLicense1, setDriverLicense1,zip1, setZip1, setAddress1, address1, setCity1, city1, setState1, 
+    const {driverLicense1, setDriverLicense1,zip1, setZip1, setAddress1, address1, setCity1, city1, setState1, mobilePhone, setMobilePhone,
           name, setName, state1, lastName1, setLastName1, firstName1, setFirstName1, middleName1, setMiddleName1} = useContext(Context);
 
 
@@ -56,6 +56,10 @@ return (
 
           <div className="ownersInformation">
             <p>Zip Code</p><input className="zip1" type="text" value={zip1} onChange={(event)=>{setZip1(event.target.value)}}/>
+          </div>
+
+          <div className="ownersInformation">
+            <p>Phone</p><input className="mobilePhone1" type="text" value={mobilePhone} onChange={(event)=>{setMobilePhone(event.target.value)}}/>
           </div>
     </>
 

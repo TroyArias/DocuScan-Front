@@ -11,7 +11,7 @@ import { Context } from "./context.jsx";
 import moment from "moment";
 import PropTypes from 'prop-types';
 
-function MainList({setToken}) {
+function MainList({setToken, token}) {
 
   const [businessName, setBusinessName] = useState('ARIAS LLC')
   const [regNumber, setRegNumber] = useState('RS90')
@@ -32,6 +32,8 @@ function MainList({setToken}) {
   const [city1, setCity1] = useState('');
   const [state1, setState1] = useState('');
   const [zip1, setZip1] = useState('');
+  const [mobilePhone, setMobilePhone] = useState('');
+  const [odometer, setOdometer] = useState('');
   const [address2, setAddress2] = useState('');
   const [city2, setCity2] = useState('');
   const [state2, setState2] = useState('');
@@ -50,7 +52,7 @@ function MainList({setToken}) {
   const [zip4, setZip4] = useState('');
   const [arrValues, setArrValues] = useState([]);
   const [arrForms, setArrForms] = useState([]);
-  const [name, setName] = useState({firstName: '', middleName: '', lastName: ''});
+  const [name, setName] = useState({firstName: '', middleName: '', lastName: '', placeholder: 'Аrias LLC dba AA DMV Services'});
   const [checked, setChecked] = useState(true);
   const [date, setDate] = useState(moment().format('L'));
   const [cost1, setCost1] = useState('');
@@ -81,6 +83,7 @@ function MainList({setToken}) {
     method: 'DELETE',
     headers: {
         'Content-type': 'application/json; charset=UTF-8',
+        'token': token
   }})}
 
   const getData = async () => {
@@ -88,6 +91,7 @@ function MainList({setToken}) {
     method: 'GET',
     headers: {
         'Content-type': 'application/json; charset=UTF-8',
+        'token': token
     }})
     .then(res => res.json())
     .then(data => {
@@ -142,11 +146,11 @@ function MainList({setToken}) {
     documentTitle: "forms",
   });
 
-  const contextObj = {vehicleID, setVehicleID, year, setYear, make, setMake, model, setModel, weight, setWeight, regNumber, setRegNumber, 
+  const contextObj = {vehicleID, setVehicleID, year, setYear, make, setMake, model, setModel, weight, setWeight, regNumber, setRegNumber, mobilePhone, setMobilePhone,
     representative, setRepresentative, phone, setPhone, fuel, setFuel, body, setBody, businessName, setBusinessName, driverLicense1, setDriverLicense1,
     zip1, setZip1, setAddress1, address1, setCity1, city1, setState1, state1, lastName1, setLastName1, firstName1, setFirstName1,
     middleName1, setMiddleName1, zip2, setZip2, setAddress2, address2, setCity2, city2, setState2, state2, lastName2, date, setDate,
-    zip3, setZip3, setAddress3, address3, setCity3, city3, setState3, state3, setLastName2, firstName2, setFirstName2, 
+    zip3, setZip3, setAddress3, address3, setCity3, city3, setState3, state3, setLastName2, firstName2, setFirstName2, odometer, setOdometer,
     middleName2, setMiddleName2, zip4, setZip4, setAddress4, address4, setCity4, city4, setState4, state4, driverLicense2, setDriverLicense2, 
     name, setName, arrValues, setArrValues, arrForms, setArrForms, cost1, setCost1, cost2, setCost2, cost3, setCost3, cost4, setCost4, fee1, setFee1, fee2, setFee2, fee3, setFee3}
 
