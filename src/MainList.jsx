@@ -52,7 +52,7 @@ function MainList({setToken, token}) {
   const [zip4, setZip4] = useState('');
   const [arrValues, setArrValues] = useState([]);
   const [arrForms, setArrForms] = useState([]);
-  const [name, setName] = useState({firstName: '', middleName: '', lastName: '', placeholder: 'Аrias LLC dba AA DMV Services'});
+  const [name, setName] = useState({firstName: '', middleName: '', lastName: ''});
   const [checked, setChecked] = useState(true);
   const [date, setDate] = useState(moment().format('L'));
   const [cost1, setCost1] = useState('');
@@ -179,11 +179,11 @@ function MainList({setToken, token}) {
           <ListOfForms/>
 
           <div className="infoList">
-              <h4>Vehicle information</h4>
+              <h3>Vehicle information</h3>
               
               <VehicleInfo/>
 
-              <h4>Owner information</h4>
+              <h3>Owner information</h3>
 
               <div className ="ownerRadio">
                 <div className ="ownerList">
@@ -199,9 +199,13 @@ function MainList({setToken, token}) {
               {checked === false ? <><FirstOwner/><div className="margin"></div><SecondOwner/></> : <FirstOwner/>}
           
           </div>
+
+          <div className="logo2">
+            <img src="https://aadmvservices.com/ws/resized-images/2e548bf58078492b83c8234acfb85373/2017-logo.png" height="380"></img>
+          </div>
         </div>
 
-        <div className='formStyle'>
+        <div className='formsContainer'>
           <Content ref={componentRef} pages={arrForms}/>
         </div>
       

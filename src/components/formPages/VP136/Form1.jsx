@@ -14,8 +14,7 @@ function VP136Page() {
     
     <div className="vp136">
 
-        <input className="input1" type="text" value={name.middleName.length === 0 && name.firstName.length === 0 && name.lastName.length === 0 ? name.placeholder 
-        : name.middleName === undefined ? name.firstName + " " + name.lastName : name.firstName + " " + name.middleName + " " + name.lastName}/>
+        <input className="input1" type="text" value={name.middleName === undefined ? name.firstName + " " + name.lastName : name.firstName + " " + name.middleName + " " + name.lastName}/>
         
         <input className="input2" type="text" placeholder="Clark"/>
         <input className="input3" type="text" placeholder="Nevada"/>
@@ -28,9 +27,9 @@ function VP136Page() {
         <input className="vehicleID" type="text" value={vehicleID.join('')} onChange={(event)=>{setVehicleID(event.target.value)}}/>: 
         <input className="vehicleID" type="text" value={vehicleID} onChange={(event)=>{setVehicleID(event.target.value)}}/>}
 
-        <input className="input4" type="text" />
-        <input className="input5" type="text" />
-        <input className="input6" type="text" />
+        <input className="input4" type="text" placeholder='Аrias LLC dba AA DMV Services'/>
+        <input className="input5" type="text" placeholder="Clark"/>
+        <input className="input6" type="text" placeholder="Nevada"/>
         
         <input className="firstName1" type="text" value={firstName1} onChange={(event)=>{setFirstName1(event.target.value)}}/>
         <input className="middleName1" type="text" value={middleName1} onChange={(event)=>{setMiddleName1(event.target.value)}}/>

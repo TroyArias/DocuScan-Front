@@ -5,6 +5,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: url("./formBackgrounds/97DC4BFC-D845-4F90-8E4D-272F9EC89C7C.png");
+  background-size: auto;
 }
 
 @media all {
@@ -30,7 +32,7 @@ input::placeholder {
 }
 
 .root{
-  min-width: 1100px
+  min-width: 1100px;
 }
 
 code {
@@ -54,14 +56,26 @@ input:focus {
 .menu{
   display: flex;
   justify-content: space-around;
+  z-index: 0;
+  background-color: #fff;
+  padding-bottom: 70px;
+}
+
+.logo2{
+  position: absolute;
+  z-index: 1;
+  opacity: 15%;
+  top: 320px
 }
 
 .infoList{
   width: 500px;
   height: 90%;
+  margin: 30px 20px 0;
+  z-index: 2;
 }
 
-.infoList h4{
+.infoList h3{
   text-align: center;
 }
 
@@ -116,11 +130,12 @@ input:focus {
 }
 
 .formsList{
-  margin: 50px 20px 0;
+  margin: 30px 20px 0;
   display: flex;
   flex-direction: column;
   width: 600px;
-  align-items: center
+  align-items: center;
+  z-index: 2;
 }
 
 .formsListContainer{
@@ -177,12 +192,16 @@ input:focus {
 }
 
 .formStyle{
-  margin-top: 90px;         
+  margin-top: 100px;
+}
+
+.page{
+  margin-top: 20px;
 }
 
 .Navbar{
   display: flex;
-  height: 70px;
+  height: 100px;
   background: #2a3040;
   position: fixed;
   width: 100vw;
@@ -209,14 +228,14 @@ input:focus {
 
 .btn {
   position: fixed;
-  top: 18px;
+  top: 31px;
   right: 540px;
   z-index: 3;	
 	padding: 0 16px;
 	outline: none;
 	border: none;    
 	border-radius: 4px;
-	height: 36px;
+	height: 38px;
 	font-size: 28px;
 	color: #34343f;
 	background-color: #fff;
@@ -233,14 +252,14 @@ input:focus {
 
 .btn_2 {
   position: fixed;
-  top: 18px;
+  top: 31px;
   right: 440px;	
 	padding: 0 16px;
 	outline: none;
   z-index: 3;	
 	border: none;    
 	border-radius: 4px;
-	height: 36px;
+	height: 38px;
 	font-size: 28px;
 	color: #34343f;
 	background-color: #fff;
@@ -257,14 +276,14 @@ input:focus {
 
 .btn_3 {
   position: fixed;
-  top: 18px;
+  top: 31px;
   right: 640px;	
 	padding: 0 16px;
 	outline: none;
   z-index: 3;	
 	border: none;    
 	border-radius: 4px;
-	height: 36px;
+	height: 38px;
 	font-size: 28px;
 	color: #34343f;
 	background-color: #fff;
@@ -281,14 +300,14 @@ input:focus {
 
 .btn_4 {
   position: fixed;
-  top: 18px;
+  top: 31px;
   right: 40px;	
 	padding: 0px 16px;
 	outline: none;
   z-index: 3;	
 	border: none;    
 	border-radius: 4px;
-	height: 36px;
+	height: 38px;
 	font-size: 28px;
 	color: #34343f;
 	background-color: #fff;
