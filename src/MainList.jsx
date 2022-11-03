@@ -200,7 +200,7 @@ function MainList({setToken, token}) {
           
           </div>
 
-          <div className="logo2">
+          <div className="logo3">
             <img src="https://aadmvservices.com/ws/resized-images/2e548bf58078492b83c8234acfb85373/2017-logo.png" height="380"></img>
           </div>
         </div>
