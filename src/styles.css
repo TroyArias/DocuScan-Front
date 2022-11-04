@@ -19,6 +19,7 @@ body {
 @media print {
   .page {
     page-break-before: always;
+    margin-top: 0px !important;
   }
 
   .contractPage input {
