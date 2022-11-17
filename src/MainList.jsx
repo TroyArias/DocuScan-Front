@@ -179,11 +179,11 @@ function MainList({setToken, token}) {
           <ListOfForms/>
 
           <div className="infoList">
-              <h3>Vehicle information</h3>
+              <h2>Vehicle information</h2>
               
               <VehicleInfo/>
 
-              <h3>Owner information</h3>
+              <h2>Owner information</h2>
 
               <div className ="ownerRadio">
                 <div className ="ownerList">

@@ -12,6 +12,7 @@ import VP136Page from './formPages/VP136/Form1';
 import VP202Page from './formPages/VP202/Form1';
 import VP018Page from './formPages/VP018/Form1';
 import VP013Page1 from './formPages/VP013/Form1';
+import VP013Page2 from './formPages/VP013/Form2';
 import EC008Page2 from './formPages/EC008/Form2';
 import DMV22Page1 from './formPages/DMV22/Form1';
 import DMV22Page2 from './formPages/DMV22/Form2';
@@ -145,10 +146,10 @@ function ListOfForms() {
 
           case 'VP013Page':
             if (!arrValues.includes(value)) {
-              setArrForms([...arrForms, VP013Page1]);
+              setArrForms([...arrForms, VP013Page1, VP013Page2]);
               setArrValues([...arrValues, value]);
             } else {
-              setArrForms(arrForms.filter(function(f) { return (f !== VP013Page1)}))
+              setArrForms(arrForms.filter(function(f) { return (f !== VP013Page1 && f!== VP013Page2)}))
               setArrValues(arrValues.filter(function(f) { return f !== value }));
             }
           break;
@@ -252,7 +253,7 @@ return (
 
 <div className="formsList">
       
-          <h3>List of forms</h3>
+          <h2>List of forms</h2>
 
           <div className="formsListContainer">
             <label className="customCheckbox customCheckbox2">
@@ -275,7 +276,7 @@ return (
             </label>
           </div>
 
-          <h3>Ownership Forms</h3>
+          <h2>Ownership Forms</h2>
 
           <div className="formsListContainer">
             <label className="customCheckbox customCheckbox4">
@@ -321,7 +322,7 @@ return (
           </div>
 
 
-          <h3>Registration Forms</h3>
+          <h2>Registration Forms</h2>
 
           <div className="formsListContainer">
             <label className="customCheckbox customCheckbox9">

@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { Context } from "../../../context";
 
 
@@ -11,11 +11,16 @@ function VP247Page() {
     zip3, setZip3, setAddress3, address3, setCity3, city3, setState3, state3, setLastName2, firstName2, setFirstName2, 
     middleName2, setMiddleName2, zip4, setZip4, setAddress4, address4, setCity4, city4, setState4, state4, driverLicense2, setDriverLicense2} = useContext(Context);
 
+    const [checkedCheckbox, setCheckedCheckbox] = useState(true);
 
-  function handleVal(value, index){
-    let vehicleID2 = [...vehicleID]
-    vehicleID2[index] = value
-    setVehicleID(vehicleID2)
+    function handleVal(value, index){
+      let vehicleID2 = [...vehicleID]
+      vehicleID2[index] = value
+      setVehicleID(vehicleID2)
+    }
+
+    const change = () => {
+      setCheckedCheckbox(!checkedCheckbox)
   }
 
   return (
@@ -216,7 +221,7 @@ function VP247Page() {
       </label>
 
       <label className="custom-checkbox custom-checkbox29">
-        <input type="checkbox"/><span></span>
+        <input type="checkbox" checked={checkedCheckbox} onChange={change} /><span></span>
       </label>
 
       <label className="custom-checkbox custom-checkbox30">

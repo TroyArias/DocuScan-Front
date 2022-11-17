@@ -36,7 +36,7 @@ function AuthUser ({setToken}) {
                     <img src="https://aadmvservices.com/ws/resized-images/2e548bf58078492b83c8234acfb85373/2017-logo.png" height="60"></img>
                 </div>
 
-                <h3>LOG IN</h3>
+                <h2>LOG IN</h2>
 
                 <div className="form-row">
                     <input type="text" id="email" required onChange={e => setEmail(e.target.value)}/><label>Email</label>

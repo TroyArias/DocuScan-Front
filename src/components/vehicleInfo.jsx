@@ -23,7 +23,7 @@ return (
         </div>
 
         <div className="vehicleInformation">
-          <p>Body type</p><input className="bodyType" type="text" value={body} onChange={(event)=>{setBody(event.target.value)}}/>
+          <p>Make</p><input className="make" type="text" value={make} onChange={(event)=>{setMake(event.target.value)}}/>
         </div>
 
         <div className="vehicleInformation">
@@ -31,7 +31,7 @@ return (
         </div>
 
         <div className="vehicleInformation">
-          <p>Make</p><input className="make" type="text" value={make} onChange={(event)=>{setMake(event.target.value)}}/>
+          <p>Body type</p><input className="bodyType" type="text" value={body} onChange={(event)=>{setBody(event.target.value)}}/>
         </div>
 
         <div className="vehicleInformation">
@@ -41,7 +41,6 @@ return (
         <div className="vehicleInformation">
           <p>Gross Wt</p><input className="weight" type="text" value={weight} onChange={(event)=>{setWeight(event.target.value)}}/>
         </div>
-
 
         {typeof odometer === "object" ? 
         <div className="vehicleInformation">
