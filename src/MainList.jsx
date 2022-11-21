@@ -62,6 +62,7 @@ function MainList({setToken, token}) {
   const [fee1, setFee1] = useState('');
   const [fee2, setFee2] = useState('');
   const [fee3, setFee3] = useState('');
+  const [checkedCheckbox, setCheckedCheckbox] = useState(true);
 
 
   const logout = async () => {
@@ -148,7 +149,7 @@ function MainList({setToken, token}) {
 
   const contextObj = {vehicleID, setVehicleID, year, setYear, make, setMake, model, setModel, weight, setWeight, regNumber, setRegNumber, mobilePhone, setMobilePhone,
     representative, setRepresentative, phone, setPhone, fuel, setFuel, body, setBody, businessName, setBusinessName, driverLicense1, setDriverLicense1,
-    zip1, setZip1, setAddress1, address1, setCity1, city1, setState1, state1, lastName1, setLastName1, firstName1, setFirstName1,
+    zip1, setZip1, setAddress1, address1, setCity1, city1, setState1, state1, lastName1, setLastName1, firstName1, setFirstName1, checkedCheckbox, setCheckedCheckbox,
     middleName1, setMiddleName1, zip2, setZip2, setAddress2, address2, setCity2, city2, setState2, state2, lastName2, date, setDate,
     zip3, setZip3, setAddress3, address3, setCity3, city3, setState3, state3, setLastName2, firstName2, setFirstName2, odometer, setOdometer,
     middleName2, setMiddleName2, zip4, setZip4, setAddress4, address4, setCity4, city4, setState4, state4, driverLicense2, setDriverLicense2, 

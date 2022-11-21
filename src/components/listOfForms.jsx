@@ -12,7 +12,7 @@ import VP136Page from './formPages/VP136/Form1';
 import VP202Page from './formPages/VP202/Form1';
 import VP018Page from './formPages/VP018/Form1';
 import VP013Page1 from './formPages/VP013/Form1';
-import VP013Page2 from './formPages/VP013/Form2';
+import ADM205Page from './formPages/ADM205/Form1';
 import EC008Page2 from './formPages/EC008/Form2';
 import DMV22Page1 from './formPages/DMV22/Form1';
 import DMV22Page2 from './formPages/DMV22/Form2';
@@ -146,10 +146,10 @@ function ListOfForms() {
 
           case 'VP013Page':
             if (!arrValues.includes(value)) {
-              setArrForms([...arrForms, VP013Page1, VP013Page2]);
+              setArrForms([...arrForms, VP013Page1]);
               setArrValues([...arrValues, value]);
             } else {
-              setArrForms(arrForms.filter(function(f) { return (f !== VP013Page1 && f!== VP013Page2)}))
+              setArrForms(arrForms.filter(function(f) { return (f !== VP013Page1)}))
               setArrValues(arrValues.filter(function(f) { return f !== value }));
             }
           break;
@@ -242,6 +242,16 @@ function ListOfForms() {
               setArrForms(arrForms.filter(function(f) { return f !== EC018Page}))
               setArrValues(arrValues.filter(function(f) { return f !== value }));
             }
+          break; 
+
+          case 'ADM205Page':
+            if (!arrValues.includes(value)) {
+              setArrForms([...arrForms, ADM205Page]);
+              setArrValues([...arrValues, value]);
+            } else {
+              setArrForms(arrForms.filter(function(f) { return f !== ADM205Page}))
+              setArrValues(arrValues.filter(function(f) { return f !== value }));
+            }
           break;
 
           default:
@@ -273,6 +283,13 @@ return (
             <label className="customCheckbox customCheckbox3">
               <input onChange={checkValue} type="checkbox" value="VP222Page" /><span></span>
               <div className="listLinks"><p>Application for Vehicle Registration VP222</p></div>
+            </label>
+          </div>
+
+          <div className="formsListContainer">
+            <label className="customCheckbox customCheckbox3">
+              <input onChange={checkValue} type="checkbox" value="ADM205Page" /><span></span>
+              <div className="listLinks"><p>Payment Authorization ADM205</p></div>
             </label>
           </div>
 
