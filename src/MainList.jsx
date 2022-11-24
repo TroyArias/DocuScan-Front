@@ -97,48 +97,49 @@ function MainList({setToken, token}) {
     .then(res => res.json())
     .then(data => {
       if(Object.keys(data).length !== 0){
-        if(data.firstOwner.firstName !== undefined && data.firstOwner.lastName !== undefined){setName({...name, firstName: data.firstOwner.firstName, lastName: data.firstOwner.lastName, middleName: data.firstOwner.middleName})}
-        setLastName1(data.firstOwner.lastName)
-        setFirstName1(data.firstOwner.firstName)
-        setMiddleName1(data.firstOwner.middleName)
-        setAddress1(data.firstOwner.address)
-        data.firstOwner.city2 === undefined ? setCity1(data.firstOwner.city) : setCity1(data.firstOwner.city + ' ' + data.firstOwner.city2)
-        setState1(data.firstOwner.state)
-        setZip1(data.firstOwner.zipCode)
-        setAddress2(data.firstOwner.address)
-        data.firstOwner.city2 === undefined ? setCity2(data.firstOwner.city) : setCity2(data.firstOwner.city + ' ' + data.firstOwner.city2)
-        setState2(data.firstOwner.state)
-        setZip2(data.firstOwner.zipCode)
-        setDriverLicense1(data.firstOwner.driverLicense)
+        console.log(data)
+        if(data?.firstOwner?.firstName !== undefined && data?.firstOwner?.lastName !== undefined){setName({...name, firstName: data?.firstOwner?.firstName, lastName: data?.firstOwner?.lastName, middleName: data?.firstOwner?.middleName})}
+        setLastName1(data?.firstOwner?.lastName)
+        setFirstName1(data?.firstOwner?.firstName)
+        setMiddleName1(data?.firstOwner?.middleName)
+        setAddress1(data?.firstOwner?.address)
+        data?.firstOwner?.city2 === undefined ? setCity1(data?.firstOwner?.city) : setCity1(data?.firstOwner?.city + ' ' + data?.firstOwner?.city2)
+        setState1(data?.firstOwner?.state)
+        setZip1(data?.firstOwner?.zipCode)
+        setAddress2(data?.firstOwner?.address)
+        data?.firstOwner?.city2 === undefined ? setCity2(data?.firstOwner?.city) : setCity2(data?.firstOwner?.city + ' ' + data?.firstOwner?.city2)
+        setState2(data?.firstOwner?.state)
+        setZip2(data?.firstOwner?.zipCode)
+        setDriverLicense1(data?.firstOwner?.driverLicense)
         
-        setLastName2(data.secondOwner.lastName2)
-        setFirstName2(data.secondOwner.firstName2)
-        setMiddleName2(data.secondOwner.middleName2)
-        setAddress3(data.secondOwner.address2)
-        data.secondOwner.city4 === undefined ? setCity3(data.secondOwner.city3) : setCity3(data.secondOwner.city3 + ' ' + data.secondOwner.city4)
-        setState3(data.secondOwner.state2)
-        setZip3(data.secondOwner.zipCode2)
-        setAddress4(data.secondOwner.address2)
-        data.secondOwner.city4 === undefined ? setCity4(data.secondOwner.city3) : setCity4(data.secondOwner.city3 + ' ' + data.secondOwner.city4)
-        setState4(data.secondOwner.state2)
-        setZip4(data.secondOwner.zipCode2)
-        setDriverLicense2(data.secondOwner.driverLicense2)
+        setLastName2(data?.secondOwner?.lastName2)
+        setFirstName2(data?.secondOwner?.firstName2)
+        setMiddleName2(data?.secondOwner?.middleName2)
+        setAddress3(data?.secondOwner?.address2)
+        data?.secondOwner?.city4 === undefined ? setCity3(data?.secondOwner?.city3) : setCity3(data?.secondOwner?.city3 + ' ' + data?.secondOwner?.city4)
+        setState3(data?.secondOwner?.state2)
+        setZip3(data?.secondOwner?.zipCode2)
+        setAddress4(data?.secondOwner?.address2)
+        data?.secondOwner?.city4 === undefined ? setCity4(data?.secondOwner?.city3) : setCity4(data?.secondOwner?.city3 + ' ' + data?.secondOwner?.city4)
+        setState4(data?.secondOwner?.state2)
+        setZip4(data?.secondOwner?.zipCode2)
+        setDriverLicense2(data?.secondOwner?.driverLicense2)
 
-        if (data.certOfTitle.vehicleID !== undefined) {setVehicleID(data.certOfTitle.vehicleID)}
-        setYear(data.certOfTitle.year);
-        setMake(data.certOfTitle.make);
-        setModel(data.certOfTitle.model);
-        if (data.certOfTitle.weight !== undefined) {setWeight(data.certOfTitle.weight.replace(/^0+/, ''))}
-        setBody(data.certOfTitle.vechBody);
-        setFuel(data.certOfTitle.fuelType);
+        if (data?.certOfTitle?.vehicleID !== undefined) {setVehicleID(data?.certOfTitle?.vehicleID)}
+        setYear(data?.certOfTitle?.year);
+        setMake(data?.certOfTitle?.make);
+        setModel(data?.certOfTitle?.model);
+        if (data?.certOfTitle?.weight !== undefined) {setWeight(data?.certOfTitle?.weight.replace(/^0+/, ''))}
+        setBody(data?.certOfTitle?.vechBody);
+        setFuel(data?.certOfTitle?.fuelType);
 
-        if (data.regist.vehicleID !== undefined) {setVehicleID(data.regist.vehicleID)}
-        setYear(data.regist.year);
-        setMake(data.regist.make);
-        setModel(data.regist.model);
-        if (data.regist.weight !== undefined) {setWeight(data.regist.weight.replace(/^0+/, ''))}
-        setBody(data.regist.vechBody);
-        setFuel(data.regist.fuelType);
+        if (data?.regist?.vehicleID !== undefined) {setVehicleID(data?.regist?.vehicleID)}
+        setYear(data?.regist?.year);
+        setMake(data?.regist?.make);
+        setModel(data?.regist?.model);
+        if (data?.regist?.weight !== undefined) {setWeight(data?.regist?.weight.replace(/^0+/, ''))}
+        setBody(data?.regist?.vechBody);
+        setFuel(data?.regist?.fuelType);
   }})}
 
   const componentRef = useRef();
