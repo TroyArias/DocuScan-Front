@@ -97,7 +97,6 @@ function MainList({setToken, token}) {
     .then(res => res.json())
     .then(data => {
       if(Object.keys(data).length !== 0){
-        console.log(data)
         if(data?.firstOwner?.firstName !== undefined && data?.firstOwner?.lastName !== undefined){setName({...name, firstName: data?.firstOwner?.firstName, lastName: data?.firstOwner?.lastName, middleName: data?.firstOwner?.middleName})}
         setLastName1(data?.firstOwner?.lastName)
         setFirstName1(data?.firstOwner?.firstName)
@@ -134,12 +133,12 @@ function MainList({setToken, token}) {
         setFuel(data?.certOfTitle?.fuelType);
 
         if (data?.regist?.vehicleID !== undefined) {setVehicleID(data?.regist?.vehicleID)}
-        setYear(data?.regist?.year);
-        setMake(data?.regist?.make);
-        setModel(data?.regist?.model);
+        if (data?.regist?.year !== undefined) {setYear(data?.regist?.year)}
+        if (data?.regist?.make !== undefined) {setMake(data?.regist?.make)}
+        if (data?.regist?.model !== undefined) {setModel(data?.regist?.model)}
         if (data?.regist?.weight !== undefined) {setWeight(data?.regist?.weight.replace(/^0+/, ''))}
-        setBody(data?.regist?.vechBody);
-        setFuel(data?.regist?.fuelType);
+        if (data?.regist?.vechBody !== undefined) {setBody(data?.regist?.vechBody)}
+        if (data?.regist?.fuelType !== undefined) {setFuel(data?.regist?.fuelType)}
   }})}
 
   const componentRef = useRef();
