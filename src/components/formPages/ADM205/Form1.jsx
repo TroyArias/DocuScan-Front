@@ -1,9 +1,9 @@
-import React, { useContext, useState } from "react";
+import React, { useContext} from "react";
 import { Context } from "../../../context";
 
 function VP013Page2() {
 
-  const {mobilePhone, setMobilePhone, date, setDate, name} = useContext(Context);
+  const {mobilePhone, setMobilePhone, date, setDate, name, zip1, setZip1, setAddress1, address1, setCity1, city1, setState1, state1} = useContext(Context);
 
     return (
       <div className="vp013_2"> 
@@ -36,10 +36,10 @@ function VP013Page2() {
 
         <input className="input1" type="text" value={name.middleName === undefined ? name.firstName + " " + name.lastName : name.firstName + " " + name.middleName + " " + name.lastName}/>
         <input className="input2" type="text"/>
-        <input className="input3" type="text"/>
-        <input className="input4" type="text"/>
-        <input className="input5" type="text"/>
-        <input className="input6" type="text"/>
+        <input className="input3" type="text" value={address1} onChange={(event)=>{setAddress1(event.target.value)}}/>
+        <input className="input4" type="text" value={city1} onChange={(event)=>{setCity1(event.target.value)}}/>
+        <input className="input5" type="text" value={state1} onChange={(event)=>{setState1(event.target.value)}}/>
+        <input className="input6" type="text" value={zip1} onChange={(event)=>{setZip1(event.target.value)}}/>
         <input className="input7" type="text"/>
         <input className="input8" type="text" value={mobilePhone} onChange={(event)=>{setMobilePhone(event.target.value)}}/>
         <input className="input9" type="text" value={date} onChange={(event)=>{setDate(event.target.value)}}/>
