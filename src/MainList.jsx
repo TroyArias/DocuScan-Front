@@ -66,7 +66,7 @@ function MainList({setToken, token}) {
 
 
   const logout = async () => {
-    return await fetch(`http://67.205.156.196/auth/logout`, {
+    return await fetch(`https://urchin-app-id7ax.ondigitalocean.app/auth/logout`, {
     method: 'POST',
     headers: {'Content-type': 'application/json; charset=UTF-8'},
     })
@@ -80,7 +80,7 @@ function MainList({setToken, token}) {
   }
 
   const clearDocument = async () => {
-    return await fetch(`http://67.205.156.196/document/clearDoc`, {
+    return await fetch(`https://urchin-app-id7ax.ondigitalocean.app/document/clearDoc`, {
     method: 'DELETE',
     headers: {
         'Content-type': 'application/json; charset=UTF-8',
@@ -88,7 +88,7 @@ function MainList({setToken, token}) {
   }})}
 
   const getData = async () => {
-    return await fetch(`http://67.205.156.196/document/getDoc`, {
+    return await fetch(`https://urchin-app-id7ax.ondigitalocean.app/document/getDoc`, {
     method: 'GET',
     headers: {
         'Content-type': 'application/json; charset=UTF-8',
