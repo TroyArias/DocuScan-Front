@@ -14,7 +14,7 @@ function AuthUser ({setToken}) {
             password: password
         };
 
-        return await fetch(`http://67.205.156.196/auth/login`, {
+        return await fetch(`https://urchin-app-id7ax.ondigitalocean.app/auth/login`, {
         method: 'POST',
         headers: {'Content-type': 'application/json; charset=UTF-8'},
         body: JSON.stringify(user)
